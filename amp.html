@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>LM3886 Chip Amp (Gainclone) - Adam Piekarski</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+
+    <style>
+    .carousel-inner > .item {
+    background: url('assets/amp/header.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+    </style>
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+  <a name="toptop"></a>
+    <div class="navbar-wrapper">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Adam Piekarski</a>
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown active">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Projects<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">Hardware</li>
+                    <li><a href="kettle.html">WiFi Kettle</a></li>
+                    <li><a href="camera.html">35mm Pinhole camera</a></li>
+                    <li><a href="#">LM3886 Chip Amp (Gainclone)</a></li>
+                    <li><a href="boombox.html">Boombox</a></li>
+                    <li><a href="dj.html">DJ Controller</a></li>
+                    <li><a href="amp2.html">Dual mono LM3886 chip amp</a></li>
+                    
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Software</li>
+                    <li><a href="piggy.html">Piggy Fly</a></li>
+                    <li><a href="ceefax.html">Ceefax 2015</a></li>
+                    <li><a href="teapot.html">Facebook Status Extension</a></li>
+                    <li><a href="ear.html">Eardentity</a></li>
+                  </ul>
+                </li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                
+              </ul>
+            </div>
+
+
+          </div>
+
+
+        </nav>
+
+      
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <!-- <img class="first-slide" src="assets/piggy/header.jpg" alt="Kettle"> -->
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>LM3886 Chip Amp (Gainclone)</h1>
+              <p>A high-power audio amplifier using the infamous LM3886 chip</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+
+      <!-- START THE FEATURETTES -->
+      <hr class="divider">
+      <h1 class="featurette-title">Amplify<span class="text-muted"> Now.</span></h1>
+      <hr class="divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Background<span class="text-muted"></span></h2>
+          <p class="lead">The original Gaincard amplifier by 47 Laboratory, released in 1999, defied all the elders' wisdom of amplifier construction. Discrete transitors were ditched and a Texas Instruments LM3875 operation-amplifier sat in the heart of it all - you can read more about it <a href="http://www.6moons.com/audioreviews/47labs5/gaincard.html">here.</a> </p>
+          <p class="lead">Shortly after the Gaincard was released, the DIY community embraced its controversial design and started creating clones, leading to the portmantau Gainclone.</p>
+          <p class="lead">As a big music listener and someone that loves to make things, I married the two together by deciding to build a power amplifier.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+      <div class="col-md-7">
+
+      <h2 class="featurette-heading">The Power Supply<span class="text-muted"></span></h2>
+       <p class="lead">Nothing particularly inspired here - the circuit resembles the <a href="http://chipamp.com/product/snubberized-chipamp-power-supply-kit/">Chipamp.com snubberized power supply</a> with the addition of an extra 4400μF capacitance on each rail. </p>
+      </div>
+
+      <img class="featurette-image img-responsive center-block" src="assets/amp/power-schematic.jpg" alt="The power supply schematic"> 
+      <br><br>
+      <div class="col-md-7">   
+       <p class="lead">At the real heart of the power supply sits a huge centre tapped toroidal transfomer. Rated for 225VA, it is more than capabable of delivering the peak current that the amplifier will demand during loud sections of music. On a good day it should output +/- 25V, however this is dependant on the AC mains supply and the load placed on the power supply.</p>
+      </div>
+      <img class="featurette-image img-responsive center-block" src="assets/amp/transformer.jpg" alt="The power supply schematic">    
+
+
+      <br><br>
+      <div class="col-md-7">   
+       <p class="lead">The power supply is built on two mirrored perfboard's: one positive rail, one negative rail. The bridge rectifier on each board is built from four MUR860 diodes, coupled with Panasonic HA and FC capacitors all rated at least 50 volts.</p>
+      </div>
+      <img class="featurette-image img-responsive center-block" src="assets/amp/power.jpg" alt="The power supply schematic">    
+      
+
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+      <div class="col-md-7">
+      <h2 class="featurette-heading">The amplifier boards<span class="text-muted"></span></h2>
+       <p class="lead">Just as before, I have used the Chipamp.com design - utilising their PCB's. To make sure I got the most of out of LM3886 chip within a reasonable budget, I have used Panasonic FM for the large capacitors and WIMA elsewhere.</p>
+       <p class="lead">The image below shows one of the amplifier boards (without the LM3886 chip). The terminal blocks, from left to right, resemble the following:
+        <ul class="lead">
+            <li>V+ - Positive voltage rail (+35V) </li>
+            <li>PG+ - Positive ground</li>
+            <li>CHG - Chassis ground</li>
+            <li>PG- - Negative ground</li>
+            <li>V- - Negative voltage rail (-35V) </li>
+            <li>NC - Not connected</li>
+          </ul></p>
+      </div>
+      <img class="featurette-image img-responsive center-block" src="assets/amp/board.jpg" alt="Generic placeholder image">    
+      
+      <br><br>
+      <div class="col-md-7">   
+       <p class="lead">Once the LM3886 was soldered onto the amplifier board, the chip was mounted onto a rather large black heatsink. The clear braided wire is the speaker output, while the green and red wires with an black outer case carry the input signal to the board.</p>
+      </div>
+      <img class="featurette-image img-responsive center-block" src="assets/amp/boardfinish.jpg" alt="The power supply schematic">    
+      </div>
+
+
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+      <div class="col-md-7">
+      <h2 class="featurette-heading">The front<span class="text-muted"></span></h2>
+       <p class="lead">Not a particularly aesthetic pleasing front, nevertheless it's very functional. On the edges are red and black binding posts which are the positive and negative speaker outputs, while the centre is occupied by two RCA plugs as an input. The centre hole currently remains empty, a future modification will be to add a volume potentiometer.</p>
+      </div>
+      <img class="featurette-image img-responsive center-block" src="assets/amp/front.jpg" alt="Generic placeholder image">    
+      
+      </div>
+
+      <hr class="featurette-divider">
+
+      <hr class="divider">
+      <h1 class="featurette-title">The Finished Product</h1>
+      <hr class="divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading"><span class="text-muted"></span></h2>
+          <p class="lead">A drawer has been repurposed to be the case for this amplifier. Sitting right in the centre is the transformer, the power supply boards are neatly tucked behind, with the positive rail on the right and the negative on the left. The back of the amplifier features an <a href="https://en.wikipedia.org/wiki/IEC_60320#C13.2FC14_coupler">IEC C13 connector</a> (usually found on desktop computers) for AC power. The two amplifier channels flank the sides, attached to the protruding heat sinks.</p>
+        </div>
+         <img class="featurette-image img-responsive center-block" src="assets/amp/finish.jpg" alt="Generic placeholder image">    
+         <br>
+         <img class="featurette-image img-responsive center-block" src="assets/amp/header.jpg" alt="Generic placeholder image">   
+
+      </div>
+
+       <hr class="featurette-divider">
+
+      <h1 class="featurette-title">Performance</h1>
+      <hr class="divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading"><span class="text-muted"></span></h2>
+          <p class="lead">There is plenty of analysis and praise about the LM3886 in DIY all over the internet, anything I would add would just be noise so I'll keep it short! I have this amp hooked up to a pair of <a href="http://www.dali-speakers.com/uk/loudspeakers/zensor/zensor-1/">DALI Zensor 1's</a> which sit on my desk - the combination is fantastic, the staging is deep and engaging plus there is plenty of power to fill my small room. What more can you ask for!</p>
+        <br>
+         <br>
+        </div>
+
+      </div>
+
+
+      
+      
+      
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        
+        <a href="https://twitter.com/fatcoookies"><img width=32px src="assets/twitter.png"></img></a>
+        <a href="https://www.facebook.com/bob.dinkle"><img width=32px src="assets/facebook.png"></img></a>
+        <a href="https://github.com/fatcookies"><img width=32px src="assets/github.png"></img></a>
+        <a href="https://www.linkedin.com/in/adam-piekarski-a678a1b9"><img width=32px src="assets/linkedin.png"></img></a></p>
+
+        <p class="pull-right"><a id="toplink" href="#">Back to top</a> 
+        <p>&copy; 2015-2020 Adam Piekarski. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+
+  var mainbottom = $('#myCarousel').offset().top + $('#myCarousel').height();
+
+    // on scroll, 
+    $(window).on('scroll',function(){
+
+    // we round here to reduce a little workload
+    stop = Math.round($(window).scrollTop());
+    if (stop > mainbottom) {
+          $('.navbar').addClass('nav-up');
+        
+    } else {
+          $('.navbar').removeClass('nav-up');
+    }
+
+    });
+
+    function scrollToAnchor(aid){
+    var aTag = $("a[name='"+ aid +"']");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+    }
+
+  $("#toplink").click(function() {
+     scrollToAnchor('toptop');
+  });
+
+    </script>
+
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
