@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Adam Piekarski</title>
+    <link>https://fatcookies.github.io/</link>
+    <description>Recent content on Adam Piekarski</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fatcookies.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>35mm Pinhole Camera</title>
+      <link>https://fatcookies.github.io/projects/camera/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/camera/</guid>
+      <description>How I made it: Link to heading The humble beginnings Link to heading I picked up a couple of baking trays for the total price of 3 quid - very good value I must say!
+Initial body cut Link to heading You can cut through these trays with a good pair of scissors.
+Marking out the pinhole Link to heading My very shoddy metalwork Link to heading The task of creating a hole in the middle of a sheet of aluminium without the aid of power tools was rather difficult.</description>
+    </item>
+    
+    <item>
+      <title>Boombox</title>
+      <link>https://fatcookies.github.io/projects/boombox/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/boombox/</guid>
+      <description>My take on creating a boombox - a 10kg booming monster
+How I made it: Link to heading Front design in SketchUp Link to heading This is my initial idea of two full range drivers and one &amp;ldquo;subwoofer&amp;rdquo; driver to deliver the bass.
+I was a little enthusiastic with the dimensions and the finished product is a lot smaller than this.
+Back design in SketchUp Link to heading Three chambers - one for each speaker.</description>
+    </item>
+    
+    <item>
+      <title>Ceefax 2015</title>
+      <link>https://fatcookies.github.io/projects/ceefax/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/ceefax/</guid>
+      <description>A modern twist to an old favourite
+Take me back to 1974 Link to heading Now. Link to heading The idea Link to heading Since the launch of Ceefax, over 40 years ago, it has gifted a generation before the internet with on-demand, up-to-date news from the comfort of sofa&amp;rsquo;s across the country. Despite being born just before the big internet boom, Ceefax still played a part of my childhood so naturally I was devestated when it ceased to broadcast along with analog terrestrial television.</description>
+    </item>
+    
+    <item>
+      <title>DJ Controller</title>
+      <link>https://fatcookies.github.io/projects/dj/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/dj/</guid>
+      <description>A very compact Arduino based DJ Controller
+How I made it: Link to heading The enclosure Link to heading I had a couple of these nuts and bolts storage boxes lying around and they seemed to be the perfect size for this tiny beast.
+Drilling out the component holes Link to heading Drilled out three different types of holes for the potentiometers, push buttons and LED&amp;rsquo;s. A bonus hole right at the back for the mini-USB port required to hook the thing up!</description>
+    </item>
+    
+    <item>
+      <title>Dual mono LM3886 chip amp</title>
+      <link>https://fatcookies.github.io/projects/amp2/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/amp2/</guid>
+      <description>My second endeavour into building an audio amplifier
+Round Two. Link to heading Background Link to heading After successfully building a LM3886 amplifier a couple of years ago, I decided it was time to build another one, be a bit ambitious with it and create something with a bit more oomfph. My previous attempt is still very capable, but is now starting to fall to bits because I didn&amp;rsquo;t own appropriate tools to produce a solid enclosure.</description>
+    </item>
+    
+    <item>
+      <title>Eardentity</title>
+      <link>https://fatcookies.github.io/projects/eardentity/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/eardentity/</guid>
+      <description>An Android ear identification app
+Using the ear as a biometric Link to heading Much of society strives to construct an unique and individual personality and some radically change their physical appearance so choosing a robust biometric to identify a human can be a challenge. Finger tips, iris, gait, face among others have been tried, tested and successfully rolled out - each with their own advantages and disadvantages.
+In recent years the ear has emerged as a potentially useful biometric to suppliment existing solutions.</description>
+    </item>
+    
+    <item>
+      <title>Facebook Teapot Spammer</title>
+      <link>https://fatcookies.github.io/projects/teapot/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/teapot/</guid>
+      <description>What is this? Link to heading A marvellous chrome extension which punishes your victims Facebook statuses if they go afk for too long!
+The source code for this extension and download can be found on my Github
+What does it do? Link to heading Upon installing the extension onto your victim&amp;rsquo;s computer, it will silently run in the background and detect if they are inactive from their computer for more than four minutes (this can be changed).</description>
+    </item>
+    
+    <item>
+      <title>LM3886 Chip Amp (Gainclone)</title>
+      <link>https://fatcookies.github.io/projects/amp/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/amp/</guid>
+      <description>A high-power audio amplifier using the infamous LM3886 chip
+Amplify Now. Link to heading Background Link to heading The original Gaincard amplifier by 47 Laboratory, released in 1999, defied all the elders&amp;rsquo; wisdom of amplifier construction. Discrete transitors were ditched and a Texas Instruments LM3875 operation-amplifier sat in the heart of it all - you can read more about it here.
+Shortly after the Gaincard was released, the DIY community embraced its controversial design and started creating clones, leading to the portmantau Gainclone.</description>
+    </item>
+    
+    <item>
+      <title>Piggy Fly</title>
+      <link>https://fatcookies.github.io/projects/piggy/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/piggy/</guid>
+      <description>A fast-paced casual Android game cough Flappy Bird clone cough
+When will pigs fly? Now. Link to heading The backdrop Link to heading During the explosion of the Flappy Bird frenzy and consequent demise, I decided to make a clone. The famous adynaton became a reality: Piggy Fly was born.
+Gameplay Link to heading There&amp;rsquo;s not much to say here - you touch the screen; the pig flies. The physics is even more annoying than Flappy Bird&amp;rsquo;s, so I wish you the best of luck!</description>
+    </item>
+    
+    <item>
+      <title>WiFi Kettle</title>
+      <link>https://fatcookies.github.io/projects/wifi-kettle/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/wifi-kettle/</guid>
+      <description>After being inspired by the rather novel iKettle, I decided I could create my own WiFi enable kettle as a little project!
+How I made it: Link to heading The enclosure Link to heading One of the last components I actually bought - it&amp;rsquo;s just a small power supply unit enclosure I picked up for a couple of quid from Maplin.
+Bottom side of the enclosure Link to heading I have many Raspberry Pi&amp;rsquo;s lying around the house, I believe the one pictured is the first Model B.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://fatcookies.github.io/about/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/about/</guid>
+      <description>I am a recent Computer Science graduate from the University of Southampton, graduating with a First class honours in MEng Computer Science.
+I now work as an Embedded Software Engineer at Qualcomm in Cambrdige, United Kingdom.
+I enjoy developing solutions for standard desktop applications, mobile and low-level hardware programming - particularly audio orientated projects.</description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://fatcookies.github.io/posts/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/posts/</guid>
+      <description>To be continued &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://fatcookies.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/contact/</guid>
+      <description> Github Twitter LinkedIn </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nodejs on Adam Piekarski</title>
+    <link>https://fatcookies.github.io/tags/nodejs/</link>
+    <description>Recent content in nodejs on Adam Piekarski</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fatcookies.github.io/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ceefax 2015</title>
+      <link>https://fatcookies.github.io/projects/ceefax/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/ceefax/</guid>
+      <description>A modern twist to an old favourite
+Take me back to 1974 Link to heading Now. Link to heading The idea Link to heading Since the launch of Ceefax, over 40 years ago, it has gifted a generation before the internet with on-demand, up-to-date news from the comfort of sofa&amp;rsquo;s across the country. Despite being born just before the big internet boom, Ceefax still played a part of my childhood so naturally I was devestated when it ceased to broadcast along with analog terrestrial television.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iot on Adam Piekarski</title>
+    <link>https://fatcookies.github.io/tags/iot/</link>
+    <description>Recent content in iot on Adam Piekarski</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fatcookies.github.io/tags/iot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WiFi Kettle</title>
+      <link>https://fatcookies.github.io/projects/wifi-kettle/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/wifi-kettle/</guid>
+      <description>After being inspired by the rather novel iKettle, I decided I could create my own WiFi enable kettle as a little project!
+How I made it: Link to heading The enclosure Link to heading One of the last components I actually bought - it&amp;rsquo;s just a small power supply unit enclosure I picked up for a couple of quid from Maplin.
+Bottom side of the enclosure Link to heading I have many Raspberry Pi&amp;rsquo;s lying around the house, I believe the one pictured is the first Model B.</description>
+    </item>
+    
+  </channel>
+</rss>

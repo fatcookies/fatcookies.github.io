@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>chip amp on Adam Piekarski</title>
+    <link>https://fatcookies.github.io/tags/chip-amp/</link>
+    <description>Recent content in chip amp on Adam Piekarski</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fatcookies.github.io/tags/chip-amp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dual mono LM3886 chip amp</title>
+      <link>https://fatcookies.github.io/projects/amp2/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/amp2/</guid>
+      <description>My second endeavour into building an audio amplifier
+Round Two. Link to heading Background Link to heading After successfully building a LM3886 amplifier a couple of years ago, I decided it was time to build another one, be a bit ambitious with it and create something with a bit more oomfph. My previous attempt is still very capable, but is now starting to fall to bits because I didn&amp;rsquo;t own appropriate tools to produce a solid enclosure.</description>
+    </item>
+    
+  </channel>
+</rss>

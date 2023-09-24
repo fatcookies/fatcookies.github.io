@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>amp on Adam Piekarski</title>
+    <link>https://fatcookies.github.io/tags/amp/</link>
+    <description>Recent content in amp on Adam Piekarski</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fatcookies.github.io/tags/amp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Boombox</title>
+      <link>https://fatcookies.github.io/projects/boombox/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/boombox/</guid>
+      <description>My take on creating a boombox - a 10kg booming monster
+How I made it: Link to heading Front design in SketchUp Link to heading This is my initial idea of two full range drivers and one &amp;ldquo;subwoofer&amp;rdquo; driver to deliver the bass.
+I was a little enthusiastic with the dimensions and the finished product is a lot smaller than this.
+Back design in SketchUp Link to heading Three chambers - one for each speaker.</description>
+    </item>
+    
+    <item>
+      <title>Dual mono LM3886 chip amp</title>
+      <link>https://fatcookies.github.io/projects/amp2/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/amp2/</guid>
+      <description>My second endeavour into building an audio amplifier
+Round Two. Link to heading Background Link to heading After successfully building a LM3886 amplifier a couple of years ago, I decided it was time to build another one, be a bit ambitious with it and create something with a bit more oomfph. My previous attempt is still very capable, but is now starting to fall to bits because I didn&amp;rsquo;t own appropriate tools to produce a solid enclosure.</description>
+    </item>
+    
+    <item>
+      <title>LM3886 Chip Amp (Gainclone)</title>
+      <link>https://fatcookies.github.io/projects/amp/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/amp/</guid>
+      <description>A high-power audio amplifier using the infamous LM3886 chip
+Amplify Now. Link to heading Background Link to heading The original Gaincard amplifier by 47 Laboratory, released in 1999, defied all the elders&amp;rsquo; wisdom of amplifier construction. Discrete transitors were ditched and a Texas Instruments LM3875 operation-amplifier sat in the heart of it all - you can read more about it here.
+Shortly after the Gaincard was released, the DIY community embraced its controversial design and started creating clones, leading to the portmantau Gainclone.</description>
+    </item>
+    
+  </channel>
+</rss>

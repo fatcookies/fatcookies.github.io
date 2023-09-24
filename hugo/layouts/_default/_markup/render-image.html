@@ -1,0 +1,30 @@
+{{ $img := .Page.Resources.GetMatch (.Destination | safeURL)}}
+{{ $largest := $img.Resize "1200x" }}
+{{ $large := $largest.Resize "900x" }}
+{{ $medium := $large.Resize "700x" }}
+{{ $small := $medium.Resize "400x" }}
+
+{{ $largestwebp := $img.Resize "1200x webp" }}
+{{ $largewebp := $largest.Resize "900x webp" }}
+{{ $mediumwebp := $large.Resize "700x webp" }}
+{{ $smallwebp := $medium.Resize "400x webp" }}
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="{{ $smallwebp.RelPermalink }} 400w,
+                {{ $mediumwebp.RelPermalink }} 700w,
+                {{ $largewebp.RelPermalink }} 900w,
+                {{ $largestwebp.RelPermalink }} 1200w"/>
+<source srcset="{{ $small.RelPermalink }} 400w,
+                {{ $medium.RelPermalink }} 700w,
+                {{ $large.RelPermalink }} 900w,
+                {{ $largest.RelPermalink }} 1200w"/>
+{{if eq .Text "Header"}}
+<img src="{{ $medium.RelPermalink }}" alt="{{ default (.Title|$.Page.RenderString) .Text }}" {{ with .Title }}title="{{ markdownify . }}"{{ end }} />
+{{ else }}
+  	<img src="{{ $medium.RelPermalink }}" loading="{{with .Attributes.loading}}{{.}}{{else}}lazy{{end}}" alt="{{ default (.Title|$.Page.RenderString) .Text }}" {{ with .Title }}title="{{ markdownify . }}"{{ end }}/>
+{{end}}
+</picture>
+</p>

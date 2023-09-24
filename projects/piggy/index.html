@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Piggy Fly · Adam Piekarski
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Adam Piekarski">
+<meta name="description" content="A fast-paced casual Android game *cough* Flappy Bird clone *cough*">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Piggy Fly"/>
+<meta name="twitter:description" content="A fast-paced casual Android game *cough* Flappy Bird clone *cough*"/>
+
+<meta property="og:title" content="Piggy Fly" />
+<meta property="og:description" content="A fast-paced casual Android game *cough* Flappy Bird clone *cough*" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fatcookies.github.io/projects/piggy/" /><meta property="article:section" content="projects" />
+<meta property="article:published_time" content="2023-09-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-09-23T00:00:00+00:00" />
+<meta property="og:see_also" content="https://fatcookies.github.io/projects/camera/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/boombox/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/ceefax/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/dj/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/amp2/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/eardentity/" />
+
+
+
+
+
+<link rel="canonical" href="https://fatcookies.github.io/projects/piggy/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Adam Piekarski
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" aria-label="Menu"/>
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://fatcookies.github.io/projects/piggy/">
+          Piggy Fly
+        </a>
+      </h1>
+    </header>
+
+    <p>A fast-paced casual Android game <em>cough</em> Flappy Bird clone <em>cough</em></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/piggy/images/header_hud71922cf3104d3395a6ab92e14f1dfeb_68626_f8a756a343158c53f73c91a2f6484fa7.webp 400w,
+                /projects/piggy/images/header_hud71922cf3104d3395a6ab92e14f1dfeb_68626_8c9a318d4ea9f75133bcca04013c4730.webp 700w,
+                /projects/piggy/images/header_hud71922cf3104d3395a6ab92e14f1dfeb_68626_797beb1bb5e4d7f558d09b400feb059f.webp 900w,
+                /projects/piggy/images/header_hud71922cf3104d3395a6ab92e14f1dfeb_68626_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/piggy/images/header_hud71922cf3104d3395a6ab92e14f1dfeb_68626_4f46641b10b22a346dfeccb16b7aa332.jpg 400w,
+                /projects/piggy/images/header_hud71922cf3104d3395a6ab92e14f1dfeb_68626_76a089aaba905cdd4712b83fb7effdb9.jpg 700w,
+                /projects/piggy/images/header_hud71922cf3104d3395a6ab92e14f1dfeb_68626_c590873433bac6de13c54d22d5958fa7.jpg 900w,
+                /projects/piggy/images/header_hud71922cf3104d3395a6ab92e14f1dfeb_68626_1200x0_resize_q65_box.jpg 1200w"/>
+
+<img src="/projects/piggy/images/header_hud71922cf3104d3395a6ab92e14f1dfeb_68626_76a089aaba905cdd4712b83fb7effdb9.jpg" alt="Header"  />
+
+</picture>
+</p>
+</p>
+<h2 id="when-will-pigs-fly-now">
+  When will pigs fly? Now.
+  <a class="heading-link" href="#when-will-pigs-fly-now">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="the-backdrop">
+  The backdrop
+  <a class="heading-link" href="#the-backdrop">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>During the explosion of the Flappy Bird frenzy and consequent <a href="http://www.bbc.co.uk/news/technology-26114364"  class="external-link" target="_blank" rel="noopener">demise</a>, I decided to make a clone. The famous adynaton became a reality: Piggy Fly was born.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/piggy/images/1_hue832181f476305f6b3e6e9d1e8142246_302928_ffe9b7586ab2d58ca949f0396113eadf.webp 400w,
+                /projects/piggy/images/1_hue832181f476305f6b3e6e9d1e8142246_302928_f93f85e99b10d22d3ea9f9d0aa86b44f.webp 700w,
+                /projects/piggy/images/1_hue832181f476305f6b3e6e9d1e8142246_302928_b49f558a041b4e5f8be12de6349bb2dd.webp 900w,
+                /projects/piggy/images/1_hue832181f476305f6b3e6e9d1e8142246_302928_1200x0_resize_q65_h2_box_3.webp 1200w"/>
+<source srcset="/projects/piggy/images/1_hue832181f476305f6b3e6e9d1e8142246_302928_0e2c4b89c162e196c323711193e47e26.png 400w,
+                /projects/piggy/images/1_hue832181f476305f6b3e6e9d1e8142246_302928_ada18fcb0e3a49a65e05bfa4ad4fe4fe.png 700w,
+                /projects/piggy/images/1_hue832181f476305f6b3e6e9d1e8142246_302928_a0843bf139455da68e422a22e4d1583b.png 900w,
+                /projects/piggy/images/1_hue832181f476305f6b3e6e9d1e8142246_302928_1200x0_resize_box_3.png 1200w"/>
+
+  	<img src="/projects/piggy/images/1_hue832181f476305f6b3e6e9d1e8142246_302928_ada18fcb0e3a49a65e05bfa4ad4fe4fe.png" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="gameplay">
+  Gameplay
+  <a class="heading-link" href="#gameplay">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>There&rsquo;s not much to say here - you touch the screen; the pig flies. The physics is even more annoying than Flappy Bird&rsquo;s, so I wish you the best of luck!</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/piggy/images/2_hue832181f476305f6b3e6e9d1e8142246_294555_0f9cb907c8629898192f0adfe14a3866.webp 400w,
+                /projects/piggy/images/2_hue832181f476305f6b3e6e9d1e8142246_294555_c095705a5853fb69b724ad7198d533ad.webp 700w,
+                /projects/piggy/images/2_hue832181f476305f6b3e6e9d1e8142246_294555_90a3b42b8885813f083552bde9869b4e.webp 900w,
+                /projects/piggy/images/2_hue832181f476305f6b3e6e9d1e8142246_294555_1200x0_resize_q65_h2_box_3.webp 1200w"/>
+<source srcset="/projects/piggy/images/2_hue832181f476305f6b3e6e9d1e8142246_294555_5ca786613a805680cebca1be8c8910c9.png 400w,
+                /projects/piggy/images/2_hue832181f476305f6b3e6e9d1e8142246_294555_b2f855a941287809238edace4844a486.png 700w,
+                /projects/piggy/images/2_hue832181f476305f6b3e6e9d1e8142246_294555_01eeb9d8729dae0b734db3e618d15d89.png 900w,
+                /projects/piggy/images/2_hue832181f476305f6b3e6e9d1e8142246_294555_1200x0_resize_box_3.png 1200w"/>
+
+  	<img src="/projects/piggy/images/2_hue832181f476305f6b3e6e9d1e8142246_294555_b2f855a941287809238edace4844a486.png" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="what-people-have-said">
+  What people have said.
+  <a class="heading-link" href="#what-people-have-said">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>There might be a tad hyperbole here</p>
+<h4 id="doctors-hate-him-one-weird-game">
+  Doctors hate him! One weird game!
+  <a class="heading-link" href="#doctors-hate-him-one-weird-game">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>Before I played this game, I was sad and lonely. But now I am a changed man and lost 10 lbs! Thank you Piggy Fly for changing my life.</p>
+<h4 id="5">
+  5*
+  <a class="heading-link" href="#5">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>Piggy Fly is a super fun game that&rsquo;s using the latest technology on the market which makes it looks so stunningly good that comparing it&rsquo;s graphics to any other mobile game out there would be an insult.</p>
+<h4 id="piggy-fly-not-even-once">
+  Piggy Fly, not even once.
+  <a class="heading-link" href="#piggy-fly-not-even-once">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>This game got me off meth and heroin, I now have to result to a mix of krokodil and brugmansia to stop playing it.</p>
+<h3 id="download">
+  Download
+  <a class="heading-link" href="#download">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Piggy Fly is officially available in the following places:</p>
+<ul>
+<li><a href="https://play.google.com/store/apps/details?id=com.adamp.android.birdgame"  class="external-link" target="_blank" rel="noopener">Google Play store</a></li>
+<li><a href="http://www.amazon.co.uk/Cookie-Solutions-Piggy-Fly/dp/B00IZQQ4EC/"  class="external-link" target="_blank" rel="noopener">Amazon App store</a></li>
+<li><a href="PiggyFly0.3.apk" >Direct APK Download</a> (from this website)</li>
+<li>Full source code available from <a href="https://github.com/fatcookies/piggyfly"  class="external-link" target="_blank" rel="noopener">Github</a>
+Try and beat my personal best of 12!</li>
+</ul>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/piggy/images/3_hue832181f476305f6b3e6e9d1e8142246_39845_2dcc1a6b6c3c669000418daf51703185.webp 400w,
+                /projects/piggy/images/3_hue832181f476305f6b3e6e9d1e8142246_39845_4c9e349fa020a85729b61f7bc024ca63.webp 700w,
+                /projects/piggy/images/3_hue832181f476305f6b3e6e9d1e8142246_39845_29d7a095f252ff08ab4d36fe59c6d534.webp 900w,
+                /projects/piggy/images/3_hue832181f476305f6b3e6e9d1e8142246_39845_1200x0_resize_q65_h2_box_3.webp 1200w"/>
+<source srcset="/projects/piggy/images/3_hue832181f476305f6b3e6e9d1e8142246_39845_dbbcca9764ed070d3294de522367d784.png 400w,
+                /projects/piggy/images/3_hue832181f476305f6b3e6e9d1e8142246_39845_814ccd91dd0419f09b20700cafa3071a.png 700w,
+                /projects/piggy/images/3_hue832181f476305f6b3e6e9d1e8142246_39845_8bc186afbbfd99d00eee1af979495a42.png 900w,
+                /projects/piggy/images/3_hue832181f476305f6b3e6e9d1e8142246_39845_1200x0_resize_box_3.png 1200w"/>
+
+  	<img src="/projects/piggy/images/3_hue832181f476305f6b3e6e9d1e8142246_39845_814ccd91dd0419f09b20700cafa3071a.png" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2015 -
+    
+    2023
+     Adam Piekarski 
+    ·
+    
+      Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  DJ Controller · Adam Piekarski
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Adam Piekarski">
+<meta name="description" content="A very compact Arduino based DJ Controller">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="DJ Controller"/>
+<meta name="twitter:description" content="A very compact Arduino based DJ Controller"/>
+
+<meta property="og:title" content="DJ Controller" />
+<meta property="og:description" content="A very compact Arduino based DJ Controller" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fatcookies.github.io/projects/dj/" /><meta property="article:section" content="projects" />
+<meta property="article:published_time" content="2023-09-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-09-23T00:00:00+00:00" />
+<meta property="og:see_also" content="https://fatcookies.github.io/projects/camera/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/boombox/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/ceefax/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/amp2/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/eardentity/" />
+
+
+
+
+
+<link rel="canonical" href="https://fatcookies.github.io/projects/dj/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Adam Piekarski
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" aria-label="Menu"/>
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://fatcookies.github.io/projects/dj/">
+          DJ Controller
+        </a>
+      </h1>
+    </header>
+
+    <p>A very compact Arduino based DJ Controller</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/dj/images/header_hu2fe639b5a1fb9425eb0ac3e7642982bb_292779_d3f59e161aed9be8a7a2298cc6277905.webp 400w,
+                /projects/dj/images/header_hu2fe639b5a1fb9425eb0ac3e7642982bb_292779_6ec6bf095611e859ba162e02b357bddb.webp 700w,
+                /projects/dj/images/header_hu2fe639b5a1fb9425eb0ac3e7642982bb_292779_c669c48f064deb82511ba4eed9b85dc7.webp 900w,
+                /projects/dj/images/header_hu2fe639b5a1fb9425eb0ac3e7642982bb_292779_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/dj/images/header_hu2fe639b5a1fb9425eb0ac3e7642982bb_292779_f33e83c8de4ee522f003883c06c48412.jpg 400w,
+                /projects/dj/images/header_hu2fe639b5a1fb9425eb0ac3e7642982bb_292779_4d57ea6df06393c988a860d2989d39fb.jpg 700w,
+                /projects/dj/images/header_hu2fe639b5a1fb9425eb0ac3e7642982bb_292779_ac18d7b7d2e359d93d5cf1b92312fbaf.jpg 900w,
+                /projects/dj/images/header_hu2fe639b5a1fb9425eb0ac3e7642982bb_292779_1200x0_resize_q65_box.jpg 1200w"/>
+
+<img src="/projects/dj/images/header_hu2fe639b5a1fb9425eb0ac3e7642982bb_292779_4d57ea6df06393c988a860d2989d39fb.jpg" alt="Header"  />
+
+</picture>
+</p>
+</p>
+<h2 id="how-i-made-it">
+  How I made it:
+  <a class="heading-link" href="#how-i-made-it">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="the-enclosure">
+  The enclosure
+  <a class="heading-link" href="#the-enclosure">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I had a couple of these nuts and bolts storage boxes lying around and they seemed to be the perfect size for this tiny beast.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/dj/images/1_huc9ddeed0203521a71dbada30443efdce_229932_7717de9367ad29fbff7da718267a600d.webp 400w,
+                /projects/dj/images/1_huc9ddeed0203521a71dbada30443efdce_229932_8045f976379a7cb47aff6fc9911fb9bb.webp 700w,
+                /projects/dj/images/1_huc9ddeed0203521a71dbada30443efdce_229932_2718f448168821e04786bf23a3ea5fb4.webp 900w,
+                /projects/dj/images/1_huc9ddeed0203521a71dbada30443efdce_229932_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/dj/images/1_huc9ddeed0203521a71dbada30443efdce_229932_e493cdb26bc496701debada394e21126.jpg 400w,
+                /projects/dj/images/1_huc9ddeed0203521a71dbada30443efdce_229932_9478a7207c097b71b684b53eebcccc19.jpg 700w,
+                /projects/dj/images/1_huc9ddeed0203521a71dbada30443efdce_229932_62f2d098bc41377cd7f4cb40930a7bce.jpg 900w,
+                /projects/dj/images/1_huc9ddeed0203521a71dbada30443efdce_229932_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/dj/images/1_huc9ddeed0203521a71dbada30443efdce_229932_9478a7207c097b71b684b53eebcccc19.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="drilling-out-the-component-holes">
+  Drilling out the component holes
+  <a class="heading-link" href="#drilling-out-the-component-holes">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Drilled out three different types of holes for the potentiometers, push buttons and LED&rsquo;s. A bonus hole right at the back for the mini-USB port required to hook the thing up!</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/dj/images/3_hu40594b93be01366641d9af68b4708da5_186697_20f967dda6c382510526c3e73a18e481.webp 400w,
+                /projects/dj/images/3_hu40594b93be01366641d9af68b4708da5_186697_392703e54ab03c28e4723fb9b7d4326b.webp 700w,
+                /projects/dj/images/3_hu40594b93be01366641d9af68b4708da5_186697_5c342e4fba1801de563bbf8e8b93fd2a.webp 900w,
+                /projects/dj/images/3_hu40594b93be01366641d9af68b4708da5_186697_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/dj/images/3_hu40594b93be01366641d9af68b4708da5_186697_fe95726cc31e94129e3230bbb8e6625a.jpg 400w,
+                /projects/dj/images/3_hu40594b93be01366641d9af68b4708da5_186697_9ac7b0118eaf62e8eaed1e4b693e27d2.jpg 700w,
+                /projects/dj/images/3_hu40594b93be01366641d9af68b4708da5_186697_d09d5a951a129c24f951dda4ebd5e65f.jpg 900w,
+                /projects/dj/images/3_hu40594b93be01366641d9af68b4708da5_186697_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/dj/images/3_hu40594b93be01366641d9af68b4708da5_186697_9ac7b0118eaf62e8eaed1e4b693e27d2.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="dry-fit">
+  Dry fit
+  <a class="heading-link" href="#dry-fit">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Testing if all the components will fit in their predetermined holes.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/dj/images/4_hufafcb281a637b79c1d353e510463dac4_205632_b7d8e5b59ea7610e6d7bc89339b4130f.webp 400w,
+                /projects/dj/images/4_hufafcb281a637b79c1d353e510463dac4_205632_3352f59cd62bf8bb2eb1195327a048b6.webp 700w,
+                /projects/dj/images/4_hufafcb281a637b79c1d353e510463dac4_205632_fc7ca8f736edbd274a81004d5793b5ca.webp 900w,
+                /projects/dj/images/4_hufafcb281a637b79c1d353e510463dac4_205632_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/dj/images/4_hufafcb281a637b79c1d353e510463dac4_205632_6bbf6efa3a14be31ea60d252e914cf42.jpg 400w,
+                /projects/dj/images/4_hufafcb281a637b79c1d353e510463dac4_205632_7d62ea5c4b8419ba249ad616b616e268.jpg 700w,
+                /projects/dj/images/4_hufafcb281a637b79c1d353e510463dac4_205632_76fb57608201becc28069aa1b89e6da2.jpg 900w,
+                /projects/dj/images/4_hufafcb281a637b79c1d353e510463dac4_205632_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/dj/images/4_hufafcb281a637b79c1d353e510463dac4_205632_7d62ea5c4b8419ba249ad616b616e268.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="the-brains">
+  The brains
+  <a class="heading-link" href="#the-brains">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>An Arduino Nano clone provides the interface between the PC and the physical device. With 14 digital and 10 analogue pins - every component can be connected directly to the microcontroller.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/dj/images/6-1_hu47aa4af502d9cf06339d35422692ac10_224910_3771461c6314a7baba210a55727263fd.webp 400w,
+                /projects/dj/images/6-1_hu47aa4af502d9cf06339d35422692ac10_224910_d07695f6456e7f2c8d81e793f03026d4.webp 700w,
+                /projects/dj/images/6-1_hu47aa4af502d9cf06339d35422692ac10_224910_c7623faed0351e6df3fc45d64e1c29dd.webp 900w,
+                /projects/dj/images/6-1_hu47aa4af502d9cf06339d35422692ac10_224910_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/dj/images/6-1_hu47aa4af502d9cf06339d35422692ac10_224910_f5c3138366fd749fc41d3139ca827d15.jpg 400w,
+                /projects/dj/images/6-1_hu47aa4af502d9cf06339d35422692ac10_224910_74b420b3b353f16949d5e526593ca1f5.jpg 700w,
+                /projects/dj/images/6-1_hu47aa4af502d9cf06339d35422692ac10_224910_b81e122a86f2dc2690a03b0a91cab95f.jpg 900w,
+                /projects/dj/images/6-1_hu47aa4af502d9cf06339d35422692ac10_224910_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/dj/images/6-1_hu47aa4af502d9cf06339d35422692ac10_224910_74b420b3b353f16949d5e526593ca1f5.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="quick-schematics">
+  Quick schematics
+  <a class="heading-link" href="#quick-schematics">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The top left describes how the potentiometers are connected to nano - The GPIO will read a voltage between 0-5V and convert this into a digital value between 0-1023.</p>
+<p>The top right shows the push button - when open the 5V supply will go straight to ground through a 10K resistor, when pressed, current flows straight through to an input pin on the nano which we can read.</p>
+<p>The bottom schematic is an LED connected to a current limiting resistor - 220Ω was chosen. Since it is connected to a GPIO pin it can be switched on and off on command.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/dj/images/4-1_hu99b3462cc4910bc42979731b16580e05_174181_b851f6f681aceb6675ed7e21d26ffb78.webp 400w,
+                /projects/dj/images/4-1_hu99b3462cc4910bc42979731b16580e05_174181_cb627170c2da06602bae99ab20a52f7d.webp 700w,
+                /projects/dj/images/4-1_hu99b3462cc4910bc42979731b16580e05_174181_992ecd632c6d8d050706adc409a36fed.webp 900w,
+                /projects/dj/images/4-1_hu99b3462cc4910bc42979731b16580e05_174181_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/dj/images/4-1_hu99b3462cc4910bc42979731b16580e05_174181_6c076c87690e06484f183179d471e010.jpg 400w,
+                /projects/dj/images/4-1_hu99b3462cc4910bc42979731b16580e05_174181_b11a27d0b051ef783e34e6c230780cea.jpg 700w,
+                /projects/dj/images/4-1_hu99b3462cc4910bc42979731b16580e05_174181_d90d5ce241ca1619d4c47dd2f8e288d4.jpg 900w,
+                /projects/dj/images/4-1_hu99b3462cc4910bc42979731b16580e05_174181_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/dj/images/4-1_hu99b3462cc4910bc42979731b16580e05_174181_b11a27d0b051ef783e34e6c230780cea.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="the-push-button">
+  The push button
+  <a class="heading-link" href="#the-push-button">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>An example push button wired up, ready to be placed in the enclosure and connected to the nano.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/dj/images/5_hu8867c131c9e076151aa0347f5925a03d_201223_4c41a7f79f86643772598f01a74c12d6.webp 400w,
+                /projects/dj/images/5_hu8867c131c9e076151aa0347f5925a03d_201223_f4c57172bd78381e26f8602bcf358765.webp 700w,
+                /projects/dj/images/5_hu8867c131c9e076151aa0347f5925a03d_201223_a8c00794b2315b040ba64395cc54557c.webp 900w,
+                /projects/dj/images/5_hu8867c131c9e076151aa0347f5925a03d_201223_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/dj/images/5_hu8867c131c9e076151aa0347f5925a03d_201223_3ac6f27410c79af7400738f86c56a2dd.jpg 400w,
+                /projects/dj/images/5_hu8867c131c9e076151aa0347f5925a03d_201223_86782079dca64e38956931fb4a11e784.jpg 700w,
+                /projects/dj/images/5_hu8867c131c9e076151aa0347f5925a03d_201223_ec2bd3ac3a6ef3f9346294f4b6148887.jpg 900w,
+                /projects/dj/images/5_hu8867c131c9e076151aa0347f5925a03d_201223_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/dj/images/5_hu8867c131c9e076151aa0347f5925a03d_201223_86782079dca64e38956931fb4a11e784.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="all-components-in-place">
+  All components in place
+  <a class="heading-link" href="#all-components-in-place">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The potentiometers are all held in place using a nut, whereas the push buttons and LED&rsquo;s had to be secured using hot glue. I hate hot glue.</p>
+<p>The Arduino Nano sits in the centre of the case, wedged between the sides.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/dj/images/6-2_hucbdd5892b3991dee51eb155b19ca10b1_219361_a64db17fc47cdf6b978c9bfcdf8d015f.webp 400w,
+                /projects/dj/images/6-2_hucbdd5892b3991dee51eb155b19ca10b1_219361_05dc63c1e1552b85392df657e7663728.webp 700w,
+                /projects/dj/images/6-2_hucbdd5892b3991dee51eb155b19ca10b1_219361_acfd6bcf399750b58f1bd444a0f68907.webp 900w,
+                /projects/dj/images/6-2_hucbdd5892b3991dee51eb155b19ca10b1_219361_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/dj/images/6-2_hucbdd5892b3991dee51eb155b19ca10b1_219361_abdd0cd2cdef34f28da3c00f53d94a98.jpg 400w,
+                /projects/dj/images/6-2_hucbdd5892b3991dee51eb155b19ca10b1_219361_6bee416161d8844e49b9b219ec30b42b.jpg 700w,
+                /projects/dj/images/6-2_hucbdd5892b3991dee51eb155b19ca10b1_219361_ae191f732b08fd99608ff951a3a57b4a.jpg 900w,
+                /projects/dj/images/6-2_hucbdd5892b3991dee51eb155b19ca10b1_219361_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/dj/images/6-2_hucbdd5892b3991dee51eb155b19ca10b1_219361_6bee416161d8844e49b9b219ec30b42b.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="mess-in-progress">
+  Mess in progress
+  <a class="heading-link" href="#mess-in-progress">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>There are a lot of wires to deal with in a very small space.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/dj/images/7_hu025bec054bfbd8aac4efb1cf489e188b_268008_c22e39d3728931e9e5e5b4dce00337ed.webp 400w,
+                /projects/dj/images/7_hu025bec054bfbd8aac4efb1cf489e188b_268008_b1968f4aba05d4fccdef4eb2e7e3a812.webp 700w,
+                /projects/dj/images/7_hu025bec054bfbd8aac4efb1cf489e188b_268008_a99add48ed1e0dc811a316e2bbaa576b.webp 900w,
+                /projects/dj/images/7_hu025bec054bfbd8aac4efb1cf489e188b_268008_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/dj/images/7_hu025bec054bfbd8aac4efb1cf489e188b_268008_1d647b3a68855cdf50187f78306c17b9.jpg 400w,
+                /projects/dj/images/7_hu025bec054bfbd8aac4efb1cf489e188b_268008_0752cc21148bf82047cf4981ba30d55f.jpg 700w,
+                /projects/dj/images/7_hu025bec054bfbd8aac4efb1cf489e188b_268008_12cdfb2fc7434c63dd74933f0cf47c4c.jpg 900w,
+                /projects/dj/images/7_hu025bec054bfbd8aac4efb1cf489e188b_268008_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/dj/images/7_hu025bec054bfbd8aac4efb1cf489e188b_268008_0752cc21148bf82047cf4981ba30d55f.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="finished-wiring">
+  Finished wiring
+  <a class="heading-link" href="#finished-wiring">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Very messy!</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/dj/images/8_hue83163b368bff978e782145cd8ef05df_271068_eac5a59bbb46c44639307d9eb1bb493b.webp 400w,
+                /projects/dj/images/8_hue83163b368bff978e782145cd8ef05df_271068_10855898349dc5bf71b731a9eb6ee779.webp 700w,
+                /projects/dj/images/8_hue83163b368bff978e782145cd8ef05df_271068_7ea57769374b39279913bb2b6f92d6fa.webp 900w,
+                /projects/dj/images/8_hue83163b368bff978e782145cd8ef05df_271068_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/dj/images/8_hue83163b368bff978e782145cd8ef05df_271068_4b5cbfa5e07b690d25b41be0fb025dcb.jpg 400w,
+                /projects/dj/images/8_hue83163b368bff978e782145cd8ef05df_271068_b1200fb90b08ed4da9bb362b6de59a28.jpg 700w,
+                /projects/dj/images/8_hue83163b368bff978e782145cd8ef05df_271068_c65d6d8f7fc52cd8f25984975635f985.jpg 900w,
+                /projects/dj/images/8_hue83163b368bff978e782145cd8ef05df_271068_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/dj/images/8_hue83163b368bff978e782145cd8ef05df_271068_b1200fb90b08ed4da9bb362b6de59a28.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="nearly-finished">
+  Nearly finished
+  <a class="heading-link" href="#nearly-finished">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Everything is connected and enclosed but the knobs and buttons aren&rsquo;t fun to press!</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/dj/images/9_hu17be9a66105ffa0e98540eecd77ade6d_243156_1e994d4b1fbcfa3867ca17a04272c22c.webp 400w,
+                /projects/dj/images/9_hu17be9a66105ffa0e98540eecd77ade6d_243156_044b8e8683c6a7fff38183c323dba91e.webp 700w,
+                /projects/dj/images/9_hu17be9a66105ffa0e98540eecd77ade6d_243156_3fc10d09e3352448354400658db5732c.webp 900w,
+                /projects/dj/images/9_hu17be9a66105ffa0e98540eecd77ade6d_243156_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/dj/images/9_hu17be9a66105ffa0e98540eecd77ade6d_243156_864216104cec17605c8fb0721123c231.jpg 400w,
+                /projects/dj/images/9_hu17be9a66105ffa0e98540eecd77ade6d_243156_8aa46fe806cf47f5fdc1fbd86ffe510e.jpg 700w,
+                /projects/dj/images/9_hu17be9a66105ffa0e98540eecd77ade6d_243156_6fa93bb6326057d101522daed51bc9f8.jpg 900w,
+                /projects/dj/images/9_hu17be9a66105ffa0e98540eecd77ade6d_243156_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/dj/images/9_hu17be9a66105ffa0e98540eecd77ade6d_243156_8aa46fe806cf47f5fdc1fbd86ffe510e.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="finished-article">
+  Finished article
+  <a class="heading-link" href="#finished-article">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Stuck some arcade style buttons on and brushed aluminium knobs onto two of the pots.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/dj/images/11_hu75d0bba24906db84efe062076966d6c8_199345_b14d5077c6b1c745779d9f595b00fbe8.webp 400w,
+                /projects/dj/images/11_hu75d0bba24906db84efe062076966d6c8_199345_f93944791c192158b36dbdab83c25840.webp 700w,
+                /projects/dj/images/11_hu75d0bba24906db84efe062076966d6c8_199345_d04c5a021b875988cdc04574cdb383ce.webp 900w,
+                /projects/dj/images/11_hu75d0bba24906db84efe062076966d6c8_199345_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/dj/images/11_hu75d0bba24906db84efe062076966d6c8_199345_352cc83f9e2b4c37bc37638665904b14.jpg 400w,
+                /projects/dj/images/11_hu75d0bba24906db84efe062076966d6c8_199345_f096333da8381d57dd3d76221a294836.jpg 700w,
+                /projects/dj/images/11_hu75d0bba24906db84efe062076966d6c8_199345_bc7915787af4f6c2d2a97271dff22e6e.jpg 900w,
+                /projects/dj/images/11_hu75d0bba24906db84efe062076966d6c8_199345_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/dj/images/11_hu75d0bba24906db84efe062076966d6c8_199345_f096333da8381d57dd3d76221a294836.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="beauty-shot">
+  Beauty shot
+  <a class="heading-link" href="#beauty-shot">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/dj/images/12_hubcc93dd9d86c184e768fa6ce256e04ec_152453_ecd137f0f4cab2b92a88a09bcc2eab4d.webp 400w,
+                /projects/dj/images/12_hubcc93dd9d86c184e768fa6ce256e04ec_152453_7f7306d677bb42ab63fa203118e0478c.webp 700w,
+                /projects/dj/images/12_hubcc93dd9d86c184e768fa6ce256e04ec_152453_27341f945f5333e0638db10548028b71.webp 900w,
+                /projects/dj/images/12_hubcc93dd9d86c184e768fa6ce256e04ec_152453_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/dj/images/12_hubcc93dd9d86c184e768fa6ce256e04ec_152453_51fcf3d7724f7b8420d1067b58e4b160.jpg 400w,
+                /projects/dj/images/12_hubcc93dd9d86c184e768fa6ce256e04ec_152453_4235c32ac4a4922e957f61252aceaf47.jpg 700w,
+                /projects/dj/images/12_hubcc93dd9d86c184e768fa6ce256e04ec_152453_282fff5588f05527de4cc912821939c9.jpg 900w,
+                /projects/dj/images/12_hubcc93dd9d86c184e768fa6ce256e04ec_152453_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/dj/images/12_hubcc93dd9d86c184e768fa6ce256e04ec_152453_4235c32ac4a4922e957f61252aceaf47.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="finished">
+  Finished
+  <a class="heading-link" href="#finished">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/dj/images/13_huf780545ababa1cdacd2f5e83c79e68b8_182356_95af89b182dab6d3dbf2950e42872c63.webp 400w,
+                /projects/dj/images/13_huf780545ababa1cdacd2f5e83c79e68b8_182356_c14904c5f8a6df0d0ed3546804663293.webp 700w,
+                /projects/dj/images/13_huf780545ababa1cdacd2f5e83c79e68b8_182356_841eafde9ea69789a3a102df7184f050.webp 900w,
+                /projects/dj/images/13_huf780545ababa1cdacd2f5e83c79e68b8_182356_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/dj/images/13_huf780545ababa1cdacd2f5e83c79e68b8_182356_13146197f8d13e28f74d3b5785925dd9.jpg 400w,
+                /projects/dj/images/13_huf780545ababa1cdacd2f5e83c79e68b8_182356_4d3c4b71af68d60a3af071a06d74acd2.jpg 700w,
+                /projects/dj/images/13_huf780545ababa1cdacd2f5e83c79e68b8_182356_534c2c3afd00bfc8cc0950ad4a5a4647.jpg 900w,
+                /projects/dj/images/13_huf780545ababa1cdacd2f5e83c79e68b8_182356_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/dj/images/13_huf780545ababa1cdacd2f5e83c79e68b8_182356_4d3c4b71af68d60a3af071a06d74acd2.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="finished-1">
+  Finished
+  <a class="heading-link" href="#finished-1">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The plan was to build a very cheap and portable DJ Controller.</p>
+<p>The result - three potentiometers, six push buttons and four LED&rsquo;s which are all user configurable.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/dj/images/0_hu2e99f093d849cdc6e2d09b44bf6c173c_257792_6841d57d82b96751d9e57bde98b54366.webp 400w,
+                /projects/dj/images/0_hu2e99f093d849cdc6e2d09b44bf6c173c_257792_17cc08964fe7949a92ac015261af8571.webp 700w,
+                /projects/dj/images/0_hu2e99f093d849cdc6e2d09b44bf6c173c_257792_cd222c4c2569de6a60fcd4373837fd7c.webp 900w,
+                /projects/dj/images/0_hu2e99f093d849cdc6e2d09b44bf6c173c_257792_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/dj/images/0_hu2e99f093d849cdc6e2d09b44bf6c173c_257792_e0d37411d85407cea1da6dcd393ca250.jpg 400w,
+                /projects/dj/images/0_hu2e99f093d849cdc6e2d09b44bf6c173c_257792_c7396c78d4eefd733df8838cfe5e2e32.jpg 700w,
+                /projects/dj/images/0_hu2e99f093d849cdc6e2d09b44bf6c173c_257792_bc31ab4920ed0e993b3ba9389abf1f4e.jpg 900w,
+                /projects/dj/images/0_hu2e99f093d849cdc6e2d09b44bf6c173c_257792_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/dj/images/0_hu2e99f093d849cdc6e2d09b44bf6c173c_257792_c7396c78d4eefd733df8838cfe5e2e32.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h1 id="software">
+  Software
+  <a class="heading-link" href="#software">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<h3 id="arduino-code">
+  Arduino code
+  <a class="heading-link" href="#arduino-code">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I quickly hacked together some Arduino code to read all the inputs and send changes as MIDI commands over the USB port (serial). The <a href="dj.ino" >code</a> is as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="line"><span class="cl"><span class="c1">// Based on http://www.instructables.com/id/Easy-3-Pot-Potentiometer-Arduino-Uno-Effects-Midi-/step4/The-Code/
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Current and previous value of all three potentionmeters
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">pots</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">},</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">}</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// All button states (1 = has been pressed down, 0 = released/not pressed)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">state</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">57600</span><span class="p">);</span> <span class="c1">// Set the speed of the midi port to the same as we will be using in the Hairless Midi software 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="nf">digitalWrite</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="nf">digitalWrite</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="nf">digitalWrite</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="nf">digitalWrite</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="n">HIGH</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Left bass
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nf">handlePot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Right bass
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nf">handlePot</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Crossfader
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nf">handlePot</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">//left white
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nf">handleButt</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//left red
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nf">handleButt</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//left blue
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nf">handleButt</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// right blue
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nf">handleButt</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//right red
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nf">handleButt</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//right white
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nf">handleButt</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">  <span class="nf">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="c1">//here we add a short delay to help prevent slight fluctuations, knocks on the pots etc. Adding this helped to prevent my pots from jumpin up or down a value when slightly touched or knocked.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Sends a MIDI message to control channel &#34;number&#34; on any pot change on physical &#34;pin&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">inline</span> <span class="kt">void</span> <span class="nf">handlePot</span><span class="p">(</span><span class="kt">int</span> <span class="n">pin</span><span class="p">,</span> <span class="kt">int</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="n">pots</span><span class="p">[</span><span class="n">number</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1023</span><span class="o">-</span><span class="nf">analogRead</span><span class="p">(</span><span class="n">pin</span><span class="p">))</span><span class="o">/</span><span class="mi">8</span><span class="p">;</span>   <span class="c1">// inverse value and decrese
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="n">pots</span><span class="p">[</span><span class="n">number</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">pots</span><span class="p">[</span><span class="n">number</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span> <span class="p">{</span> <span class="c1">// Only send if change
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="nf">MIDImessage</span><span class="p">(</span><span class="mi">176</span><span class="p">,</span><span class="n">number</span><span class="p">,</span><span class="n">pots</span><span class="p">[</span><span class="n">number</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]);</span> <span class="c1">// 176 = CC command (channel 1 control change), 1 = Which Control, val = value read from Potentionmeter 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="p">}</span>         
+</span></span><span class="line"><span class="cl">      <span class="n">pots</span><span class="p">[</span><span class="n">number</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">pots</span><span class="p">[</span><span class="n">number</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Sends a MIDI message to &#34;number&#34; for any full press on physical &#34;pin&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">inline</span> <span class="kt">void</span> <span class="nf">handleButt</span><span class="p">(</span><span class="kt">int</span> <span class="n">pin</span><span class="p">,</span> <span class="kt">int</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nf">digitalRead</span><span class="p">(</span><span class="n">pin</span><span class="p">)</span> <span class="o">==</span> <span class="n">HIGH</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">state</span><span class="p">[</span><span class="n">number</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">state</span><span class="p">[</span><span class="n">number</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nf">MIDImessage</span><span class="p">(</span><span class="mi">144</span><span class="p">,</span><span class="n">number</span><span class="p">,</span><span class="mi">127</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="n">state</span><span class="p">[</span><span class="n">number</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">MIDImessage</span><span class="p">(</span><span class="n">byte</span> <span class="n">command</span><span class="p">,</span> <span class="n">byte</span> <span class="n">data1</span><span class="p">,</span> <span class="n">byte</span> <span class="n">data2</span><span class="p">)</span> <span class="c1">//pass values out through standard Midi Command
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Serial</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">command</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Serial</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">data1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Serial</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">data2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="connecting-to-a-pc">
+  Connecting to a PC
+  <a class="heading-link" href="#connecting-to-a-pc">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Most music software supports contollers using the MIDI interface - unfortunately we only have access to a serial port using USB so a couple of utilities are required to trick the operating system to thinking we have a real MIDI device.</p>
+<p><a href="http://nerds.de/en/loopbe1.html"  class="external-link" target="_blank" rel="noopener">LoopBe1:</a> Creates a fake MIDI port which music software can listen to.</p>
+<p><a href="http://projectgus.github.io/hairless-midiserial/"  class="external-link" target="_blank" rel="noopener">Hairless MIDI:</a> Reads a serial port and converts messages to MIDI which LoopBe1 can read</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/dj/images/13-1_hu4253a794f126f7f93acc80c8103c1ca3_49576_91443a839367831622da7a59eba9172f.webp 400w,
+                /projects/dj/images/13-1_hu4253a794f126f7f93acc80c8103c1ca3_49576_4bec216fe96364d903818d7a29d2bc5f.webp 700w,
+                /projects/dj/images/13-1_hu4253a794f126f7f93acc80c8103c1ca3_49576_4ba2d8f94fe4c4a9a2abeaafaf4c2809.webp 900w,
+                /projects/dj/images/13-1_hu4253a794f126f7f93acc80c8103c1ca3_49576_1200x0_resize_q65_h2_box_3.webp 1200w"/>
+<source srcset="/projects/dj/images/13-1_hu4253a794f126f7f93acc80c8103c1ca3_49576_2420488916c705cf5717a5625eb90f2f.png 400w,
+                /projects/dj/images/13-1_hu4253a794f126f7f93acc80c8103c1ca3_49576_0aca2dbf9cfacf3fc45a9f1152f169c0.png 700w,
+                /projects/dj/images/13-1_hu4253a794f126f7f93acc80c8103c1ca3_49576_9027441cdfa22aa289de112f43b4b0a3.png 900w,
+                /projects/dj/images/13-1_hu4253a794f126f7f93acc80c8103c1ca3_49576_1200x0_resize_box_3.png 1200w"/>
+
+  	<img src="/projects/dj/images/13-1_hu4253a794f126f7f93acc80c8103c1ca3_49576_0aca2dbf9cfacf3fc45a9f1152f169c0.png" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="configuring-mixxx">
+  Configuring Mixxx
+  <a class="heading-link" href="#configuring-mixxx">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Mapped the MIDI controls to various controls in Mixxx.</p>
+<p>The mapping file can be found <a href="mixxx.xml" >here</a></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/dj/images/13-2_hua561ae018b79812c396ec296ce50dceb_51251_3aad419b33d5c60a8f215134a2d3d3ea.webp 400w,
+                /projects/dj/images/13-2_hua561ae018b79812c396ec296ce50dceb_51251_fa4837434043e3e5bde3a3f2a1db1e4c.webp 700w,
+                /projects/dj/images/13-2_hua561ae018b79812c396ec296ce50dceb_51251_46cb974fa164ff5021b4d09d7808e29a.webp 900w,
+                /projects/dj/images/13-2_hua561ae018b79812c396ec296ce50dceb_51251_1200x0_resize_q65_h2_box_3.webp 1200w"/>
+<source srcset="/projects/dj/images/13-2_hua561ae018b79812c396ec296ce50dceb_51251_72156d30c9868e633523536bad7acd9c.png 400w,
+                /projects/dj/images/13-2_hua561ae018b79812c396ec296ce50dceb_51251_75d91bc4685770f7a9b9fd9878f2c52c.png 700w,
+                /projects/dj/images/13-2_hua561ae018b79812c396ec296ce50dceb_51251_424e9c36c3faf87e18cffc761e611149.png 900w,
+                /projects/dj/images/13-2_hua561ae018b79812c396ec296ce50dceb_51251_1200x0_resize_box_3.png 1200w"/>
+
+  	<img src="/projects/dj/images/13-2_hua561ae018b79812c396ec296ce50dceb_51251_75d91bc4685770f7a9b9fd9878f2c52c.png" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h2 id="all-working-together">
+  All working together
+  <a class="heading-link" href="#all-working-together">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/dj/images/14_hu3b5621a6b3dc5e07405893f37e74e28a_737943_27142dd2fe5cdb3141095ac46eaa57ae.webp 400w,
+                /projects/dj/images/14_hu3b5621a6b3dc5e07405893f37e74e28a_737943_c1395932107d039ef2a9394e176f5def.webp 700w,
+                /projects/dj/images/14_hu3b5621a6b3dc5e07405893f37e74e28a_737943_c9d3f587c080905e78a5b9121bb517ae.webp 900w,
+                /projects/dj/images/14_hu3b5621a6b3dc5e07405893f37e74e28a_737943_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/dj/images/14_hu3b5621a6b3dc5e07405893f37e74e28a_737943_17351af18815286a97e3da4cf87ab310.jpg 400w,
+                /projects/dj/images/14_hu3b5621a6b3dc5e07405893f37e74e28a_737943_82aebc4f00392bf3f8512cc31760078d.jpg 700w,
+                /projects/dj/images/14_hu3b5621a6b3dc5e07405893f37e74e28a_737943_7c8570e0b4d85c8e747c77f376f51ac7.jpg 900w,
+                /projects/dj/images/14_hu3b5621a6b3dc5e07405893f37e74e28a_737943_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/dj/images/14_hu3b5621a6b3dc5e07405893f37e74e28a_737943_82aebc4f00392bf3f8512cc31760078d.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2015 -
+    
+    2023
+     Adam Piekarski 
+    ·
+    
+      Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

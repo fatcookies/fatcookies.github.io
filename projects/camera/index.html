@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  35mm Pinhole Camera · Adam Piekarski
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Adam Piekarski">
+<meta name="description" content="A 35mm camera made from a couple of baking trays">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="35mm Pinhole Camera"/>
+<meta name="twitter:description" content="A 35mm camera made from a couple of baking trays"/>
+
+<meta property="og:title" content="35mm Pinhole Camera" />
+<meta property="og:description" content="A 35mm camera made from a couple of baking trays" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fatcookies.github.io/projects/camera/" /><meta property="article:section" content="projects" />
+<meta property="article:published_time" content="2023-09-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-09-23T00:00:00+00:00" />
+<meta property="og:see_also" content="https://fatcookies.github.io/projects/boombox/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/ceefax/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/dj/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/amp2/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/eardentity/" />
+
+
+
+
+
+<link rel="canonical" href="https://fatcookies.github.io/projects/camera/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Adam Piekarski
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" aria-label="Menu"/>
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://fatcookies.github.io/projects/camera/">
+          35mm Pinhole Camera
+        </a>
+      </h1>
+    </header>
+
+    <p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/header_hu5bd804fe8ffa4bf41720ec2097af0572_147833_3203d67f402ea83bb86ba74ff4d7e6cd.webp 400w,
+                /projects/camera/images/header_hu5bd804fe8ffa4bf41720ec2097af0572_147833_5db64694de103df29f3cc2fde7ed145e.webp 700w,
+                /projects/camera/images/header_hu5bd804fe8ffa4bf41720ec2097af0572_147833_5e2f1432dc7c8ee02534535246460ad7.webp 900w,
+                /projects/camera/images/header_hu5bd804fe8ffa4bf41720ec2097af0572_147833_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/header_hu5bd804fe8ffa4bf41720ec2097af0572_147833_7876f1de00c5cc28f7957a1580377c5a.jpg 400w,
+                /projects/camera/images/header_hu5bd804fe8ffa4bf41720ec2097af0572_147833_01e41d4049eb840dee1ef0fe29741eb2.jpg 700w,
+                /projects/camera/images/header_hu5bd804fe8ffa4bf41720ec2097af0572_147833_10020e295739972a415b31e1b6afcc0c.jpg 900w,
+                /projects/camera/images/header_hu5bd804fe8ffa4bf41720ec2097af0572_147833_1200x0_resize_q65_box.jpg 1200w"/>
+
+<img src="/projects/camera/images/header_hu5bd804fe8ffa4bf41720ec2097af0572_147833_01e41d4049eb840dee1ef0fe29741eb2.jpg" alt="Header"  />
+
+</picture>
+</p>
+</p>
+<h2 id="how-i-made-it">
+  How I made it:
+  <a class="heading-link" href="#how-i-made-it">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="the-humble-beginnings">
+  The humble beginnings
+  <a class="heading-link" href="#the-humble-beginnings">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I picked up a couple of baking trays for the total price of 3 quid - very good value I must say!</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/a_hu5896fc55f9d6a1452ca94b10b34940fa_259562_b14abc063c97abff9542d1466c4d3464.webp 400w,
+                /projects/camera/images/a_hu5896fc55f9d6a1452ca94b10b34940fa_259562_3216c537f81db5c4be886c61852558c5.webp 700w,
+                /projects/camera/images/a_hu5896fc55f9d6a1452ca94b10b34940fa_259562_cfa0ffabe9bfb528b65c6160e48003f8.webp 900w,
+                /projects/camera/images/a_hu5896fc55f9d6a1452ca94b10b34940fa_259562_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/a_hu5896fc55f9d6a1452ca94b10b34940fa_259562_b2528570623626ffd41d149fb00499f5.jpg 400w,
+                /projects/camera/images/a_hu5896fc55f9d6a1452ca94b10b34940fa_259562_7a7015ec8e256ac586c7d9b05e794a4c.jpg 700w,
+                /projects/camera/images/a_hu5896fc55f9d6a1452ca94b10b34940fa_259562_ecc9a5c5712f0a84507adfe2be23d0c1.jpg 900w,
+                /projects/camera/images/a_hu5896fc55f9d6a1452ca94b10b34940fa_259562_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/a_hu5896fc55f9d6a1452ca94b10b34940fa_259562_7a7015ec8e256ac586c7d9b05e794a4c.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="initial-body-cut">
+  Initial body cut
+  <a class="heading-link" href="#initial-body-cut">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>You can cut through these trays with a good pair of scissors.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/b_hu5896fc55f9d6a1452ca94b10b34940fa_165754_5234e43e31f45a4a7e42703b892b978a.webp 400w,
+                /projects/camera/images/b_hu5896fc55f9d6a1452ca94b10b34940fa_165754_09946a906f271ac53e122458c12ff68e.webp 700w,
+                /projects/camera/images/b_hu5896fc55f9d6a1452ca94b10b34940fa_165754_a16dcb5db7fae6db6437b79a7ac82b3a.webp 900w,
+                /projects/camera/images/b_hu5896fc55f9d6a1452ca94b10b34940fa_165754_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/b_hu5896fc55f9d6a1452ca94b10b34940fa_165754_aecc38cc11e7cf2cdc9b25f1466b7f30.jpg 400w,
+                /projects/camera/images/b_hu5896fc55f9d6a1452ca94b10b34940fa_165754_5f642acb225c4fe9551726ed57111d34.jpg 700w,
+                /projects/camera/images/b_hu5896fc55f9d6a1452ca94b10b34940fa_165754_0786cb4eccb7b6d200bbd9d0f6bf93e7.jpg 900w,
+                /projects/camera/images/b_hu5896fc55f9d6a1452ca94b10b34940fa_165754_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/b_hu5896fc55f9d6a1452ca94b10b34940fa_165754_5f642acb225c4fe9551726ed57111d34.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="marking-out-the-pinhole">
+  Marking out the pinhole
+  <a class="heading-link" href="#marking-out-the-pinhole">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/c_hu5896fc55f9d6a1452ca94b10b34940fa_237429_ec91055067d9ca6c4600978fef333dfa.webp 400w,
+                /projects/camera/images/c_hu5896fc55f9d6a1452ca94b10b34940fa_237429_5386c580b1d10bf898eab32b11f06cf5.webp 700w,
+                /projects/camera/images/c_hu5896fc55f9d6a1452ca94b10b34940fa_237429_1b5c1d2dfb96a567cf6415b1ead3b4fc.webp 900w,
+                /projects/camera/images/c_hu5896fc55f9d6a1452ca94b10b34940fa_237429_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/c_hu5896fc55f9d6a1452ca94b10b34940fa_237429_656754adc898a38d9d9516ccc1b01cf1.jpg 400w,
+                /projects/camera/images/c_hu5896fc55f9d6a1452ca94b10b34940fa_237429_1ee4820402bfa87de08bfb05c714d816.jpg 700w,
+                /projects/camera/images/c_hu5896fc55f9d6a1452ca94b10b34940fa_237429_7fde3c5ef345664b2ac9219b8bd9154a.jpg 900w,
+                /projects/camera/images/c_hu5896fc55f9d6a1452ca94b10b34940fa_237429_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/c_hu5896fc55f9d6a1452ca94b10b34940fa_237429_1ee4820402bfa87de08bfb05c714d816.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="my-very-shoddy-metalwork">
+  My very shoddy metalwork
+  <a class="heading-link" href="#my-very-shoddy-metalwork">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The task of creating a hole in the middle of a sheet of aluminium without the aid of power tools was rather difficult.</p>
+<p>I managed to work my way around this later on!</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/d_hu5896fc55f9d6a1452ca94b10b34940fa_181113_9d2c8fe1ed9c082726003e246941d101.webp 400w,
+                /projects/camera/images/d_hu5896fc55f9d6a1452ca94b10b34940fa_181113_a6ac4509f870dcf3c66071719a8ea395.webp 700w,
+                /projects/camera/images/d_hu5896fc55f9d6a1452ca94b10b34940fa_181113_617b892f14f30207e45916cf59c8c577.webp 900w,
+                /projects/camera/images/d_hu5896fc55f9d6a1452ca94b10b34940fa_181113_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/d_hu5896fc55f9d6a1452ca94b10b34940fa_181113_e5d781fd266dfb418157be253f65b5da.jpg 400w,
+                /projects/camera/images/d_hu5896fc55f9d6a1452ca94b10b34940fa_181113_0f04ed93ba6b8e134edfe60441957ac8.jpg 700w,
+                /projects/camera/images/d_hu5896fc55f9d6a1452ca94b10b34940fa_181113_fae5e74465de603a2af199ed16eab5e0.jpg 900w,
+                /projects/camera/images/d_hu5896fc55f9d6a1452ca94b10b34940fa_181113_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/d_hu5896fc55f9d6a1452ca94b10b34940fa_181113_0f04ed93ba6b8e134edfe60441957ac8.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="attaching-a-base-to-the-back">
+  Attaching a base to the back
+  <a class="heading-link" href="#attaching-a-base-to-the-back">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I didn&rsquo;t even end up using this backplate in the end but I thought I&rsquo;d share it!</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/e_hu5896fc55f9d6a1452ca94b10b34940fa_198939_99a5aab97cdfb76b8564893df3b0e7e6.webp 400w,
+                /projects/camera/images/e_hu5896fc55f9d6a1452ca94b10b34940fa_198939_47394875dcd76f3f84bba3217987fe60.webp 700w,
+                /projects/camera/images/e_hu5896fc55f9d6a1452ca94b10b34940fa_198939_f0fed3b2495d98d5c4bfb7bbbbf12571.webp 900w,
+                /projects/camera/images/e_hu5896fc55f9d6a1452ca94b10b34940fa_198939_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/e_hu5896fc55f9d6a1452ca94b10b34940fa_198939_06743e04e3cdb3fe6b8fe29248121d4c.jpg 400w,
+                /projects/camera/images/e_hu5896fc55f9d6a1452ca94b10b34940fa_198939_99b994e4a79e4edde8d617fdcca757db.jpg 700w,
+                /projects/camera/images/e_hu5896fc55f9d6a1452ca94b10b34940fa_198939_476e06f2987a721444de80b917109f37.jpg 900w,
+                /projects/camera/images/e_hu5896fc55f9d6a1452ca94b10b34940fa_198939_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/e_hu5896fc55f9d6a1452ca94b10b34940fa_198939_99b994e4a79e4edde8d617fdcca757db.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="my-initial-bodies">
+  My initial bodies
+  <a class="heading-link" href="#my-initial-bodies">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Glue gun glue, superglue and black electrical tape were my weapons of choice for attaching different parts to the body.</p>
+<p>At this point I ditched the backplate on the left and concentrated on the front of the camera</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/f_hu875bada319f97aa313d89f955bbb5540_159871_a6d3270b3de5f3539e20b79823511d15.webp 400w,
+                /projects/camera/images/f_hu875bada319f97aa313d89f955bbb5540_159871_7c715cd8ebfac1c6d13260f569fe8c72.webp 700w,
+                /projects/camera/images/f_hu875bada319f97aa313d89f955bbb5540_159871_b887e54bdba1eb71c7a6ec04b00f5d59.webp 900w,
+                /projects/camera/images/f_hu875bada319f97aa313d89f955bbb5540_159871_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/f_hu875bada319f97aa313d89f955bbb5540_159871_0f7ab03b3001c4f343c9e37ba261a64e.jpg 400w,
+                /projects/camera/images/f_hu875bada319f97aa313d89f955bbb5540_159871_2f491d4044ba3064ea5ffc82be81ed2c.jpg 700w,
+                /projects/camera/images/f_hu875bada319f97aa313d89f955bbb5540_159871_9db494dc27ec1f24de68d4ca8d002aa2.jpg 900w,
+                /projects/camera/images/f_hu875bada319f97aa313d89f955bbb5540_159871_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/f_hu875bada319f97aa313d89f955bbb5540_159871_2f491d4044ba3064ea5ffc82be81ed2c.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="the-front">
+  The front
+  <a class="heading-link" href="#the-front">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I attached the bottom to the front part of the camera and taped up the inside of the camera to minimise internal reflections in the camera.</p>
+<p>The two small pieces at the bottom are dividers which form the frame for the film.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/g_hu5896fc55f9d6a1452ca94b10b34940fa_172108_c2629541b7e7150f1c20037623645a90.webp 400w,
+                /projects/camera/images/g_hu5896fc55f9d6a1452ca94b10b34940fa_172108_f89a5d7ccf37c6d89b5f518b48cd55b3.webp 700w,
+                /projects/camera/images/g_hu5896fc55f9d6a1452ca94b10b34940fa_172108_1ab61ed9f1b361cd6abd3a350d1f2395.webp 900w,
+                /projects/camera/images/g_hu5896fc55f9d6a1452ca94b10b34940fa_172108_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/g_hu5896fc55f9d6a1452ca94b10b34940fa_172108_e3727e604892b772f9d3d8b8192f004e.jpg 400w,
+                /projects/camera/images/g_hu5896fc55f9d6a1452ca94b10b34940fa_172108_b6a452caf8171db76a051e69a4f03f8e.jpg 700w,
+                /projects/camera/images/g_hu5896fc55f9d6a1452ca94b10b34940fa_172108_4f279aeab982e17874cfb0dd7fe5880c.jpg 900w,
+                /projects/camera/images/g_hu5896fc55f9d6a1452ca94b10b34940fa_172108_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/g_hu5896fc55f9d6a1452ca94b10b34940fa_172108_b6a452caf8171db76a051e69a4f03f8e.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="tension">
+  Tension!
+  <a class="heading-link" href="#tension">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I found a little patch of carpet laying around and stuck it on the right side of the camera.</p>
+<p>This is used to create tension in the take-up-spool for the film.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/h_hu5896fc55f9d6a1452ca94b10b34940fa_183671_2220e566a945e49c3a8bfefaf3131292.webp 400w,
+                /projects/camera/images/h_hu5896fc55f9d6a1452ca94b10b34940fa_183671_f72eb8800d1ac5deca7f028014098b81.webp 700w,
+                /projects/camera/images/h_hu5896fc55f9d6a1452ca94b10b34940fa_183671_603b2b7a3b885fe544c121d67313f44d.webp 900w,
+                /projects/camera/images/h_hu5896fc55f9d6a1452ca94b10b34940fa_183671_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/h_hu5896fc55f9d6a1452ca94b10b34940fa_183671_e02934945fc5eee4330f1bd2fabeecaa.jpg 400w,
+                /projects/camera/images/h_hu5896fc55f9d6a1452ca94b10b34940fa_183671_a2428474cfce33179dc0a032ef329be9.jpg 700w,
+                /projects/camera/images/h_hu5896fc55f9d6a1452ca94b10b34940fa_183671_05b098dc86b6dd020b69dac096fefd10.jpg 900w,
+                /projects/camera/images/h_hu5896fc55f9d6a1452ca94b10b34940fa_183671_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/h_hu5896fc55f9d6a1452ca94b10b34940fa_183671_a2428474cfce33179dc0a032ef329be9.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="the-top">
+  The top
+  <a class="heading-link" href="#the-top">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Drilled two holes to provide access to the film.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/i_hu5896fc55f9d6a1452ca94b10b34940fa_265141_24767e2066c292671d027c77d8dcdc26.webp 400w,
+                /projects/camera/images/i_hu5896fc55f9d6a1452ca94b10b34940fa_265141_c131f2aae98694e4a37bdb94de0ed503.webp 700w,
+                /projects/camera/images/i_hu5896fc55f9d6a1452ca94b10b34940fa_265141_ff5f64ed974c2491940da9d56f0b6de3.webp 900w,
+                /projects/camera/images/i_hu5896fc55f9d6a1452ca94b10b34940fa_265141_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/i_hu5896fc55f9d6a1452ca94b10b34940fa_265141_a407a3884e8c5e7ba255137ec77757e4.jpg 400w,
+                /projects/camera/images/i_hu5896fc55f9d6a1452ca94b10b34940fa_265141_34b1c7befa647ee97be04823d8090ab4.jpg 700w,
+                /projects/camera/images/i_hu5896fc55f9d6a1452ca94b10b34940fa_265141_8ef6d11e03ff9954dc49971c2c521cc0.jpg 900w,
+                /projects/camera/images/i_hu5896fc55f9d6a1452ca94b10b34940fa_265141_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/i_hu5896fc55f9d6a1452ca94b10b34940fa_265141_34b1c7befa647ee97be04823d8090ab4.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="the-dials">
+  The dials
+  <a class="heading-link" href="#the-dials">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The area to the left is where a 35mm film canister is loaded and then screw is then used to rewind the film when unloading the camera.</p>
+<p>On the right the screw is used to advance the film between every shot. More details to follow!</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/j_hu1d9eb9e70e010a1d7be973ba43ffd052_159750_2ddbacbe02b82d2f9da39d1ba77417ca.webp 400w,
+                /projects/camera/images/j_hu1d9eb9e70e010a1d7be973ba43ffd052_159750_cc0ccbd193a7dd2c70815271839ccbcf.webp 700w,
+                /projects/camera/images/j_hu1d9eb9e70e010a1d7be973ba43ffd052_159750_e74b4b64295aab7ebd9321357bcb9611.webp 900w,
+                /projects/camera/images/j_hu1d9eb9e70e010a1d7be973ba43ffd052_159750_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/j_hu1d9eb9e70e010a1d7be973ba43ffd052_159750_4e3c1e067befe4e3a286f8753ba6d623.jpg 400w,
+                /projects/camera/images/j_hu1d9eb9e70e010a1d7be973ba43ffd052_159750_88951c6bb4c2d5449ed80a2345b81b04.jpg 700w,
+                /projects/camera/images/j_hu1d9eb9e70e010a1d7be973ba43ffd052_159750_2a8b1c3a215ea96fd52e06a320ec6d83.jpg 900w,
+                /projects/camera/images/j_hu1d9eb9e70e010a1d7be973ba43ffd052_159750_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/j_hu1d9eb9e70e010a1d7be973ba43ffd052_159750_88951c6bb4c2d5449ed80a2345b81b04.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="light-proofing-the-holes">
+  Light proofing the holes
+  <a class="heading-link" href="#light-proofing-the-holes">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I drilled (punctured may a better way to describe it) a hole in the top of the enclosure and threaded a camera cable through it.</p>
+<p>Added some fabric to the underside of the holes on the top to minimise light which could enter via these gaps.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/l_hu88ced7f7f593b3f30be8fcf8d4934940_162760_39de394ab6018c76646809b9a4abfbbf.webp 400w,
+                /projects/camera/images/l_hu88ced7f7f593b3f30be8fcf8d4934940_162760_e66fae7c35c895e2b6afa52d20d41623.webp 700w,
+                /projects/camera/images/l_hu88ced7f7f593b3f30be8fcf8d4934940_162760_7734abd3a15de0ad54b14a08448ad3e1.webp 900w,
+                /projects/camera/images/l_hu88ced7f7f593b3f30be8fcf8d4934940_162760_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/l_hu88ced7f7f593b3f30be8fcf8d4934940_162760_db6d7b4a88852449fc4c168cf568ff9e.jpg 400w,
+                /projects/camera/images/l_hu88ced7f7f593b3f30be8fcf8d4934940_162760_168e967a1c2c3ecbb4208a927c56486d.jpg 700w,
+                /projects/camera/images/l_hu88ced7f7f593b3f30be8fcf8d4934940_162760_4a1f137758e1f3775e3751ba3f67c49d.jpg 900w,
+                /projects/camera/images/l_hu88ced7f7f593b3f30be8fcf8d4934940_162760_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/l_hu88ced7f7f593b3f30be8fcf8d4934940_162760_168e967a1c2c3ecbb4208a927c56486d.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="first-attempt-for-a-take-up-spool">
+  First attempt for a take-up-spool
+  <a class="heading-link" href="#first-attempt-for-a-take-up-spool">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>So I took a spent film canister, opened it up, did a bit of sawing and flipped it all round all to discover this was a terrible idea!</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/m_hu5896fc55f9d6a1452ca94b10b34940fa_169268_ba31b7babf0f00c7febf1c80f80bd32a.webp 400w,
+                /projects/camera/images/m_hu5896fc55f9d6a1452ca94b10b34940fa_169268_9c85b2309f060c271686beaf367909a4.webp 700w,
+                /projects/camera/images/m_hu5896fc55f9d6a1452ca94b10b34940fa_169268_68139bbb394934ad48269e7c59668e19.webp 900w,
+                /projects/camera/images/m_hu5896fc55f9d6a1452ca94b10b34940fa_169268_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/m_hu5896fc55f9d6a1452ca94b10b34940fa_169268_10d6d9071250a1191cb31d76f1ccd504.jpg 400w,
+                /projects/camera/images/m_hu5896fc55f9d6a1452ca94b10b34940fa_169268_4209b973c44f9958913a7e51ba52cbfe.jpg 700w,
+                /projects/camera/images/m_hu5896fc55f9d6a1452ca94b10b34940fa_169268_509e9803bad510fb5c4f5d662e903d21.jpg 900w,
+                /projects/camera/images/m_hu5896fc55f9d6a1452ca94b10b34940fa_169268_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/m_hu5896fc55f9d6a1452ca94b10b34940fa_169268_4209b973c44f9958913a7e51ba52cbfe.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="polishing">
+  Polishing
+  <a class="heading-link" href="#polishing">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>After deciding my take-up-spool was terrible I decided to scratch away the teflon coating from the baking trays to create a brushed aluminium look.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/n_huf3c6771ba903c0f8ba4c56b1f8145b91_155245_0e91fc5c902b06c3786f38b615b1065e.webp 400w,
+                /projects/camera/images/n_huf3c6771ba903c0f8ba4c56b1f8145b91_155245_b7c5443404d2402bc38eb65d96816b56.webp 700w,
+                /projects/camera/images/n_huf3c6771ba903c0f8ba4c56b1f8145b91_155245_cf745cd721c7bc038a00f4eb5550a157.webp 900w,
+                /projects/camera/images/n_huf3c6771ba903c0f8ba4c56b1f8145b91_155245_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/n_huf3c6771ba903c0f8ba4c56b1f8145b91_155245_a14a46c4318787bd8bc989cfd4caedb3.jpg 400w,
+                /projects/camera/images/n_huf3c6771ba903c0f8ba4c56b1f8145b91_155245_79c66b1e03e4a303c8868a76a30e1796.jpg 700w,
+                /projects/camera/images/n_huf3c6771ba903c0f8ba4c56b1f8145b91_155245_5878ca0bc0fa7b2dc87ac8ca60d0873a.jpg 900w,
+                /projects/camera/images/n_huf3c6771ba903c0f8ba4c56b1f8145b91_155245_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/n_huf3c6771ba903c0f8ba4c56b1f8145b91_155245_79c66b1e03e4a303c8868a76a30e1796.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="mess">
+  Mess
+  <a class="heading-link" href="#mess">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Don&rsquo;t work like this!</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/o_hu1f83ba19e7485c7574da33701cf96a7b_144103_01e2da8632330f7b65b68a04a506914c.webp 400w,
+                /projects/camera/images/o_hu1f83ba19e7485c7574da33701cf96a7b_144103_cf1068404ef616c28c36aa515047869e.webp 700w,
+                /projects/camera/images/o_hu1f83ba19e7485c7574da33701cf96a7b_144103_38b8a53a0f502fba46cb532e2f530423.webp 900w,
+                /projects/camera/images/o_hu1f83ba19e7485c7574da33701cf96a7b_144103_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/o_hu1f83ba19e7485c7574da33701cf96a7b_144103_894b3456f9c3ec6e488cfadc8458f7bf.jpg 400w,
+                /projects/camera/images/o_hu1f83ba19e7485c7574da33701cf96a7b_144103_9b759ee36fbbf04f6cbbca5ddfa70342.jpg 700w,
+                /projects/camera/images/o_hu1f83ba19e7485c7574da33701cf96a7b_144103_df58c5eddedb22472029097747dafd4e.jpg 900w,
+                /projects/camera/images/o_hu1f83ba19e7485c7574da33701cf96a7b_144103_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/o_hu1f83ba19e7485c7574da33701cf96a7b_144103_9b759ee36fbbf04f6cbbca5ddfa70342.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="take-up-spool-v2">
+  Take-up spool v2
+  <a class="heading-link" href="#take-up-spool-v2">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Believe it or not but I took a couple of wall plugs I had lying around and attached them to the screw to form the take-up spool.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/p_hu5896fc55f9d6a1452ca94b10b34940fa_184756_33d7fecb31da474a5e9c16234e080ac8.webp 400w,
+                /projects/camera/images/p_hu5896fc55f9d6a1452ca94b10b34940fa_184756_29d9a113e7b17023f0b0ea32ffc9da11.webp 700w,
+                /projects/camera/images/p_hu5896fc55f9d6a1452ca94b10b34940fa_184756_9d92449d1370fba7cf11dbcf8d877233.webp 900w,
+                /projects/camera/images/p_hu5896fc55f9d6a1452ca94b10b34940fa_184756_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/p_hu5896fc55f9d6a1452ca94b10b34940fa_184756_e03930b9a298f5d25ac5c0ef9f2a07a6.jpg 400w,
+                /projects/camera/images/p_hu5896fc55f9d6a1452ca94b10b34940fa_184756_f806fc31b240a5588f5ca04b4fcf5da2.jpg 700w,
+                /projects/camera/images/p_hu5896fc55f9d6a1452ca94b10b34940fa_184756_dba5eed557fd6901a448a7f3a7ccd347.jpg 900w,
+                /projects/camera/images/p_hu5896fc55f9d6a1452ca94b10b34940fa_184756_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/p_hu5896fc55f9d6a1452ca94b10b34940fa_184756_f806fc31b240a5588f5ca04b4fcf5da2.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="take-up-spool-v2-1">
+  Take-up spool v2
+  <a class="heading-link" href="#take-up-spool-v2-1">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Old spindle out. New plugs in.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/q_hu5896fc55f9d6a1452ca94b10b34940fa_179580_6a6997922fab7aed7face7aa858a57d4.webp 400w,
+                /projects/camera/images/q_hu5896fc55f9d6a1452ca94b10b34940fa_179580_75ae98ee12d239a7fce1fcae0fe47dfc.webp 700w,
+                /projects/camera/images/q_hu5896fc55f9d6a1452ca94b10b34940fa_179580_b644c819d28e2f24c8de870c2f7039cb.webp 900w,
+                /projects/camera/images/q_hu5896fc55f9d6a1452ca94b10b34940fa_179580_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/q_hu5896fc55f9d6a1452ca94b10b34940fa_179580_5fd87b04ff166441f67e2ef24ae21c28.jpg 400w,
+                /projects/camera/images/q_hu5896fc55f9d6a1452ca94b10b34940fa_179580_2adaec767dd5c502a300f489734a130f.jpg 700w,
+                /projects/camera/images/q_hu5896fc55f9d6a1452ca94b10b34940fa_179580_f245486c26a475654170be21d9a4e981.jpg 900w,
+                /projects/camera/images/q_hu5896fc55f9d6a1452ca94b10b34940fa_179580_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/q_hu5896fc55f9d6a1452ca94b10b34940fa_179580_2adaec767dd5c502a300f489734a130f.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="more-tension">
+  More tension
+  <a class="heading-link" href="#more-tension">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>My carpet idea didn&rsquo;t seem to create enough tension for the film so a paper-clip positioned in a strange manner was just what the doctor ordered.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/r_hu5896fc55f9d6a1452ca94b10b34940fa_182814_cf5a43b6b83e15bbe304d8ac0ae28929.webp 400w,
+                /projects/camera/images/r_hu5896fc55f9d6a1452ca94b10b34940fa_182814_3bc94064f39b45131fa83b3cf5110871.webp 700w,
+                /projects/camera/images/r_hu5896fc55f9d6a1452ca94b10b34940fa_182814_148069fed9c93f40868ab6d59b1d05be.webp 900w,
+                /projects/camera/images/r_hu5896fc55f9d6a1452ca94b10b34940fa_182814_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/r_hu5896fc55f9d6a1452ca94b10b34940fa_182814_560b56ad8a52470fedf84308c980c4c5.jpg 400w,
+                /projects/camera/images/r_hu5896fc55f9d6a1452ca94b10b34940fa_182814_2d2505973b1bc162cfb0fffeafbb967d.jpg 700w,
+                /projects/camera/images/r_hu5896fc55f9d6a1452ca94b10b34940fa_182814_c8bf1a33562740365850fbe3603dfef1.jpg 900w,
+                /projects/camera/images/r_hu5896fc55f9d6a1452ca94b10b34940fa_182814_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/r_hu5896fc55f9d6a1452ca94b10b34940fa_182814_2d2505973b1bc162cfb0fffeafbb967d.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="rewind-knob">
+  Rewind knob
+  <a class="heading-link" href="#rewind-knob">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The end of a paperclip super-glued to the end of the film rewind screw provided the means to rewind film in the canister.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/s_hu5896fc55f9d6a1452ca94b10b34940fa_156422_c495739847a8c21556a20554e16562ca.webp 400w,
+                /projects/camera/images/s_hu5896fc55f9d6a1452ca94b10b34940fa_156422_7b8f8141db83da2c95bf7614932c5170.webp 700w,
+                /projects/camera/images/s_hu5896fc55f9d6a1452ca94b10b34940fa_156422_75cb96a500b2b2641dc8f64fc9302740.webp 900w,
+                /projects/camera/images/s_hu5896fc55f9d6a1452ca94b10b34940fa_156422_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/s_hu5896fc55f9d6a1452ca94b10b34940fa_156422_e1828906ff69f892573a60ffc897791c.jpg 400w,
+                /projects/camera/images/s_hu5896fc55f9d6a1452ca94b10b34940fa_156422_d299ee9c0e9ceee222de33874987631d.jpg 700w,
+                /projects/camera/images/s_hu5896fc55f9d6a1452ca94b10b34940fa_156422_4ed7af12b34910b578e977946363c0e9.jpg 900w,
+                /projects/camera/images/s_hu5896fc55f9d6a1452ca94b10b34940fa_156422_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/s_hu5896fc55f9d6a1452ca94b10b34940fa_156422_d299ee9c0e9ceee222de33874987631d.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="creating-the-pinhole">
+  Creating the pinhole
+  <a class="heading-link" href="#creating-the-pinhole">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The oven tray aluminium was too thick to create a pinhole small enough so once again beer saves the day!</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/t_hu5896fc55f9d6a1452ca94b10b34940fa_155705_d199dc133a4074eda14a86d00285108b.webp 400w,
+                /projects/camera/images/t_hu5896fc55f9d6a1452ca94b10b34940fa_155705_e1ae324e9e9a2fefece0e73ce959d4ea.webp 700w,
+                /projects/camera/images/t_hu5896fc55f9d6a1452ca94b10b34940fa_155705_211803d19de293162f92a097d4d945c7.webp 900w,
+                /projects/camera/images/t_hu5896fc55f9d6a1452ca94b10b34940fa_155705_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/t_hu5896fc55f9d6a1452ca94b10b34940fa_155705_4346ffc7a24d5489094dda14dffcfcf6.jpg 400w,
+                /projects/camera/images/t_hu5896fc55f9d6a1452ca94b10b34940fa_155705_c25d0cc55a9d5bc3946e063d04d9b63f.jpg 700w,
+                /projects/camera/images/t_hu5896fc55f9d6a1452ca94b10b34940fa_155705_a0424786f7caa063be4150ae3ab95c2f.jpg 900w,
+                /projects/camera/images/t_hu5896fc55f9d6a1452ca94b10b34940fa_155705_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/t_hu5896fc55f9d6a1452ca94b10b34940fa_155705_c25d0cc55a9d5bc3946e063d04d9b63f.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="the-pinhole">
+  The Pinhole
+  <a class="heading-link" href="#the-pinhole">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Pierced with a sewing needle. Approximately 0.4mm wide.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/u_hu5896fc55f9d6a1452ca94b10b34940fa_141611_e3a579c34e2bf73d3d5b9baa1120268e.webp 400w,
+                /projects/camera/images/u_hu5896fc55f9d6a1452ca94b10b34940fa_141611_17382e5842058efeec99c4f1b5a70f22.webp 700w,
+                /projects/camera/images/u_hu5896fc55f9d6a1452ca94b10b34940fa_141611_f5aec072951f04d403bd1ec12a9447d1.webp 900w,
+                /projects/camera/images/u_hu5896fc55f9d6a1452ca94b10b34940fa_141611_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/u_hu5896fc55f9d6a1452ca94b10b34940fa_141611_3221f0e016020bc0ce100ea7f28d6410.jpg 400w,
+                /projects/camera/images/u_hu5896fc55f9d6a1452ca94b10b34940fa_141611_ab3f17e26d57d23928e191ae38b3d71e.jpg 700w,
+                /projects/camera/images/u_hu5896fc55f9d6a1452ca94b10b34940fa_141611_e22d97222781fc0af623ef873772766b.jpg 900w,
+                /projects/camera/images/u_hu5896fc55f9d6a1452ca94b10b34940fa_141611_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/u_hu5896fc55f9d6a1452ca94b10b34940fa_141611_ab3f17e26d57d23928e191ae38b3d71e.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="the-pinhole-1">
+  The Pinhole
+  <a class="heading-link" href="#the-pinhole-1">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Just a little test</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/v_hu5896fc55f9d6a1452ca94b10b34940fa_65328_4bef8af798edb885f2278c71b10daeea.webp 400w,
+                /projects/camera/images/v_hu5896fc55f9d6a1452ca94b10b34940fa_65328_6817f38d69919295b7aac0affd61a558.webp 700w,
+                /projects/camera/images/v_hu5896fc55f9d6a1452ca94b10b34940fa_65328_179313bfc0f634cd4351a9d075fb6081.webp 900w,
+                /projects/camera/images/v_hu5896fc55f9d6a1452ca94b10b34940fa_65328_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/v_hu5896fc55f9d6a1452ca94b10b34940fa_65328_866bbca9da52aed4d58e6e0223a253b1.jpg 400w,
+                /projects/camera/images/v_hu5896fc55f9d6a1452ca94b10b34940fa_65328_e5b43cb127b01e373a048cadde11a434.jpg 700w,
+                /projects/camera/images/v_hu5896fc55f9d6a1452ca94b10b34940fa_65328_9bec0f43ece64f87bcbda40cd12ff766.jpg 900w,
+                /projects/camera/images/v_hu5896fc55f9d6a1452ca94b10b34940fa_65328_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/v_hu5896fc55f9d6a1452ca94b10b34940fa_65328_e5b43cb127b01e373a048cadde11a434.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="attaching-the-dividers-and-taping-it-all-up">
+  Attaching the dividers and taping it all up
+  <a class="heading-link" href="#attaching-the-dividers-and-taping-it-all-up">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I attached the dividers to the front of the camera.</p>
+<p>They are 54mm apart (as opposed to the standard 36mm) as I wished to create a camera which would shoot ultra-wide photos - this unfortunately become redundant as explained later.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/w_hu0b840e9dea8e7b8ab303f121f8d21545_154096_cca76c31ffc44b43e7f0407a47470dc7.webp 400w,
+                /projects/camera/images/w_hu0b840e9dea8e7b8ab303f121f8d21545_154096_398e899f0ac97adabc7d760c2c10460b.webp 700w,
+                /projects/camera/images/w_hu0b840e9dea8e7b8ab303f121f8d21545_154096_9dc4c1d9e8c42675beec7b0a53c4aaff.webp 900w,
+                /projects/camera/images/w_hu0b840e9dea8e7b8ab303f121f8d21545_154096_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/w_hu0b840e9dea8e7b8ab303f121f8d21545_154096_1af0454f1e9dbe2d1cc652ac20aa4813.jpg 400w,
+                /projects/camera/images/w_hu0b840e9dea8e7b8ab303f121f8d21545_154096_8a7af182003db3d0e67b31d3b3992c11.jpg 700w,
+                /projects/camera/images/w_hu0b840e9dea8e7b8ab303f121f8d21545_154096_8238156ab3f12b773050f8c3a9ecad83.jpg 900w,
+                /projects/camera/images/w_hu0b840e9dea8e7b8ab303f121f8d21545_154096_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/w_hu0b840e9dea8e7b8ab303f121f8d21545_154096_8a7af182003db3d0e67b31d3b3992c11.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="film-test">
+  Film test
+  <a class="heading-link" href="#film-test">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I loaded a junk developed roll of film into the camera to test it out: all seems swell.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/x_hu60fd27cc69edf70a955d7e4cf25c93ce_118489_d9db4a5afeb349314f32c606db1ca91d.webp 400w,
+                /projects/camera/images/x_hu60fd27cc69edf70a955d7e4cf25c93ce_118489_01dc558a79dd7c8715f09264f0b5e984.webp 700w,
+                /projects/camera/images/x_hu60fd27cc69edf70a955d7e4cf25c93ce_118489_0626c1839d66cb22f82c96b3aecb7ad2.webp 900w,
+                /projects/camera/images/x_hu60fd27cc69edf70a955d7e4cf25c93ce_118489_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/x_hu60fd27cc69edf70a955d7e4cf25c93ce_118489_eafa7935ac0ff0849dad3bf20ad71daf.jpg 400w,
+                /projects/camera/images/x_hu60fd27cc69edf70a955d7e4cf25c93ce_118489_efb75a4a000b9973aa2442da8f5f0ce2.jpg 700w,
+                /projects/camera/images/x_hu60fd27cc69edf70a955d7e4cf25c93ce_118489_b4e897efec11659c9def9727dfd0536e.jpg 900w,
+                /projects/camera/images/x_hu60fd27cc69edf70a955d7e4cf25c93ce_118489_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/x_hu60fd27cc69edf70a955d7e4cf25c93ce_118489_efb75a4a000b9973aa2442da8f5f0ce2.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="back-plate-number-two">
+  Back plate number two
+  <a class="heading-link" href="#back-plate-number-two">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>My first backplate in the beginning of the album was inadequate so I remade it using a single piece of &ldquo;baking tray&rdquo;.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/y_hu5896fc55f9d6a1452ca94b10b34940fa_136620_c70106025a444b7600554ec53a795af6.webp 400w,
+                /projects/camera/images/y_hu5896fc55f9d6a1452ca94b10b34940fa_136620_824414b34c97fc63a7976b4cda1058df.webp 700w,
+                /projects/camera/images/y_hu5896fc55f9d6a1452ca94b10b34940fa_136620_cdb68e57628dd3624dc792a6dd840293.webp 900w,
+                /projects/camera/images/y_hu5896fc55f9d6a1452ca94b10b34940fa_136620_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/y_hu5896fc55f9d6a1452ca94b10b34940fa_136620_650b096e2f8ddd3a69e5bc3cc58b1706.jpg 400w,
+                /projects/camera/images/y_hu5896fc55f9d6a1452ca94b10b34940fa_136620_4332ce308a58a4bd2c5a7f7d42f12b6e.jpg 700w,
+                /projects/camera/images/y_hu5896fc55f9d6a1452ca94b10b34940fa_136620_e1299541e3f18e79d133cb8e3511a774.jpg 900w,
+                /projects/camera/images/y_hu5896fc55f9d6a1452ca94b10b34940fa_136620_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/y_hu5896fc55f9d6a1452ca94b10b34940fa_136620_4332ce308a58a4bd2c5a7f7d42f12b6e.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="snug-fit">
+  Snug fit
+  <a class="heading-link" href="#snug-fit">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/z_hu65d0ce39976ca27060d1d24cc0834859_111216_b49c456e588f311b9ff2e654222c2b14.webp 400w,
+                /projects/camera/images/z_hu65d0ce39976ca27060d1d24cc0834859_111216_49fecb159f0cdcf2ed4a61b4b1333a1a.webp 700w,
+                /projects/camera/images/z_hu65d0ce39976ca27060d1d24cc0834859_111216_2683affe1da18e16afeacf1af47f836b.webp 900w,
+                /projects/camera/images/z_hu65d0ce39976ca27060d1d24cc0834859_111216_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/z_hu65d0ce39976ca27060d1d24cc0834859_111216_e4dec2f2aecd7d05af00f440920befc0.jpg 400w,
+                /projects/camera/images/z_hu65d0ce39976ca27060d1d24cc0834859_111216_5e3675c23ca044180f5a39a0071fba95.jpg 700w,
+                /projects/camera/images/z_hu65d0ce39976ca27060d1d24cc0834859_111216_aa3a6b9c4d16f83f64d8724f1ea96df1.jpg 900w,
+                /projects/camera/images/z_hu65d0ce39976ca27060d1d24cc0834859_111216_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/z_hu65d0ce39976ca27060d1d24cc0834859_111216_5e3675c23ca044180f5a39a0071fba95.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="lightproofing">
+  Lightproofing
+  <a class="heading-link" href="#lightproofing">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Added some fabric to ensure no light can enter the camera between the front and back bodies of the camera.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/za_hub63c964f416f438652480955b56a85df_146388_76c58c6d0ab851400df39bef92330e54.webp 400w,
+                /projects/camera/images/za_hub63c964f416f438652480955b56a85df_146388_6972f0eadb203ff5dbf7bbde43040793.webp 700w,
+                /projects/camera/images/za_hub63c964f416f438652480955b56a85df_146388_43a2680bf0c9fe1e3d1cb76599715ae3.webp 900w,
+                /projects/camera/images/za_hub63c964f416f438652480955b56a85df_146388_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/za_hub63c964f416f438652480955b56a85df_146388_3f575ced9a8a350d1957c5b8f45af630.jpg 400w,
+                /projects/camera/images/za_hub63c964f416f438652480955b56a85df_146388_bb924a5d3a717b1a433c261c0f1c3178.jpg 700w,
+                /projects/camera/images/za_hub63c964f416f438652480955b56a85df_146388_498bb50ca53b04785d2cc7dd365c09ec.jpg 900w,
+                /projects/camera/images/za_hub63c964f416f438652480955b56a85df_146388_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/za_hub63c964f416f438652480955b56a85df_146388_bb924a5d3a717b1a433c261c0f1c3178.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="more-lightproofing">
+  More lightproofing
+  <a class="heading-link" href="#more-lightproofing">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Same business on the front of the camera</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/zb_hua1d0f019592bcc01fb4b4c76fc485ad9_134492_3055478d202293aa545ce6187a05c9ba.webp 400w,
+                /projects/camera/images/zb_hua1d0f019592bcc01fb4b4c76fc485ad9_134492_fda5a29dd317b2588568d538075b669b.webp 700w,
+                /projects/camera/images/zb_hua1d0f019592bcc01fb4b4c76fc485ad9_134492_1376b1f16b8beb4af0c55d7c6665551f.webp 900w,
+                /projects/camera/images/zb_hua1d0f019592bcc01fb4b4c76fc485ad9_134492_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/zb_hua1d0f019592bcc01fb4b4c76fc485ad9_134492_dc0c679586ee2f7e9fd510d46d87825a.jpg 400w,
+                /projects/camera/images/zb_hua1d0f019592bcc01fb4b4c76fc485ad9_134492_b2f4a57c3a8d5e7cd6b52dd877c2bdb7.jpg 700w,
+                /projects/camera/images/zb_hua1d0f019592bcc01fb4b4c76fc485ad9_134492_ac3702ce99f137240ed47012e0bdca86.jpg 900w,
+                /projects/camera/images/zb_hua1d0f019592bcc01fb4b4c76fc485ad9_134492_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/zb_hua1d0f019592bcc01fb4b4c76fc485ad9_134492_b2f4a57c3a8d5e7cd6b52dd877c2bdb7.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="fixing-my-mess">
+  Fixing my mess
+  <a class="heading-link" href="#fixing-my-mess">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I cut more aluminium from the can and cut a large hole to cover up my terrible hole making.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/zc_huea63fa91b7f9131f172df7b2fa63ebf4_195088_02f12437a6c4777fdcfa078b6fa5b9fb.webp 400w,
+                /projects/camera/images/zc_huea63fa91b7f9131f172df7b2fa63ebf4_195088_22e374955db9c0df6ed2a0b35ee23acc.webp 700w,
+                /projects/camera/images/zc_huea63fa91b7f9131f172df7b2fa63ebf4_195088_0fd72196a40046f1568687ec771bb884.webp 900w,
+                /projects/camera/images/zc_huea63fa91b7f9131f172df7b2fa63ebf4_195088_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/zc_huea63fa91b7f9131f172df7b2fa63ebf4_195088_65c5a61d8577ba4460df7caa6dd9ddd0.jpg 400w,
+                /projects/camera/images/zc_huea63fa91b7f9131f172df7b2fa63ebf4_195088_dcfa7229b9cfb3f1ac1e5037e896eadd.jpg 700w,
+                /projects/camera/images/zc_huea63fa91b7f9131f172df7b2fa63ebf4_195088_610372e24d9a26ef7f56fbb35fd977d5.jpg 900w,
+                /projects/camera/images/zc_huea63fa91b7f9131f172df7b2fa63ebf4_195088_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/zc_huea63fa91b7f9131f172df7b2fa63ebf4_195088_dcfa7229b9cfb3f1ac1e5037e896eadd.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="mounting-screws">
+  Mounting screws
+  <a class="heading-link" href="#mounting-screws">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>These are M3 screw nuts which should enable the camera to be attached to most tripods.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/ze_hu5896fc55f9d6a1452ca94b10b34940fa_179794_b743c25770813125fa4467498e62e7f7.webp 400w,
+                /projects/camera/images/ze_hu5896fc55f9d6a1452ca94b10b34940fa_179794_f68c34d1b2a986ddfba866c6df493170.webp 700w,
+                /projects/camera/images/ze_hu5896fc55f9d6a1452ca94b10b34940fa_179794_add5af09a771db9bf714627bda56ae9c.webp 900w,
+                /projects/camera/images/ze_hu5896fc55f9d6a1452ca94b10b34940fa_179794_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/ze_hu5896fc55f9d6a1452ca94b10b34940fa_179794_6b8729e9ba487c6a3f8db555f338540d.jpg 400w,
+                /projects/camera/images/ze_hu5896fc55f9d6a1452ca94b10b34940fa_179794_05402c7037e09ab621f2afa2d862a76e.jpg 700w,
+                /projects/camera/images/ze_hu5896fc55f9d6a1452ca94b10b34940fa_179794_71ff8ba6a4198a66ac5dbf8311ec4b9c.jpg 900w,
+                /projects/camera/images/ze_hu5896fc55f9d6a1452ca94b10b34940fa_179794_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/ze_hu5896fc55f9d6a1452ca94b10b34940fa_179794_05402c7037e09ab621f2afa2d862a76e.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="attached-to-the-base-of-the-camera">
+  Attached to the base of the camera
+  <a class="heading-link" href="#attached-to-the-base-of-the-camera">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/zf_hu53e78750b80f0140f1bd0248d4120ee6_139859_6836d7bcf599f6e0dd970cf910159d82.webp 400w,
+                /projects/camera/images/zf_hu53e78750b80f0140f1bd0248d4120ee6_139859_97a514ca04bff8426783cc2a57d0b407.webp 700w,
+                /projects/camera/images/zf_hu53e78750b80f0140f1bd0248d4120ee6_139859_8197ad731797df049063a9e06d72d945.webp 900w,
+                /projects/camera/images/zf_hu53e78750b80f0140f1bd0248d4120ee6_139859_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/zf_hu53e78750b80f0140f1bd0248d4120ee6_139859_0b42e87bc5bd239810116c7a6950ce47.jpg 400w,
+                /projects/camera/images/zf_hu53e78750b80f0140f1bd0248d4120ee6_139859_6a05fea58070df18041c356e610cf011.jpg 700w,
+                /projects/camera/images/zf_hu53e78750b80f0140f1bd0248d4120ee6_139859_81f960eb825dd6649d0b195e2500d201.jpg 900w,
+                /projects/camera/images/zf_hu53e78750b80f0140f1bd0248d4120ee6_139859_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/zf_hu53e78750b80f0140f1bd0248d4120ee6_139859_6a05fea58070df18041c356e610cf011.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="done-and-dusted">
+  Done and dusted
+  <a class="heading-link" href="#done-and-dusted">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I unfortunately I didn&rsquo;t take more pictures of the finished product.</p>
+<p>I used a bit of card and tape to create a shutter, not very accurate or pretty, but it seemed to get the job done :)</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/zd_hufa7f1961d2d2ee203d16b9f40821b3ec_185402_94c0e6ff4f3674a8c992018594c37741.webp 400w,
+                /projects/camera/images/zd_hufa7f1961d2d2ee203d16b9f40821b3ec_185402_1b6fc05c2e3f343e4d4a7891bcce8638.webp 700w,
+                /projects/camera/images/zd_hufa7f1961d2d2ee203d16b9f40821b3ec_185402_f4575cc423af6540a750351d71a55eb8.webp 900w,
+                /projects/camera/images/zd_hufa7f1961d2d2ee203d16b9f40821b3ec_185402_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/zd_hufa7f1961d2d2ee203d16b9f40821b3ec_185402_8c3c8d67094bf59d0029a9c1201c7214.jpg 400w,
+                /projects/camera/images/zd_hufa7f1961d2d2ee203d16b9f40821b3ec_185402_6350331d27384706619b88034b096d27.jpg 700w,
+                /projects/camera/images/zd_hufa7f1961d2d2ee203d16b9f40821b3ec_185402_eb10f1219ee60b5e48a7ec44a9981ae6.jpg 900w,
+                /projects/camera/images/zd_hufa7f1961d2d2ee203d16b9f40821b3ec_185402_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/zd_hufa7f1961d2d2ee203d16b9f40821b3ec_185402_6350331d27384706619b88034b096d27.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h2 id="sample-pictures">
+  Sample Pictures
+  <a class="heading-link" href="#sample-pictures">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>I initially hoped for a wide aspect ratio but it seems my shoddy metal work blocked light from entering the camera at extreme angles.</p>
+<p>With a 0.4mm pinhole and approximately 25mm between hole and film, the camera had a fixed f-stop of ~62.5. I did a few exposure time calculations when taking photos and even used a light meter for some but as my shutter was completely manual it was rather silly. In sunny conditions I opened the shutter for 1 second, in the shade 4-10.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/1_hua889745161bd4c4f3cd6a6bc84d202b5_7144927_cae5de9de42ee9a2f549cc9ad29d2509.webp 400w,
+                /projects/camera/images/1_hua889745161bd4c4f3cd6a6bc84d202b5_7144927_8cfac214ba7855ff414bae961cb2939f.webp 700w,
+                /projects/camera/images/1_hua889745161bd4c4f3cd6a6bc84d202b5_7144927_591ab017435b3c64e6021b4b468308bd.webp 900w,
+                /projects/camera/images/1_hua889745161bd4c4f3cd6a6bc84d202b5_7144927_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/1_hua889745161bd4c4f3cd6a6bc84d202b5_7144927_73de232f0a9192d77d6bc30e00a56104.jpg 400w,
+                /projects/camera/images/1_hua889745161bd4c4f3cd6a6bc84d202b5_7144927_78eed1d41bce25c2cbb1489bf47721a3.jpg 700w,
+                /projects/camera/images/1_hua889745161bd4c4f3cd6a6bc84d202b5_7144927_7d0747d66700d43a5275c34b535647ba.jpg 900w,
+                /projects/camera/images/1_hua889745161bd4c4f3cd6a6bc84d202b5_7144927_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/1_hua889745161bd4c4f3cd6a6bc84d202b5_7144927_78eed1d41bce25c2cbb1489bf47721a3.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="a-pathway">
+  A pathway
+  <a class="heading-link" href="#a-pathway">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/2_hu93f33f5fe30a2c5827fd482516720808_7145253_493c9458ef433ab2441fc8ff0605f5b7.webp 400w,
+                /projects/camera/images/2_hu93f33f5fe30a2c5827fd482516720808_7145253_8e4d3fd2b7cca5f2f48ccceefbfd0ded.webp 700w,
+                /projects/camera/images/2_hu93f33f5fe30a2c5827fd482516720808_7145253_21c4b16abec58c115fc253de3f7e2e4d.webp 900w,
+                /projects/camera/images/2_hu93f33f5fe30a2c5827fd482516720808_7145253_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/2_hu93f33f5fe30a2c5827fd482516720808_7145253_887a260d789382e00f840b6bc9142e85.jpg 400w,
+                /projects/camera/images/2_hu93f33f5fe30a2c5827fd482516720808_7145253_f3095b286a6b97ed2ced13c9368e8a4a.jpg 700w,
+                /projects/camera/images/2_hu93f33f5fe30a2c5827fd482516720808_7145253_33b8ca7627c0ca4386c84ea395502578.jpg 900w,
+                /projects/camera/images/2_hu93f33f5fe30a2c5827fd482516720808_7145253_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/2_hu93f33f5fe30a2c5827fd482516720808_7145253_f3095b286a6b97ed2ced13c9368e8a4a.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="road">
+  Road
+  <a class="heading-link" href="#road">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>And a not so good one :(</p>
+<p>Getting the exposure right for photos was a bit tricky.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/camera/images/3_huefb164f649f5dff188f2c48dbca050f1_4137057_57bec8bdeec7f64bc92444562c8fba18.webp 400w,
+                /projects/camera/images/3_huefb164f649f5dff188f2c48dbca050f1_4137057_d59d0ad328afb2a71c31e69a8feebf4e.webp 700w,
+                /projects/camera/images/3_huefb164f649f5dff188f2c48dbca050f1_4137057_9acea97c6aca22da18d986a5eb9131d2.webp 900w,
+                /projects/camera/images/3_huefb164f649f5dff188f2c48dbca050f1_4137057_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/camera/images/3_huefb164f649f5dff188f2c48dbca050f1_4137057_7b7c1a4e68c5e1ba00b72ba3d12434b6.jpg 400w,
+                /projects/camera/images/3_huefb164f649f5dff188f2c48dbca050f1_4137057_0c2fcddc4efa1d0e4d5b44621cd78cb6.jpg 700w,
+                /projects/camera/images/3_huefb164f649f5dff188f2c48dbca050f1_4137057_25bd22d9bd87052b7efc8a8cf383bf7a.jpg 900w,
+                /projects/camera/images/3_huefb164f649f5dff188f2c48dbca050f1_4137057_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/camera/images/3_huefb164f649f5dff188f2c48dbca050f1_4137057_0c2fcddc4efa1d0e4d5b44621cd78cb6.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2015 -
+    
+    2023
+     Adam Piekarski 
+    ·
+    
+      Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

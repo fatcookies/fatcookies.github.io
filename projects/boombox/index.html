@@ -1,0 +1,1793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Boombox · Adam Piekarski
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Adam Piekarski">
+<meta name="description" content="My take on creating a boombox - a 10kg booming monster">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Boombox"/>
+<meta name="twitter:description" content="My take on creating a boombox - a 10kg booming monster"/>
+
+<meta property="og:title" content="Boombox" />
+<meta property="og:description" content="My take on creating a boombox - a 10kg booming monster" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fatcookies.github.io/projects/boombox/" /><meta property="article:section" content="projects" />
+<meta property="article:published_time" content="2023-09-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-09-23T00:00:00+00:00" />
+<meta property="og:see_also" content="https://fatcookies.github.io/projects/camera/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/ceefax/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/dj/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/amp2/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/eardentity/" />
+
+
+
+
+
+<link rel="canonical" href="https://fatcookies.github.io/projects/boombox/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Adam Piekarski
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" aria-label="Menu"/>
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://fatcookies.github.io/projects/boombox/">
+          Boombox
+        </a>
+      </h1>
+    </header>
+
+    <p>My take on creating a boombox - a 10kg booming monster</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/header_hu04a1f68801264e819cefbc64b51e4305_710954_2326c72a529fb7f120ec7dcf1278f504.webp 400w,
+                /projects/boombox/images/header_hu04a1f68801264e819cefbc64b51e4305_710954_3e532a427ab2fc3eee4a48b5398769ca.webp 700w,
+                /projects/boombox/images/header_hu04a1f68801264e819cefbc64b51e4305_710954_5fd6bc6055b1b5c8784683def3b73b10.webp 900w,
+                /projects/boombox/images/header_hu04a1f68801264e819cefbc64b51e4305_710954_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/header_hu04a1f68801264e819cefbc64b51e4305_710954_fc016cc80efce19498f1ce7d7b36cbc3.jpg 400w,
+                /projects/boombox/images/header_hu04a1f68801264e819cefbc64b51e4305_710954_b545e4206474586b295be12ea34d1ae8.jpg 700w,
+                /projects/boombox/images/header_hu04a1f68801264e819cefbc64b51e4305_710954_dccffd10e1c76de8cdfb2808927e6267.jpg 900w,
+                /projects/boombox/images/header_hu04a1f68801264e819cefbc64b51e4305_710954_1200x0_resize_q65_box.jpg 1200w"/>
+
+<img src="/projects/boombox/images/header_hu04a1f68801264e819cefbc64b51e4305_710954_b545e4206474586b295be12ea34d1ae8.jpg" alt="Header"  />
+
+</picture>
+</p>
+</p>
+<h2 id="how-i-made-it">
+  How I made it:
+  <a class="heading-link" href="#how-i-made-it">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="front-design-in-sketchup">
+  Front design in SketchUp
+  <a class="heading-link" href="#front-design-in-sketchup">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>This is my initial idea of two full range drivers and one &ldquo;subwoofer&rdquo; driver to deliver the bass.</p>
+<p>I was a little enthusiastic with the dimensions and the finished product is a lot smaller than this.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/1_hua98611ce321f2c604c49bd47a128319f_251737_d78a7e0db207abb69e972c422c40ec8a.webp 400w,
+                /projects/boombox/images/1_hua98611ce321f2c604c49bd47a128319f_251737_702bd1e79be0e0fee7d1202f087d84f4.webp 700w,
+                /projects/boombox/images/1_hua98611ce321f2c604c49bd47a128319f_251737_af7f4f6dc7523c76f47bd2371e9d47cb.webp 900w,
+                /projects/boombox/images/1_hua98611ce321f2c604c49bd47a128319f_251737_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/1_hua98611ce321f2c604c49bd47a128319f_251737_1c6a43c95ef30a03d594065f3fd26f43.jpg 400w,
+                /projects/boombox/images/1_hua98611ce321f2c604c49bd47a128319f_251737_52c37d3f0a448a733e03880002eaaaba.jpg 700w,
+                /projects/boombox/images/1_hua98611ce321f2c604c49bd47a128319f_251737_3f2abb2a0c23833850652d0ddc741727.jpg 900w,
+                /projects/boombox/images/1_hua98611ce321f2c604c49bd47a128319f_251737_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/1_hua98611ce321f2c604c49bd47a128319f_251737_52c37d3f0a448a733e03880002eaaaba.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="back-design-in-sketchup">
+  Back design in SketchUp
+  <a class="heading-link" href="#back-design-in-sketchup">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Three chambers - one for each speaker. On the left sits a sealed lead acid battery for power and on the right are two amplifiers: one for the small full-range speakers, the other the power the sub.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/2_hua98611ce321f2c604c49bd47a128319f_292937_b4769de923772a31ce24c347130138eb.webp 400w,
+                /projects/boombox/images/2_hua98611ce321f2c604c49bd47a128319f_292937_007dac5e2f75f07178b3b2c774034707.webp 700w,
+                /projects/boombox/images/2_hua98611ce321f2c604c49bd47a128319f_292937_bbe6fa5a98f0b275633d721a94b1e0a2.webp 900w,
+                /projects/boombox/images/2_hua98611ce321f2c604c49bd47a128319f_292937_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/2_hua98611ce321f2c604c49bd47a128319f_292937_d425bca520d6e37de86aa30439b8b126.jpg 400w,
+                /projects/boombox/images/2_hua98611ce321f2c604c49bd47a128319f_292937_e1be00c24ca59b88272eef0ca62b8b26.jpg 700w,
+                /projects/boombox/images/2_hua98611ce321f2c604c49bd47a128319f_292937_68cbc2e97b55f535257df749e9d94800.jpg 900w,
+                /projects/boombox/images/2_hua98611ce321f2c604c49bd47a128319f_292937_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/2_hua98611ce321f2c604c49bd47a128319f_292937_e1be00c24ca59b88272eef0ca62b8b26.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="main-material">
+  Main Material
+  <a class="heading-link" href="#main-material">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Some scrap 5/8&quot; plywood I had lying around.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/3_hu0a78b3c690eee504633c5ae84490fb9a_595686_e39c6877abbb9f6fe9945900ae28cce2.webp 400w,
+                /projects/boombox/images/3_hu0a78b3c690eee504633c5ae84490fb9a_595686_351239a5340cfb8e36ee66768d5097b4.webp 700w,
+                /projects/boombox/images/3_hu0a78b3c690eee504633c5ae84490fb9a_595686_3f776e800b212c0a9063416b7a86f098.webp 900w,
+                /projects/boombox/images/3_hu0a78b3c690eee504633c5ae84490fb9a_595686_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/3_hu0a78b3c690eee504633c5ae84490fb9a_595686_a2adaab2b44fe49c10f32de946079fb9.jpg 400w,
+                /projects/boombox/images/3_hu0a78b3c690eee504633c5ae84490fb9a_595686_175bb131abd95a52d099724474124e52.jpg 700w,
+                /projects/boombox/images/3_hu0a78b3c690eee504633c5ae84490fb9a_595686_c49f16e8a78f78bbb121fe813a0970bb.jpg 900w,
+                /projects/boombox/images/3_hu0a78b3c690eee504633c5ae84490fb9a_595686_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/3_hu0a78b3c690eee504633c5ae84490fb9a_595686_175bb131abd95a52d099724474124e52.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="bottom-and-side">
+  Bottom and side
+  <a class="heading-link" href="#bottom-and-side">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Based from the measurements I made in SketchUp (21&quot; x 12&quot; x 9&quot;), I cut out the bottom and side. The sheer size then became apparent and after a few calculations I decided to reduce the size to 18&quot; x 10&quot; x 7&quot;.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/4_huf79bf429c6ba99bbb03b20660770d7de_256602_df2b32de3dc4cc8cc5222cb970317ce7.webp 400w,
+                /projects/boombox/images/4_huf79bf429c6ba99bbb03b20660770d7de_256602_a64e9a5c56b442a2ef751f68a496b8e8.webp 700w,
+                /projects/boombox/images/4_huf79bf429c6ba99bbb03b20660770d7de_256602_177bd4fd562002e46d910ccf799320fe.webp 900w,
+                /projects/boombox/images/4_huf79bf429c6ba99bbb03b20660770d7de_256602_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/4_huf79bf429c6ba99bbb03b20660770d7de_256602_668d77842e27ad716615018e5ca60124.jpg 400w,
+                /projects/boombox/images/4_huf79bf429c6ba99bbb03b20660770d7de_256602_0cdab7855c77655efce4523c4fc87561.jpg 700w,
+                /projects/boombox/images/4_huf79bf429c6ba99bbb03b20660770d7de_256602_9523ad7b6c710dd735faad7731fa444d.jpg 900w,
+                /projects/boombox/images/4_huf79bf429c6ba99bbb03b20660770d7de_256602_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/4_huf79bf429c6ba99bbb03b20660770d7de_256602_0cdab7855c77655efce4523c4fc87561.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="preparing-the-box-joints">
+  Preparing the box joints
+  <a class="heading-link" href="#preparing-the-box-joints">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Measured out boxes 5/8&quot; (the same thickness as the plywood) and made the cuts with a hack saw - yes I&rsquo;m guilty of using a metal blade with wood!</p>
+<p>Also guilty of using a sock with my clamp to protect the wood :)</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/5_hua1e5e3972ddf55cba02628d7fa139ad8_349512_b2f62fae904b1dc816525614f84cb9ee.webp 400w,
+                /projects/boombox/images/5_hua1e5e3972ddf55cba02628d7fa139ad8_349512_c228d6637553cea2fb9b5a3fa0b3821f.webp 700w,
+                /projects/boombox/images/5_hua1e5e3972ddf55cba02628d7fa139ad8_349512_4f40c232a56ce8ba8d0687aa8d31cb1d.webp 900w,
+                /projects/boombox/images/5_hua1e5e3972ddf55cba02628d7fa139ad8_349512_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/5_hua1e5e3972ddf55cba02628d7fa139ad8_349512_220daf528bc9d167b7e84255e6403e72.jpg 400w,
+                /projects/boombox/images/5_hua1e5e3972ddf55cba02628d7fa139ad8_349512_05b0819fad93136309e3db8131f7e0ca.jpg 700w,
+                /projects/boombox/images/5_hua1e5e3972ddf55cba02628d7fa139ad8_349512_693c01ceb8c481dd971a53ee39556532.jpg 900w,
+                /projects/boombox/images/5_hua1e5e3972ddf55cba02628d7fa139ad8_349512_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/5_hua1e5e3972ddf55cba02628d7fa139ad8_349512_05b0819fad93136309e3db8131f7e0ca.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="boxing-out-the-boxes">
+  Boxing out the boxes
+  <a class="heading-link" href="#boxing-out-the-boxes">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Drilled a few overlapping holes until I could snap out the alternating boxes.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/6_huf79bf429c6ba99bbb03b20660770d7de_280887_01ca577fb9136a71d1bbd2a025e8dcf8.webp 400w,
+                /projects/boombox/images/6_huf79bf429c6ba99bbb03b20660770d7de_280887_8c6eb25a157d3c7a9903c64ba310fe7a.webp 700w,
+                /projects/boombox/images/6_huf79bf429c6ba99bbb03b20660770d7de_280887_a75918bf2fa6780a872ef6294dc1fe99.webp 900w,
+                /projects/boombox/images/6_huf79bf429c6ba99bbb03b20660770d7de_280887_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/6_huf79bf429c6ba99bbb03b20660770d7de_280887_dfba09e173e55455ee4ee9c239005ed2.jpg 400w,
+                /projects/boombox/images/6_huf79bf429c6ba99bbb03b20660770d7de_280887_72d93325056b8630daa5dc9fa9ce7305.jpg 700w,
+                /projects/boombox/images/6_huf79bf429c6ba99bbb03b20660770d7de_280887_92ed1e64f86eba68bb82527f768309b8.jpg 900w,
+                /projects/boombox/images/6_huf79bf429c6ba99bbb03b20660770d7de_280887_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/6_huf79bf429c6ba99bbb03b20660770d7de_280887_72d93325056b8630daa5dc9fa9ce7305.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="cleaning-up-the-boxes">
+  Cleaning up the boxes
+  <a class="heading-link" href="#cleaning-up-the-boxes">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/7_hua1e5e3972ddf55cba02628d7fa139ad8_312521_5602d43536f5795ef118b8df2b21ed38.webp 400w,
+                /projects/boombox/images/7_hua1e5e3972ddf55cba02628d7fa139ad8_312521_5d2e5961e098745e88980448507812b6.webp 700w,
+                /projects/boombox/images/7_hua1e5e3972ddf55cba02628d7fa139ad8_312521_a417825e309ea8de444cd10b623d08f6.webp 900w,
+                /projects/boombox/images/7_hua1e5e3972ddf55cba02628d7fa139ad8_312521_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/7_hua1e5e3972ddf55cba02628d7fa139ad8_312521_956bbd13fbdbc41091c4a64ebd7db52a.jpg 400w,
+                /projects/boombox/images/7_hua1e5e3972ddf55cba02628d7fa139ad8_312521_7f83307f360eb677775f5fd3a1601ca3.jpg 700w,
+                /projects/boombox/images/7_hua1e5e3972ddf55cba02628d7fa139ad8_312521_f49df8fe115adf91204dafa567f9bc8f.jpg 900w,
+                /projects/boombox/images/7_hua1e5e3972ddf55cba02628d7fa139ad8_312521_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/7_hua1e5e3972ddf55cba02628d7fa139ad8_312521_7f83307f360eb677775f5fd3a1601ca3.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="almost-all-the-wood-i-need">
+  Almost all the wood I need
+  <a class="heading-link" href="#almost-all-the-wood-i-need">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>On the left sit the top and bottom pieces, the sides are in the centre and the front/back baffles complete the set on the right.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/8_huf79bf429c6ba99bbb03b20660770d7de_286186_4e17d117a76aeec4360912045a835705.webp 400w,
+                /projects/boombox/images/8_huf79bf429c6ba99bbb03b20660770d7de_286186_a8dc9eb7c76d1d5d4957168f08153068.webp 700w,
+                /projects/boombox/images/8_huf79bf429c6ba99bbb03b20660770d7de_286186_1b41ca824eb68d24eac81f4dbafa259c.webp 900w,
+                /projects/boombox/images/8_huf79bf429c6ba99bbb03b20660770d7de_286186_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/8_huf79bf429c6ba99bbb03b20660770d7de_286186_4c1906fe85227223f53d50b384368691.jpg 400w,
+                /projects/boombox/images/8_huf79bf429c6ba99bbb03b20660770d7de_286186_39f68dd3b22eaabbc09cb692b1de5cae.jpg 700w,
+                /projects/boombox/images/8_huf79bf429c6ba99bbb03b20660770d7de_286186_48f6cd1c68fa531e234fa27174279dd0.jpg 900w,
+                /projects/boombox/images/8_huf79bf429c6ba99bbb03b20660770d7de_286186_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/8_huf79bf429c6ba99bbb03b20660770d7de_286186_39f68dd3b22eaabbc09cb692b1de5cae.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="dry-fit">
+  Dry fit
+  <a class="heading-link" href="#dry-fit">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>A little rough round the edges, but nice and stiff nevertheless!</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/9_huf79bf429c6ba99bbb03b20660770d7de_227439_aaa3cb1ef64162a50c56ad99c855c005.webp 400w,
+                /projects/boombox/images/9_huf79bf429c6ba99bbb03b20660770d7de_227439_7a6770820977147457a171b806a26a39.webp 700w,
+                /projects/boombox/images/9_huf79bf429c6ba99bbb03b20660770d7de_227439_27946a2f85826a3281cd8e16ac3e13b6.webp 900w,
+                /projects/boombox/images/9_huf79bf429c6ba99bbb03b20660770d7de_227439_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/9_huf79bf429c6ba99bbb03b20660770d7de_227439_9c5322664c23fc604d7094f92ca5a171.jpg 400w,
+                /projects/boombox/images/9_huf79bf429c6ba99bbb03b20660770d7de_227439_e4518fd7514caeeb7914f7ecf9d38d1a.jpg 700w,
+                /projects/boombox/images/9_huf79bf429c6ba99bbb03b20660770d7de_227439_046827cfb09ca5280fdbcb3bde6880de.jpg 900w,
+                /projects/boombox/images/9_huf79bf429c6ba99bbb03b20660770d7de_227439_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/9_huf79bf429c6ba99bbb03b20660770d7de_227439_e4518fd7514caeeb7914f7ecf9d38d1a.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="gluing-the-main-frame">
+  Gluing the main frame
+  <a class="heading-link" href="#gluing-the-main-frame">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Just your bog standard wood glue in between the box joint. Wish I had some clamps for this bit.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/10_hued61635cc0953021c9350eb8c76c1ba9_321684_c085087de1c7b2b6746b3f38fa979150.webp 400w,
+                /projects/boombox/images/10_hued61635cc0953021c9350eb8c76c1ba9_321684_e2fae741043f065117ab2e55c6145d0f.webp 700w,
+                /projects/boombox/images/10_hued61635cc0953021c9350eb8c76c1ba9_321684_f282538ea4f6d8db2894c68639090e41.webp 900w,
+                /projects/boombox/images/10_hued61635cc0953021c9350eb8c76c1ba9_321684_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/10_hued61635cc0953021c9350eb8c76c1ba9_321684_246b4ad53953072d38e8d56c24134620.jpg 400w,
+                /projects/boombox/images/10_hued61635cc0953021c9350eb8c76c1ba9_321684_43a353d6823497ecf5032761c5e0980e.jpg 700w,
+                /projects/boombox/images/10_hued61635cc0953021c9350eb8c76c1ba9_321684_230b85c3e30eb990c11fec6712969785.jpg 900w,
+                /projects/boombox/images/10_hued61635cc0953021c9350eb8c76c1ba9_321684_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/10_hued61635cc0953021c9350eb8c76c1ba9_321684_43a353d6823497ecf5032761c5e0980e.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="marking-out-the-front-baffle">
+  Marking out the front baffle
+  <a class="heading-link" href="#marking-out-the-front-baffle">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Marked out the holes for the three speakers, some of the holes to mount them and the holes to mount the thing to the main box.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/11_huc84754acd68f9fd0f8b2734052d469be_301565_c1adeb4683f5dc13ab58bf1142e36c4a.webp 400w,
+                /projects/boombox/images/11_huc84754acd68f9fd0f8b2734052d469be_301565_07ed934f5696d5cb5c1ed1a848576c7a.webp 700w,
+                /projects/boombox/images/11_huc84754acd68f9fd0f8b2734052d469be_301565_422e60f95c4c7c3591546eadf8c5efa0.webp 900w,
+                /projects/boombox/images/11_huc84754acd68f9fd0f8b2734052d469be_301565_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/11_huc84754acd68f9fd0f8b2734052d469be_301565_eae73c3f83a0b34a62ad557e106a22db.jpg 400w,
+                /projects/boombox/images/11_huc84754acd68f9fd0f8b2734052d469be_301565_2cd3c143bdd3a442a6e143fb68081f69.jpg 700w,
+                /projects/boombox/images/11_huc84754acd68f9fd0f8b2734052d469be_301565_af5c5cef1215458d85d0d1b6d97c7363.jpg 900w,
+                /projects/boombox/images/11_huc84754acd68f9fd0f8b2734052d469be_301565_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/11_huc84754acd68f9fd0f8b2734052d469be_301565_2cd3c143bdd3a442a6e143fb68081f69.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="cut-out-the-driver-holes">
+  Cut out the driver holes
+  <a class="heading-link" href="#cut-out-the-driver-holes">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Drilled a hole, cut roughly with the jig-saw and finished with the file.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/12_hu0a78b3c690eee504633c5ae84490fb9a_362480_5becc5319165580d9ac1d18c89323edb.webp 400w,
+                /projects/boombox/images/12_hu0a78b3c690eee504633c5ae84490fb9a_362480_413b25b6e59267bd435b5a217bdf37db.webp 700w,
+                /projects/boombox/images/12_hu0a78b3c690eee504633c5ae84490fb9a_362480_429c8990d17e4f845129b99f62ccec4c.webp 900w,
+                /projects/boombox/images/12_hu0a78b3c690eee504633c5ae84490fb9a_362480_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/12_hu0a78b3c690eee504633c5ae84490fb9a_362480_a8cb746d689d5748b245dcaa89d3c58d.jpg 400w,
+                /projects/boombox/images/12_hu0a78b3c690eee504633c5ae84490fb9a_362480_df5edb5f9ed22677186c4d5d0c23ed31.jpg 700w,
+                /projects/boombox/images/12_hu0a78b3c690eee504633c5ae84490fb9a_362480_3d1c98c587091301fce6098c8162359e.jpg 900w,
+                /projects/boombox/images/12_hu0a78b3c690eee504633c5ae84490fb9a_362480_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/12_hu0a78b3c690eee504633c5ae84490fb9a_362480_df5edb5f9ed22677186c4d5d0c23ed31.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="ooops">
+  Ooops
+  <a class="heading-link" href="#ooops">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Cut one of the holes a little too big so I created a wood glue/sawdust paste to patch up my shoddy work</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/13_huc84754acd68f9fd0f8b2734052d469be_246924_a61a6b1a3a107ca393736d424db08c64.webp 400w,
+                /projects/boombox/images/13_huc84754acd68f9fd0f8b2734052d469be_246924_9c7a6a3a0261f86a04e067a06ea20b94.webp 700w,
+                /projects/boombox/images/13_huc84754acd68f9fd0f8b2734052d469be_246924_6766202d27a7dee32eaab065eca1d606.webp 900w,
+                /projects/boombox/images/13_huc84754acd68f9fd0f8b2734052d469be_246924_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/13_huc84754acd68f9fd0f8b2734052d469be_246924_0209e6165ee2dd6a6cfc2d5099484242.jpg 400w,
+                /projects/boombox/images/13_huc84754acd68f9fd0f8b2734052d469be_246924_be13752f63b3562ff9147f5978254e74.jpg 700w,
+                /projects/boombox/images/13_huc84754acd68f9fd0f8b2734052d469be_246924_0840a612f8ca3f36333700978fc74438.jpg 900w,
+                /projects/boombox/images/13_huc84754acd68f9fd0f8b2734052d469be_246924_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/13_huc84754acd68f9fd0f8b2734052d469be_246924_be13752f63b3562ff9147f5978254e74.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="corner-brackets">
+  Corner Brackets
+  <a class="heading-link" href="#corner-brackets">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Added these zinc flange brackets for rigidity and more importantly, something to mount the front and back baffles to the main body of the box.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/14_huc84754acd68f9fd0f8b2734052d469be_248742_3275e8fa1c402ec7d8df2f6b6966cbd1.webp 400w,
+                /projects/boombox/images/14_huc84754acd68f9fd0f8b2734052d469be_248742_9b7f72183d9b3bf7f10174abadf9b874.webp 700w,
+                /projects/boombox/images/14_huc84754acd68f9fd0f8b2734052d469be_248742_77fd163152806cf317206972cba3583c.webp 900w,
+                /projects/boombox/images/14_huc84754acd68f9fd0f8b2734052d469be_248742_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/14_huc84754acd68f9fd0f8b2734052d469be_248742_cd2d4d765da99bb2c6a68b969471a087.jpg 400w,
+                /projects/boombox/images/14_huc84754acd68f9fd0f8b2734052d469be_248742_8a2974583a19269b8aae8cae46d5c34f.jpg 700w,
+                /projects/boombox/images/14_huc84754acd68f9fd0f8b2734052d469be_248742_74825baba76ea38d27ded432d1ff2a79.jpg 900w,
+                /projects/boombox/images/14_huc84754acd68f9fd0f8b2734052d469be_248742_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/14_huc84754acd68f9fd0f8b2734052d469be_248742_8a2974583a19269b8aae8cae46d5c34f.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="gluing-the-compartment-separators">
+  Gluing the compartment separators
+  <a class="heading-link" href="#gluing-the-compartment-separators">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>They are not part of the structural integrity of the boombox hence a tight fit and a spot of wood glue is enough.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/15_hub1e0224749db55de33633d409674d030_366843_521ce95cfd46fed2cdc31c5654f959b9.webp 400w,
+                /projects/boombox/images/15_hub1e0224749db55de33633d409674d030_366843_3a96e953542f2c9f57e2b68cbcde2990.webp 700w,
+                /projects/boombox/images/15_hub1e0224749db55de33633d409674d030_366843_65a312ff6bdcd57c59ea4d7f2063e9e1.webp 900w,
+                /projects/boombox/images/15_hub1e0224749db55de33633d409674d030_366843_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/15_hub1e0224749db55de33633d409674d030_366843_78059b9db1f3a98b3f2e9ff9fb0a8875.jpg 400w,
+                /projects/boombox/images/15_hub1e0224749db55de33633d409674d030_366843_66cdfabe3bfc39f78c520c300493ff0b.jpg 700w,
+                /projects/boombox/images/15_hub1e0224749db55de33633d409674d030_366843_e75b3ee459ebb34712c13bc71b8c3357.jpg 900w,
+                /projects/boombox/images/15_hub1e0224749db55de33633d409674d030_366843_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/15_hub1e0224749db55de33633d409674d030_366843_66cdfabe3bfc39f78c520c300493ff0b.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="now-time-to-get-to-the-real-nuts-and-bolts-of-it-all">
+  Now, time to get to the real nuts and bolts of it all
+  <a class="heading-link" href="#now-time-to-get-to-the-real-nuts-and-bolts-of-it-all">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I apologise for the pun!</p>
+<p>On the left are the nuts and bolts for the two full range speakers, the subwoofer bolts are in the centre and the front/back baffle mounting nuts/bolts complete the set</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/16_hu8c7d6f5dbb483252ab53fbceb53a27c9_420026_a391bbeb30ce87e1d7c9caa93b16a6e5.webp 400w,
+                /projects/boombox/images/16_hu8c7d6f5dbb483252ab53fbceb53a27c9_420026_6894f70f4612a98554146b083682d4a5.webp 700w,
+                /projects/boombox/images/16_hu8c7d6f5dbb483252ab53fbceb53a27c9_420026_7b9a6ff8ebf3c164409d045241d38a0d.webp 900w,
+                /projects/boombox/images/16_hu8c7d6f5dbb483252ab53fbceb53a27c9_420026_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/16_hu8c7d6f5dbb483252ab53fbceb53a27c9_420026_b88c42958999a86603fde56159707dee.jpg 400w,
+                /projects/boombox/images/16_hu8c7d6f5dbb483252ab53fbceb53a27c9_420026_9d9dad6d3bbd18dfd6aaf7de32cdccb5.jpg 700w,
+                /projects/boombox/images/16_hu8c7d6f5dbb483252ab53fbceb53a27c9_420026_39964ff618ace0da1a9fb9eb9267f64b.jpg 900w,
+                /projects/boombox/images/16_hu8c7d6f5dbb483252ab53fbceb53a27c9_420026_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/16_hu8c7d6f5dbb483252ab53fbceb53a27c9_420026_9d9dad6d3bbd18dfd6aaf7de32cdccb5.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="dry-fitting-the-front-baffle">
+  Dry fitting the front baffle
+  <a class="heading-link" href="#dry-fitting-the-front-baffle">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The two full-range speakers share a bolt for mounting</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/17_hu32268e00e6e60f286b2d818656aefeac_280408_e49d00536b6fbd9ca160a28f382d443b.webp 400w,
+                /projects/boombox/images/17_hu32268e00e6e60f286b2d818656aefeac_280408_f4411acde1768999df29036051f719da.webp 700w,
+                /projects/boombox/images/17_hu32268e00e6e60f286b2d818656aefeac_280408_050c7adf2ecf07f354e363e620914f22.webp 900w,
+                /projects/boombox/images/17_hu32268e00e6e60f286b2d818656aefeac_280408_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/17_hu32268e00e6e60f286b2d818656aefeac_280408_750f1980b736dc4b0b6719a174a54649.jpg 400w,
+                /projects/boombox/images/17_hu32268e00e6e60f286b2d818656aefeac_280408_653fdde572ac204d94191ddf901cda6e.jpg 700w,
+                /projects/boombox/images/17_hu32268e00e6e60f286b2d818656aefeac_280408_665de46caffd8f85a8c81cad287ed3c9.jpg 900w,
+                /projects/boombox/images/17_hu32268e00e6e60f286b2d818656aefeac_280408_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/17_hu32268e00e6e60f286b2d818656aefeac_280408_653fdde572ac204d94191ddf901cda6e.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="the-amplifiers">
+  The amplifiers
+  <a class="heading-link" href="#the-amplifiers">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I had these lying around - they are both 12V amplifiers, take audio in with RCA sockets and claim to put out around 20W of power into two channels (exaggerated marketing).</p>
+<p>I used the top amplifier for the bass (since it is bridged) and the bottom amp to driver the two full-range speakers.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/18_hub1e0224749db55de33633d409674d030_237546_04f4aba7fd39818fd09558d52b477bed.webp 400w,
+                /projects/boombox/images/18_hub1e0224749db55de33633d409674d030_237546_73a63587492d8371a30fc2283cfc1114.webp 700w,
+                /projects/boombox/images/18_hub1e0224749db55de33633d409674d030_237546_5fea5ea8ea73fd9d4d62d61f528ba461.webp 900w,
+                /projects/boombox/images/18_hub1e0224749db55de33633d409674d030_237546_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/18_hub1e0224749db55de33633d409674d030_237546_2911a74254d34f27c6c7147255480c0a.jpg 400w,
+                /projects/boombox/images/18_hub1e0224749db55de33633d409674d030_237546_b44ffa87642beca3b68d881db7ab2a63.jpg 700w,
+                /projects/boombox/images/18_hub1e0224749db55de33633d409674d030_237546_75553421640cf48e5c86daf89cc91110.jpg 900w,
+                /projects/boombox/images/18_hub1e0224749db55de33633d409674d030_237546_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/18_hub1e0224749db55de33633d409674d030_237546_b44ffa87642beca3b68d881db7ab2a63.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="creating-a-2-in-1-plate">
+  Creating a 2-in-1 plate
+  <a class="heading-link" href="#creating-a-2-in-1-plate">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Cut a piece of aluminium out and drilled holes such that both amplifiers can be mounted onto the same plate.</p>
+<p>The black is just a protective film on the alu; this was my third attempt, ensuring everything was aligned was tricky.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/19_hu469462d3cf0892d9fa3221a2cd5ca70b_234317_6833d01d3f755954380dcc0237bff746.webp 400w,
+                /projects/boombox/images/19_hu469462d3cf0892d9fa3221a2cd5ca70b_234317_24dd224864ad9cc01accbfe638459925.webp 700w,
+                /projects/boombox/images/19_hu469462d3cf0892d9fa3221a2cd5ca70b_234317_34bcfae2fcb0317490c7e322d1d48bfe.webp 900w,
+                /projects/boombox/images/19_hu469462d3cf0892d9fa3221a2cd5ca70b_234317_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/19_hu469462d3cf0892d9fa3221a2cd5ca70b_234317_2a727085aa7decc13f103cd4b967233c.jpg 400w,
+                /projects/boombox/images/19_hu469462d3cf0892d9fa3221a2cd5ca70b_234317_b4e1c45c7cbdf89fa3de9a549603da39.jpg 700w,
+                /projects/boombox/images/19_hu469462d3cf0892d9fa3221a2cd5ca70b_234317_89549e8c0f1667f4f9d0e19253991a0c.jpg 900w,
+                /projects/boombox/images/19_hu469462d3cf0892d9fa3221a2cd5ca70b_234317_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/19_hu469462d3cf0892d9fa3221a2cd5ca70b_234317_b4e1c45c7cbdf89fa3de9a549603da39.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="the-amplifiers-and-their-modifications">
+  The amplifiers and their modifications
+  <a class="heading-link" href="#the-amplifiers-and-their-modifications">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>On the far left of both amplifiers you can see two wires shorted together with some tape on top - this means they are always &ldquo;on&rdquo; so I could connect a DPDT switch (top left corner) that can switch both amplifiers on/off at the same time.</p>
+<p>Both amplifiers are connected with DC jacks which are connected to a power source, more on this later.</p>
+<p>Hard to see in the image - I desoldered the supply capacitor of the top amplifier and &ldquo;extended&rdquo; its leads so i could fit the switch in.</p>
+<p>This configuration is also safer as the original designs have the switches AFTER the input capacitors which is quite dangerous if you mix your positive/negative up.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/20_hu1fb045016f0504392bf9cc39c28c988e_365304_f5fe955c152b88a69305a83e74a2cd3f.webp 400w,
+                /projects/boombox/images/20_hu1fb045016f0504392bf9cc39c28c988e_365304_945151d5602289ff092c66caa972436c.webp 700w,
+                /projects/boombox/images/20_hu1fb045016f0504392bf9cc39c28c988e_365304_1922101e90fb189e669b3f9201bc4df9.webp 900w,
+                /projects/boombox/images/20_hu1fb045016f0504392bf9cc39c28c988e_365304_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/20_hu1fb045016f0504392bf9cc39c28c988e_365304_6620dec428f45d170fd055ebc8ac2afd.jpg 400w,
+                /projects/boombox/images/20_hu1fb045016f0504392bf9cc39c28c988e_365304_c56c59405c55bfe70c417a1c19f4215c.jpg 700w,
+                /projects/boombox/images/20_hu1fb045016f0504392bf9cc39c28c988e_365304_1bc148adb7451719d3bbc92f7d7b9999.jpg 900w,
+                /projects/boombox/images/20_hu1fb045016f0504392bf9cc39c28c988e_365304_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/20_hu1fb045016f0504392bf9cc39c28c988e_365304_c56c59405c55bfe70c417a1c19f4215c.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="the-control-panel">
+  The control panel
+  <a class="heading-link" href="#the-control-panel">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The two amplifiers controls hooked up to the same plate plus a switch which switches both amps on/off simultaneously.</p>
+<p>Unfortunately there is one key thing missing: audio input! Not to worry - I solve this later on.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/21_hu3cf1955a1f97632b14ade2aa505af33e_211577_ccda515e4c768cb00e4e87749fd00bf7.webp 400w,
+                /projects/boombox/images/21_hu3cf1955a1f97632b14ade2aa505af33e_211577_2721cf86e1c6b35492b0cbc2d2067c36.webp 700w,
+                /projects/boombox/images/21_hu3cf1955a1f97632b14ade2aa505af33e_211577_af4c0ec6ab6ac278406a1a949ffcf679.webp 900w,
+                /projects/boombox/images/21_hu3cf1955a1f97632b14ade2aa505af33e_211577_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/21_hu3cf1955a1f97632b14ade2aa505af33e_211577_24139e356ef613d9f97fc3178a6e6559.jpg 400w,
+                /projects/boombox/images/21_hu3cf1955a1f97632b14ade2aa505af33e_211577_52c448e38707e2148f2931e7ba502048.jpg 700w,
+                /projects/boombox/images/21_hu3cf1955a1f97632b14ade2aa505af33e_211577_347eb98f58dac647f142f2b8729845e6.jpg 900w,
+                /projects/boombox/images/21_hu3cf1955a1f97632b14ade2aa505af33e_211577_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/21_hu3cf1955a1f97632b14ade2aa505af33e_211577_52c448e38707e2148f2931e7ba502048.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="the-speakers">
+  The speakers
+  <a class="heading-link" href="#the-speakers">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I ventured into the world of car audio for these speakers:</p>
+<p>The two golden full-range speakers are 4 inch &ldquo;auna Goldblaster 4&rsquo;s&rdquo;</p>
+<p>The bass speaker is a Pyramid Audio PW677X.</p>
+<p>They claim to handle any power that I am planning on throwing at them and claim to have a sensitivity of 89 and 86 db/W/m for the full range and bass, respectively.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/22_hu8c7d6f5dbb483252ab53fbceb53a27c9_307778_e361051d29bf3cf590878a8d10a21e35.webp 400w,
+                /projects/boombox/images/22_hu8c7d6f5dbb483252ab53fbceb53a27c9_307778_5e5285413c02cf71d6a5c5e26cc671ac.webp 700w,
+                /projects/boombox/images/22_hu8c7d6f5dbb483252ab53fbceb53a27c9_307778_ea9691a3b04b89b05537efe563e12e0f.webp 900w,
+                /projects/boombox/images/22_hu8c7d6f5dbb483252ab53fbceb53a27c9_307778_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/22_hu8c7d6f5dbb483252ab53fbceb53a27c9_307778_78718d832a0fccb5a4e45f2e49387bcd.jpg 400w,
+                /projects/boombox/images/22_hu8c7d6f5dbb483252ab53fbceb53a27c9_307778_0b43c26cd286296755fdd30718d0f32f.jpg 700w,
+                /projects/boombox/images/22_hu8c7d6f5dbb483252ab53fbceb53a27c9_307778_cbdb703e6b764a411f81a4a877af2f82.jpg 900w,
+                /projects/boombox/images/22_hu8c7d6f5dbb483252ab53fbceb53a27c9_307778_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/22_hu8c7d6f5dbb483252ab53fbceb53a27c9_307778_0b43c26cd286296755fdd30718d0f32f.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="the-exterior-fabric">
+  The exterior fabric
+  <a class="heading-link" href="#the-exterior-fabric">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Picked up 6 1/2 yards of this very bold and colourful fabric from my local market.</p>
+<p>I believe it&rsquo;s linen; it&rsquo;s quite thin but shall do the job in hand.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/23_hu8c7d6f5dbb483252ab53fbceb53a27c9_378815_a6b1befed079570f4e968ef9cfd190ff.webp 400w,
+                /projects/boombox/images/23_hu8c7d6f5dbb483252ab53fbceb53a27c9_378815_73fbee8f8bc1b8deaad5fdbcfbda1c94.webp 700w,
+                /projects/boombox/images/23_hu8c7d6f5dbb483252ab53fbceb53a27c9_378815_017907993b65520b0d4d0c06b88925be.webp 900w,
+                /projects/boombox/images/23_hu8c7d6f5dbb483252ab53fbceb53a27c9_378815_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/23_hu8c7d6f5dbb483252ab53fbceb53a27c9_378815_412ea37be92cdedfe8c973369b832d4e.jpg 400w,
+                /projects/boombox/images/23_hu8c7d6f5dbb483252ab53fbceb53a27c9_378815_1e65ebce2bb6807e13d2b0dfff2f445a.jpg 700w,
+                /projects/boombox/images/23_hu8c7d6f5dbb483252ab53fbceb53a27c9_378815_77e83c354758fd31e02c294b5bc01b59.jpg 900w,
+                /projects/boombox/images/23_hu8c7d6f5dbb483252ab53fbceb53a27c9_378815_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/23_hu8c7d6f5dbb483252ab53fbceb53a27c9_378815_1e65ebce2bb6807e13d2b0dfff2f445a.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="attaching-the-fabric-to-the-front-baffle">
+  Attaching the fabric to the front baffle
+  <a class="heading-link" href="#attaching-the-fabric-to-the-front-baffle">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I am not in the possession of a fabric stapler or a nail gun, so I stretched the fabric over the wood and nailed the thing in by hand using small nails.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/24_hu8c7d6f5dbb483252ab53fbceb53a27c9_364811_d123d8bfb868ab8c44f4f24c0f81a2fd.webp 400w,
+                /projects/boombox/images/24_hu8c7d6f5dbb483252ab53fbceb53a27c9_364811_e6569a6e84e9db2a44c6d681bffb9d3d.webp 700w,
+                /projects/boombox/images/24_hu8c7d6f5dbb483252ab53fbceb53a27c9_364811_c8e65120eb0bf887c6673420fd261c1d.webp 900w,
+                /projects/boombox/images/24_hu8c7d6f5dbb483252ab53fbceb53a27c9_364811_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/24_hu8c7d6f5dbb483252ab53fbceb53a27c9_364811_fe27f5819e207197484efbc3470f5d05.jpg 400w,
+                /projects/boombox/images/24_hu8c7d6f5dbb483252ab53fbceb53a27c9_364811_2366e59cddd2a73a0734a9fc841fa2cf.jpg 700w,
+                /projects/boombox/images/24_hu8c7d6f5dbb483252ab53fbceb53a27c9_364811_06a3f86bdee2ac34dce79ab3dd6a370c.jpg 900w,
+                /projects/boombox/images/24_hu8c7d6f5dbb483252ab53fbceb53a27c9_364811_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/24_hu8c7d6f5dbb483252ab53fbceb53a27c9_364811_2366e59cddd2a73a0734a9fc841fa2cf.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="poke-holes-for-the-speakers">
+  Poke holes for the speakers
+  <a class="heading-link" href="#poke-holes-for-the-speakers">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/25_hu8c7d6f5dbb483252ab53fbceb53a27c9_401506_6c7125ead6d94e3b8c0f5da85d6360ba.webp 400w,
+                /projects/boombox/images/25_hu8c7d6f5dbb483252ab53fbceb53a27c9_401506_ea5f8bd7f127d847ca4604f21e990345.webp 700w,
+                /projects/boombox/images/25_hu8c7d6f5dbb483252ab53fbceb53a27c9_401506_a7150cc861adc6fef13ff0871410c2af.webp 900w,
+                /projects/boombox/images/25_hu8c7d6f5dbb483252ab53fbceb53a27c9_401506_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/25_hu8c7d6f5dbb483252ab53fbceb53a27c9_401506_40f0ae5886b2412ad193ba91d1338d49.jpg 400w,
+                /projects/boombox/images/25_hu8c7d6f5dbb483252ab53fbceb53a27c9_401506_c0972421df9c9c39441cb9c9c36292de.jpg 700w,
+                /projects/boombox/images/25_hu8c7d6f5dbb483252ab53fbceb53a27c9_401506_ba889144701d6c83cc0dfd604c01cc42.jpg 900w,
+                /projects/boombox/images/25_hu8c7d6f5dbb483252ab53fbceb53a27c9_401506_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/25_hu8c7d6f5dbb483252ab53fbceb53a27c9_401506_c0972421df9c9c39441cb9c9c36292de.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="front-baffle-done">
+  Front baffle done!
+  <a class="heading-link" href="#front-baffle-done">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/26_hu1fb045016f0504392bf9cc39c28c988e_316199_c9891924c1c36b58cf8a805e66d8e9e8.webp 400w,
+                /projects/boombox/images/26_hu1fb045016f0504392bf9cc39c28c988e_316199_b162cbd931ad63a512626bd75aa3636a.webp 700w,
+                /projects/boombox/images/26_hu1fb045016f0504392bf9cc39c28c988e_316199_ee306ad8b880bbe0cea62494971b8163.webp 900w,
+                /projects/boombox/images/26_hu1fb045016f0504392bf9cc39c28c988e_316199_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/26_hu1fb045016f0504392bf9cc39c28c988e_316199_2b0a70209958ed1bc8274300dc479c34.jpg 400w,
+                /projects/boombox/images/26_hu1fb045016f0504392bf9cc39c28c988e_316199_6179f319f1a4b6bc1b3afa0ceacea6b6.jpg 700w,
+                /projects/boombox/images/26_hu1fb045016f0504392bf9cc39c28c988e_316199_3a5bf27b256fde94d4bf7d19e84fdf93.jpg 900w,
+                /projects/boombox/images/26_hu1fb045016f0504392bf9cc39c28c988e_316199_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/26_hu1fb045016f0504392bf9cc39c28c988e_316199_6179f319f1a4b6bc1b3afa0ceacea6b6.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="covering-the-main-frame">
+  Covering the main frame
+  <a class="heading-link" href="#covering-the-main-frame">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/27_hu8c7d6f5dbb483252ab53fbceb53a27c9_377048_c0a9ebfc902e1c4e64e81e18e37dd05c.webp 400w,
+                /projects/boombox/images/27_hu8c7d6f5dbb483252ab53fbceb53a27c9_377048_406588fb75394861f057e724e75d90b5.webp 700w,
+                /projects/boombox/images/27_hu8c7d6f5dbb483252ab53fbceb53a27c9_377048_baffc6a5de818cdb28b5e63850a9d162.webp 900w,
+                /projects/boombox/images/27_hu8c7d6f5dbb483252ab53fbceb53a27c9_377048_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/27_hu8c7d6f5dbb483252ab53fbceb53a27c9_377048_df883cf6103e0bfce02a395e34fb13cf.jpg 400w,
+                /projects/boombox/images/27_hu8c7d6f5dbb483252ab53fbceb53a27c9_377048_712f1191c9dba935b933008dc97e5528.jpg 700w,
+                /projects/boombox/images/27_hu8c7d6f5dbb483252ab53fbceb53a27c9_377048_683b910c2268303f6490a3403ef38f63.jpg 900w,
+                /projects/boombox/images/27_hu8c7d6f5dbb483252ab53fbceb53a27c9_377048_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/27_hu8c7d6f5dbb483252ab53fbceb53a27c9_377048_712f1191c9dba935b933008dc97e5528.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="attached-a-handle">
+  Attached a handle
+  <a class="heading-link" href="#attached-a-handle">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Found this little blue handle and though it&rsquo;d match the aesthetics of the box - it is screwed in from the inside.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/28_hu8c7d6f5dbb483252ab53fbceb53a27c9_270107_01c546ae2daae80a5ca7b30368cd26d1.webp 400w,
+                /projects/boombox/images/28_hu8c7d6f5dbb483252ab53fbceb53a27c9_270107_2d72298c8881536002cfca12cc229bd2.webp 700w,
+                /projects/boombox/images/28_hu8c7d6f5dbb483252ab53fbceb53a27c9_270107_cae162f87c58fc304ae5029fd9a6aea8.webp 900w,
+                /projects/boombox/images/28_hu8c7d6f5dbb483252ab53fbceb53a27c9_270107_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/28_hu8c7d6f5dbb483252ab53fbceb53a27c9_270107_8c8d704049b360b28224e0fa15d8165a.jpg 400w,
+                /projects/boombox/images/28_hu8c7d6f5dbb483252ab53fbceb53a27c9_270107_6f2ae15b775b7c5892be5f8c0af6c2e9.jpg 700w,
+                /projects/boombox/images/28_hu8c7d6f5dbb483252ab53fbceb53a27c9_270107_ad3fc056bb95cd764b8a0f3476be9d3e.jpg 900w,
+                /projects/boombox/images/28_hu8c7d6f5dbb483252ab53fbceb53a27c9_270107_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/28_hu8c7d6f5dbb483252ab53fbceb53a27c9_270107_6f2ae15b775b7c5892be5f8c0af6c2e9.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="audio-input">
+  Audio input!
+  <a class="heading-link" href="#audio-input">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The two amplifiers have RCA jacks for audio input and I dug out this long, lost and forgotten cable from the depths of my cupboard to solve this.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/29_hu9057c09d0fa4615d4e22db790c71d140_317530_c9200b1b680006fc352b8a817f040d07.webp 400w,
+                /projects/boombox/images/29_hu9057c09d0fa4615d4e22db790c71d140_317530_4e98386128aa61383a773363148a3849.webp 700w,
+                /projects/boombox/images/29_hu9057c09d0fa4615d4e22db790c71d140_317530_56a020c8a3f6763756254a2e642de8ed.webp 900w,
+                /projects/boombox/images/29_hu9057c09d0fa4615d4e22db790c71d140_317530_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/29_hu9057c09d0fa4615d4e22db790c71d140_317530_59601cafe52a9a6795da9ee56a2b1f03.jpg 400w,
+                /projects/boombox/images/29_hu9057c09d0fa4615d4e22db790c71d140_317530_8977778812176be02adcb52afdaae268.jpg 700w,
+                /projects/boombox/images/29_hu9057c09d0fa4615d4e22db790c71d140_317530_10196eb7f3f9750b8997f682a25eabcf.jpg 900w,
+                /projects/boombox/images/29_hu9057c09d0fa4615d4e22db790c71d140_317530_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/29_hu9057c09d0fa4615d4e22db790c71d140_317530_8977778812176be02adcb52afdaae268.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="audio-input-1">
+  Audio input
+  <a class="heading-link" href="#audio-input-1">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I created this female 3.5mm jack to 2 sets of male RCA jack.</p>
+<p>I was quite torn between making this a bluetooth speaker, a bluetooth/3.5mm or just a 3.5mm wired speaker and decided I hate bluetooth receiving modules and just settled for a wired connection</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/30_hu3cf1955a1f97632b14ade2aa505af33e_248282_3f08cd0b01a8accc04c9d7d78f4bb203.webp 400w,
+                /projects/boombox/images/30_hu3cf1955a1f97632b14ade2aa505af33e_248282_4709249bf87c6dfaee7ef36e01c0df85.webp 700w,
+                /projects/boombox/images/30_hu3cf1955a1f97632b14ade2aa505af33e_248282_5196acaae72a5a5f629ba4f62ec7ac58.webp 900w,
+                /projects/boombox/images/30_hu3cf1955a1f97632b14ade2aa505af33e_248282_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/30_hu3cf1955a1f97632b14ade2aa505af33e_248282_4c28b8cd7c9c4b00e47186a76d7896a0.jpg 400w,
+                /projects/boombox/images/30_hu3cf1955a1f97632b14ade2aa505af33e_248282_13b1236f56c961ac3c71c7893ad73977.jpg 700w,
+                /projects/boombox/images/30_hu3cf1955a1f97632b14ade2aa505af33e_248282_8f6b958e25c050971153bfda6486f009.jpg 900w,
+                /projects/boombox/images/30_hu3cf1955a1f97632b14ade2aa505af33e_248282_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/30_hu3cf1955a1f97632b14ade2aa505af33e_248282_13b1236f56c961ac3c71c7893ad73977.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="power">
+  Power
+  <a class="heading-link" href="#power">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The full-range speaker amplifier is class D (very efficient) however the other bass amplifier is class AB (not so efficient) so I needed a beefy battery to keep this thing going at the volumes I like to listen to!</p>
+<p>Much much cheaper than lithium batteries too :)</p>
+<p>Usain in the background after his 8th Olympic medal :)</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/31_hu3cf1955a1f97632b14ade2aa505af33e_233779_14c18011d2c8ecbffd521f8e8fa85be1.webp 400w,
+                /projects/boombox/images/31_hu3cf1955a1f97632b14ade2aa505af33e_233779_97385a69d19f5020b2196992455c7c30.webp 700w,
+                /projects/boombox/images/31_hu3cf1955a1f97632b14ade2aa505af33e_233779_b1c494ed45d835f722e6ad4d596942bf.webp 900w,
+                /projects/boombox/images/31_hu3cf1955a1f97632b14ade2aa505af33e_233779_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/31_hu3cf1955a1f97632b14ade2aa505af33e_233779_e1bf01c6db5300395346ae481e4429c1.jpg 400w,
+                /projects/boombox/images/31_hu3cf1955a1f97632b14ade2aa505af33e_233779_2c5a389d44bad1e6ec93d7c3d111e61a.jpg 700w,
+                /projects/boombox/images/31_hu3cf1955a1f97632b14ade2aa505af33e_233779_40af648684fcb91f3c0e0a3f788a8f2b.jpg 900w,
+                /projects/boombox/images/31_hu3cf1955a1f97632b14ade2aa505af33e_233779_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/31_hu3cf1955a1f97632b14ade2aa505af33e_233779_2c5a389d44bad1e6ec93d7c3d111e61a.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="battery">
+  Battery
+  <a class="heading-link" href="#battery">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The battery sits on one side of the box and must be mounted to avoid it shaking around during transport.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/32_hu8c7d6f5dbb483252ab53fbceb53a27c9_289410_04b3ec704e53a55d0a143469e19442f1.webp 400w,
+                /projects/boombox/images/32_hu8c7d6f5dbb483252ab53fbceb53a27c9_289410_d474494e58711a8b804504a0da36e8fd.webp 700w,
+                /projects/boombox/images/32_hu8c7d6f5dbb483252ab53fbceb53a27c9_289410_3a777124f59288c8b1e0acd23c845ef7.webp 900w,
+                /projects/boombox/images/32_hu8c7d6f5dbb483252ab53fbceb53a27c9_289410_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/32_hu8c7d6f5dbb483252ab53fbceb53a27c9_289410_e9ca619bd22ef753c2c321c10bcee164.jpg 400w,
+                /projects/boombox/images/32_hu8c7d6f5dbb483252ab53fbceb53a27c9_289410_3d2977a0b76ae0347ec806dbc956030e.jpg 700w,
+                /projects/boombox/images/32_hu8c7d6f5dbb483252ab53fbceb53a27c9_289410_1ad58a2ac4ba613897a241bca45dc799.jpg 900w,
+                /projects/boombox/images/32_hu8c7d6f5dbb483252ab53fbceb53a27c9_289410_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/32_hu8c7d6f5dbb483252ab53fbceb53a27c9_289410_3d2977a0b76ae0347ec806dbc956030e.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="the-battery-mounted-in-the-box">
+  The battery mounted in the box
+  <a class="heading-link" href="#the-battery-mounted-in-the-box">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I cover the metal braces with electrical tape, hence why they are hard to see.</p>
+<p>Covered anything metallic and carrying electrical current with electrical tape.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/33_hu9057c09d0fa4615d4e22db790c71d140_263040_2bbd59d8a03d0a93b04b349c6ced5815.webp 400w,
+                /projects/boombox/images/33_hu9057c09d0fa4615d4e22db790c71d140_263040_9e9c9745699cf20a5b72ab0069d26b81.webp 700w,
+                /projects/boombox/images/33_hu9057c09d0fa4615d4e22db790c71d140_263040_20b73a7f5eac6e0bacc333a0b7b985d6.webp 900w,
+                /projects/boombox/images/33_hu9057c09d0fa4615d4e22db790c71d140_263040_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/33_hu9057c09d0fa4615d4e22db790c71d140_263040_80c977641a0c6a3f60ed1a4083b19b31.jpg 400w,
+                /projects/boombox/images/33_hu9057c09d0fa4615d4e22db790c71d140_263040_27ad0e71ef903f9bbf0b6f45595f633e.jpg 700w,
+                /projects/boombox/images/33_hu9057c09d0fa4615d4e22db790c71d140_263040_fd7659f3c184e2b1a66dff84dfcc06bf.jpg 900w,
+                /projects/boombox/images/33_hu9057c09d0fa4615d4e22db790c71d140_263040_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/33_hu9057c09d0fa4615d4e22db790c71d140_263040_27ad0e71ef903f9bbf0b6f45595f633e.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="power-1">
+  Power
+  <a class="heading-link" href="#power-1">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I needed something to gauge how much juice is left in the SLA battery so I purchased this cheap little voltmeter with LCD display.</p>
+<p>Decided that it would be nice to power this thing from the mains and be able to charge it with the same port hence the switch and the DC jack.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/34_hu3cf1955a1f97632b14ade2aa505af33e_229525_101ac3359dee35b7af33e67a2ecadea0.webp 400w,
+                /projects/boombox/images/34_hu3cf1955a1f97632b14ade2aa505af33e_229525_66c0a7f3e59fad82319c532586b30b3f.webp 700w,
+                /projects/boombox/images/34_hu3cf1955a1f97632b14ade2aa505af33e_229525_8719b3f12618ff57f1a6e6cb32d4d9c4.webp 900w,
+                /projects/boombox/images/34_hu3cf1955a1f97632b14ade2aa505af33e_229525_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/34_hu3cf1955a1f97632b14ade2aa505af33e_229525_ee1d38132630dcd84be16cedb68d9c2d.jpg 400w,
+                /projects/boombox/images/34_hu3cf1955a1f97632b14ade2aa505af33e_229525_30d0d10484713650f94ef12521b2a7c8.jpg 700w,
+                /projects/boombox/images/34_hu3cf1955a1f97632b14ade2aa505af33e_229525_31a96ce60ae7b4f316d23708bc58fed4.jpg 900w,
+                /projects/boombox/images/34_hu3cf1955a1f97632b14ade2aa505af33e_229525_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/34_hu3cf1955a1f97632b14ade2aa505af33e_229525_30d0d10484713650f94ef12521b2a7c8.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="power-panel">
+  Power panel
+  <a class="heading-link" href="#power-panel">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>A little messy and scratched up - but still very functional.</p>
+<p>The switch is used to change between battery power and DC from a power supply.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/35_hu3cf1955a1f97632b14ade2aa505af33e_214171_b5a7de02ac3dd38c2f096c63a09f8224.webp 400w,
+                /projects/boombox/images/35_hu3cf1955a1f97632b14ade2aa505af33e_214171_912f7a40a467ed42b96dd87528a536b5.webp 700w,
+                /projects/boombox/images/35_hu3cf1955a1f97632b14ade2aa505af33e_214171_f7e6a14493a6bb01f02b4c22c59455a7.webp 900w,
+                /projects/boombox/images/35_hu3cf1955a1f97632b14ade2aa505af33e_214171_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/35_hu3cf1955a1f97632b14ade2aa505af33e_214171_6725c01afda61425b9ddf4e7bb8ceb76.jpg 400w,
+                /projects/boombox/images/35_hu3cf1955a1f97632b14ade2aa505af33e_214171_5667c927e62f64d3ff71311e3ead2cc9.jpg 700w,
+                /projects/boombox/images/35_hu3cf1955a1f97632b14ade2aa505af33e_214171_0464628d112b9cade16c653dded0f4f1.jpg 900w,
+                /projects/boombox/images/35_hu3cf1955a1f97632b14ade2aa505af33e_214171_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/35_hu3cf1955a1f97632b14ade2aa505af33e_214171_5667c927e62f64d3ff71311e3ead2cc9.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="finishing-the-back">
+  Finishing the back
+  <a class="heading-link" href="#finishing-the-back">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Power section on the left, Audio on the right</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/36_hud928f2f0417e027949b90c72be9f1b9f_432499_ea25606a54e495502429ef386d82e318.webp 400w,
+                /projects/boombox/images/36_hud928f2f0417e027949b90c72be9f1b9f_432499_2f04004f08583c93abb850bf0f3a3479.webp 700w,
+                /projects/boombox/images/36_hud928f2f0417e027949b90c72be9f1b9f_432499_226789fb9f2d230e77781be1907d3c18.webp 900w,
+                /projects/boombox/images/36_hud928f2f0417e027949b90c72be9f1b9f_432499_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/36_hud928f2f0417e027949b90c72be9f1b9f_432499_9dcd8cdfc4a8b9dd0d8b00dee66bb0a1.jpg 400w,
+                /projects/boombox/images/36_hud928f2f0417e027949b90c72be9f1b9f_432499_9e373605d1e6cb7ae3c3146605b73502.jpg 700w,
+                /projects/boombox/images/36_hud928f2f0417e027949b90c72be9f1b9f_432499_7f8736ec3399144b454b429fb52bb3b8.jpg 900w,
+                /projects/boombox/images/36_hud928f2f0417e027949b90c72be9f1b9f_432499_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/36_hud928f2f0417e027949b90c72be9f1b9f_432499_9e373605d1e6cb7ae3c3146605b73502.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="the-final-back-panel">
+  The final back panel
+  <a class="heading-link" href="#the-final-back-panel">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>A lot of unseen changes here.</p>
+<p>To the right of the voltmeter is a little push button so that the voltage is only displayed temporarily - this is done through necessity as the cheap meter spits out some interference which the amps pick up.</p>
+<p>To the left is a little switch used to switch the DC jack&rsquo;s function - either charging the batteries or powering the amps. This was a little hacky and messy due to my lack of planning - oh well.</p>
+<p>As mentioned, this boombox will receive audio through a 3.5mm jack which is now present on the top right corner of the amp plate.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/37_hud928f2f0417e027949b90c72be9f1b9f_477145_039a41f83c91d1b041d551da25d7c528.webp 400w,
+                /projects/boombox/images/37_hud928f2f0417e027949b90c72be9f1b9f_477145_5424b6893d4ece9fc6e9b59969bc9885.webp 700w,
+                /projects/boombox/images/37_hud928f2f0417e027949b90c72be9f1b9f_477145_7d54a5d8f6814bcec168d13c260db15e.webp 900w,
+                /projects/boombox/images/37_hud928f2f0417e027949b90c72be9f1b9f_477145_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/37_hud928f2f0417e027949b90c72be9f1b9f_477145_1ff13ad519b9ff9ff9bde2a32188a22d.jpg 400w,
+                /projects/boombox/images/37_hud928f2f0417e027949b90c72be9f1b9f_477145_3d771a17a4558542ed46cc73b99c96c2.jpg 700w,
+                /projects/boombox/images/37_hud928f2f0417e027949b90c72be9f1b9f_477145_1e48d9bf5b8f66d676c86ea4d7becd9c.jpg 900w,
+                /projects/boombox/images/37_hud928f2f0417e027949b90c72be9f1b9f_477145_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/37_hud928f2f0417e027949b90c72be9f1b9f_477145_3d771a17a4558542ed46cc73b99c96c2.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="hooking-everything-up">
+  Hooking everything up
+  <a class="heading-link" href="#hooking-everything-up">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I poked some holes in the separators to thread the audio and power cables across chambers.</p>
+<p>The electronics work perfectly under battery power; unfortunately the weather&rsquo;s not so bright under DC power. Anyone with electronic/audio experience will look at this circuit and notice that running two amplifiers from the same source is a classic recipe for a ground loop. As of writing, I await delivery for a ground loop isolator to solve this problem.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/38_hu9057c09d0fa4615d4e22db790c71d140_353798_18c3d4d1c9e7d09b9420bffad5bb1efc.webp 400w,
+                /projects/boombox/images/38_hu9057c09d0fa4615d4e22db790c71d140_353798_c0ea205d81a3fd0d99aaee8e623efa72.webp 700w,
+                /projects/boombox/images/38_hu9057c09d0fa4615d4e22db790c71d140_353798_15fb2712d93722cf10652df833e3eb44.webp 900w,
+                /projects/boombox/images/38_hu9057c09d0fa4615d4e22db790c71d140_353798_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/38_hu9057c09d0fa4615d4e22db790c71d140_353798_cc2abd8eaa0fd7bf0c630adf205e4a8a.jpg 400w,
+                /projects/boombox/images/38_hu9057c09d0fa4615d4e22db790c71d140_353798_1423f58941cc2e731d857149c96206a7.jpg 700w,
+                /projects/boombox/images/38_hu9057c09d0fa4615d4e22db790c71d140_353798_6e0eedaa44981cf0363d9a43953746ae.jpg 900w,
+                /projects/boombox/images/38_hu9057c09d0fa4615d4e22db790c71d140_353798_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/38_hu9057c09d0fa4615d4e22db790c71d140_353798_1423f58941cc2e731d857149c96206a7.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h2 id="final-pictures">
+  Final Pictures
+  <a class="heading-link" href="#final-pictures">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="1">
+  1
+  <a class="heading-link" href="#1">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/a_hu9b7a56331ea10b6a4e507d6556919486_440950_70ce6dae26b1db5cf433ae1dc704ee0b.webp 400w,
+                /projects/boombox/images/a_hu9b7a56331ea10b6a4e507d6556919486_440950_6aa405873fac4beee064df6d5daaa60f.webp 700w,
+                /projects/boombox/images/a_hu9b7a56331ea10b6a4e507d6556919486_440950_5e581e2461db03a91ace9c24912e98eb.webp 900w,
+                /projects/boombox/images/a_hu9b7a56331ea10b6a4e507d6556919486_440950_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/a_hu9b7a56331ea10b6a4e507d6556919486_440950_0c5992da874ca82c6d42574ac1e76ca9.jpg 400w,
+                /projects/boombox/images/a_hu9b7a56331ea10b6a4e507d6556919486_440950_4ab590488a23adbc4b39ca468e8a1709.jpg 700w,
+                /projects/boombox/images/a_hu9b7a56331ea10b6a4e507d6556919486_440950_50d0525e5f73e54f995e05064b6ae7c9.jpg 900w,
+                /projects/boombox/images/a_hu9b7a56331ea10b6a4e507d6556919486_440950_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/a_hu9b7a56331ea10b6a4e507d6556919486_440950_4ab590488a23adbc4b39ca468e8a1709.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="2">
+  2
+  <a class="heading-link" href="#2">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/b_hu23fec9d40fe3e30546358b323bfc3971_486095_55b8301adc39f16505e2b0d9ac687f26.webp 400w,
+                /projects/boombox/images/b_hu23fec9d40fe3e30546358b323bfc3971_486095_cd651b6710448a556dffca7add723e2f.webp 700w,
+                /projects/boombox/images/b_hu23fec9d40fe3e30546358b323bfc3971_486095_0cea709da3746610b8ccf96340b77d94.webp 900w,
+                /projects/boombox/images/b_hu23fec9d40fe3e30546358b323bfc3971_486095_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/b_hu23fec9d40fe3e30546358b323bfc3971_486095_28ee3953fbe1c13e57a03fb25243c346.jpg 400w,
+                /projects/boombox/images/b_hu23fec9d40fe3e30546358b323bfc3971_486095_c727b7cfc195220d2a7488e755a51f53.jpg 700w,
+                /projects/boombox/images/b_hu23fec9d40fe3e30546358b323bfc3971_486095_87a6a69dd724612b8f8323e7247a23cd.jpg 900w,
+                /projects/boombox/images/b_hu23fec9d40fe3e30546358b323bfc3971_486095_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/b_hu23fec9d40fe3e30546358b323bfc3971_486095_c727b7cfc195220d2a7488e755a51f53.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h3 id="3">
+  3
+  <a class="heading-link" href="#3">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/boombox/images/c_hufc09bd0b322ae161cec3e9618ccb61cb_366605_54340e4dd83b966ba5906f308b9a9e01.webp 400w,
+                /projects/boombox/images/c_hufc09bd0b322ae161cec3e9618ccb61cb_366605_0084bd09b0dad7ffcc8b7d0ba446b8e0.webp 700w,
+                /projects/boombox/images/c_hufc09bd0b322ae161cec3e9618ccb61cb_366605_7c766e34f11f54c170bbe91eb7236bd1.webp 900w,
+                /projects/boombox/images/c_hufc09bd0b322ae161cec3e9618ccb61cb_366605_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/boombox/images/c_hufc09bd0b322ae161cec3e9618ccb61cb_366605_e1329188906ac95c3fcb51bd85a323d6.jpg 400w,
+                /projects/boombox/images/c_hufc09bd0b322ae161cec3e9618ccb61cb_366605_0fae8aacf63d3909e8852af11fb8b207.jpg 700w,
+                /projects/boombox/images/c_hufc09bd0b322ae161cec3e9618ccb61cb_366605_57cc2382673665a6049cc109c4a37db6.jpg 900w,
+                /projects/boombox/images/c_hufc09bd0b322ae161cec3e9618ccb61cb_366605_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/boombox/images/c_hufc09bd0b322ae161cec3e9618ccb61cb_366605_0fae8aacf63d3909e8852af11fb8b207.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2015 -
+    
+    2023
+     Adam Piekarski 
+    ·
+    
+      Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

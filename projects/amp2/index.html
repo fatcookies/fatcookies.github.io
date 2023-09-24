@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Dual mono LM3886 chip amp · Adam Piekarski
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Adam Piekarski">
+<meta name="description" content="My second endeavour into building an audio amplifier">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Dual mono LM3886 chip amp"/>
+<meta name="twitter:description" content="My second endeavour into building an audio amplifier"/>
+
+<meta property="og:title" content="Dual mono LM3886 chip amp" />
+<meta property="og:description" content="My second endeavour into building an audio amplifier" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fatcookies.github.io/projects/amp2/" /><meta property="article:section" content="projects" />
+<meta property="article:published_time" content="2023-09-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-09-23T00:00:00+00:00" />
+<meta property="og:see_also" content="https://fatcookies.github.io/projects/camera/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/boombox/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/ceefax/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/dj/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/eardentity/" />
+
+
+
+
+
+<link rel="canonical" href="https://fatcookies.github.io/projects/amp2/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Adam Piekarski
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" aria-label="Menu"/>
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://fatcookies.github.io/projects/amp2/">
+          Dual mono LM3886 chip amp
+        </a>
+      </h1>
+    </header>
+
+    <p>My second endeavour into building an audio amplifier</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/amp2/images/header_huc71951f9a9504a82ac217e5d268613ad_465252_588282c225181c1cb266ba755225be72.webp 400w,
+                /projects/amp2/images/header_huc71951f9a9504a82ac217e5d268613ad_465252_985812d1907a9595566b22ff23253ab4.webp 700w,
+                /projects/amp2/images/header_huc71951f9a9504a82ac217e5d268613ad_465252_02b19521677ef4022cf7289f8bf5313f.webp 900w,
+                /projects/amp2/images/header_huc71951f9a9504a82ac217e5d268613ad_465252_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/amp2/images/header_huc71951f9a9504a82ac217e5d268613ad_465252_09321c86db37e62bf14dce4a31054db1.jpg 400w,
+                /projects/amp2/images/header_huc71951f9a9504a82ac217e5d268613ad_465252_21207251374f96ffe53fd90b3c7d535e.jpg 700w,
+                /projects/amp2/images/header_huc71951f9a9504a82ac217e5d268613ad_465252_6809e4d33f27912abaebe2d100dad114.jpg 900w,
+                /projects/amp2/images/header_huc71951f9a9504a82ac217e5d268613ad_465252_1200x0_resize_q65_box.jpg 1200w"/>
+
+<img src="/projects/amp2/images/header_huc71951f9a9504a82ac217e5d268613ad_465252_21207251374f96ffe53fd90b3c7d535e.jpg" alt="Header"  />
+
+</picture>
+</p>
+</p>
+<h2 id="round-two">
+  Round Two.
+  <a class="heading-link" href="#round-two">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="background">
+  Background
+  <a class="heading-link" href="#background">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>After successfully building a <a href="/projects/amp" >LM3886 amplifier</a> a couple of years ago, I decided it was time to build another one, be a bit ambitious with it and create something with a bit more oomfph. My previous attempt is still very capable, but is now starting to fall to bits because I didn&rsquo;t own appropriate tools to produce a solid enclosure. Loaded with an arsenal of new tools this project has given me a lot of woodworking experience which I never really exercised during my first build.</p>
+<h3 id="technical-overview">
+  Technical Overview
+  <a class="heading-link" href="#technical-overview">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>As with any class AB amplifier, a good power supply is paramount. I have chosen to go with a dual mono configuration so there are two independant and unregulated power supplies which are mirrored down the centre. They resemble Carlos Fillipe&rsquo;s <a href="images/psu.gif" >&ldquo;Unregulated PSU for audio amplifiers&rdquo;</a> - I believe these are BrianGT&rsquo;s interpretation.</p>
+<p>Each channel contains a <a href="https://uk.rs-online.com/web/p/toroidal-transformers/7529261/"  class="external-link" target="_blank" rel="noopener">120VA 2 x 24V transformer</a> by RKD and two <a href="https://uk.rs-online.com/web/p/aluminium-capacitors/8696325/"  class="external-link" target="_blank" rel="noopener">KEMET 10000uF 50V resevior capacitors</a>. The transformers have very little mechanical hum and have dual-voltage primaries just incase I ever want to run the amplifier on 110V mains.</p>
+<p>The LM3886 chips sit on a PCB by <a href="https://www.ebay.co.uk/itm/Quality-LM3886-based-mono-amplifier-Chipamp-Gainclone-PCB-only-DIY-Audiophile/112887774780"  class="external-link" target="_blank" rel="noopener">KMTech</a> along with <a href="https://uk.rs-online.com/web/p/aluminium-capacitors/6022668/"  class="external-link" target="_blank" rel="noopener">100uF Nichicon FG Series</a> as power decoupling capacitors. They are a relatively neutral and compliment my DALI Zensor 1&rsquo;s well, but I may look at experimenting with different capacitors - I could benefit with a larger low-end. The resistors have all been hand-matched to be within 1% tolerance.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/amp2/images/top_hueea3202e7335e719daacab18b480c7f7_673769_c50d970390ef3f1637353eaf0443fe30.webp 400w,
+                /projects/amp2/images/top_hueea3202e7335e719daacab18b480c7f7_673769_b98344d79859c8619cf23de8beb1f8fc.webp 700w,
+                /projects/amp2/images/top_hueea3202e7335e719daacab18b480c7f7_673769_c8fca6d62e8c936c1ced411e77ac5c93.webp 900w,
+                /projects/amp2/images/top_hueea3202e7335e719daacab18b480c7f7_673769_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/amp2/images/top_hueea3202e7335e719daacab18b480c7f7_673769_a5d0d4f70446ac95ad07e3024a755b5b.jpg 400w,
+                /projects/amp2/images/top_hueea3202e7335e719daacab18b480c7f7_673769_902d17e44b2f13cd0b9e10094545e1ae.jpg 700w,
+                /projects/amp2/images/top_hueea3202e7335e719daacab18b480c7f7_673769_14f345218b237dc20cb7719297044162.jpg 900w,
+                /projects/amp2/images/top_hueea3202e7335e719daacab18b480c7f7_673769_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/amp2/images/top_hueea3202e7335e719daacab18b480c7f7_673769_902d17e44b2f13cd0b9e10094545e1ae.jpg" loading="lazy" alt="Top down view of the amp" />
+
+</picture>
+</p>
+</p>
+<h2 id="gallery">
+  Gallery
+  <a class="heading-link" href="#gallery">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Enclosing the amplifier is a custom built wooden case. The front and rear are solid pieces of Red Grandis (Eucalyptus Grandis) held together with a base made from <a href="https://www.metsawood.com/"  class="external-link" target="_blank" rel="noopener">Metsä Wood Spruce</a> plywood and supported by the aluminium heatsinks which flank the sides.</p>
+<p>This was the first project I&rsquo;ve completed that encorporated the use of a router. Since the Red Grandis stock was 25mm deep, the router enabled me to recess parts of the wood so I could mount components to it. It also was used to cut through dado joints so the base could fit snuggly to the rest of the wood.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/amp2/images/iso_hu2e2fddd316765662aafaed499b9a2c5d_1313656_0fe2e8a32a5a987a6531afe026443257.webp 400w,
+                /projects/amp2/images/iso_hu2e2fddd316765662aafaed499b9a2c5d_1313656_ab3345e007795ee3ad88a9abfb8434db.webp 700w,
+                /projects/amp2/images/iso_hu2e2fddd316765662aafaed499b9a2c5d_1313656_6d353d6927e4f772832f2c46176d4e0d.webp 900w,
+                /projects/amp2/images/iso_hu2e2fddd316765662aafaed499b9a2c5d_1313656_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/amp2/images/iso_hu2e2fddd316765662aafaed499b9a2c5d_1313656_74a3849092d0a03be043957a8d32067f.jpg 400w,
+                /projects/amp2/images/iso_hu2e2fddd316765662aafaed499b9a2c5d_1313656_94beea032476fe135a4fc3232bc12dd2.jpg 700w,
+                /projects/amp2/images/iso_hu2e2fddd316765662aafaed499b9a2c5d_1313656_ba1f4b1dec0e89105cc233fa45bf6a67.jpg 900w,
+                /projects/amp2/images/iso_hu2e2fddd316765662aafaed499b9a2c5d_1313656_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/amp2/images/iso_hu2e2fddd316765662aafaed499b9a2c5d_1313656_94beea032476fe135a4fc3232bc12dd2.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/amp2/images/connected-back_hu0a78b3c690eee504633c5ae84490fb9a_1090669_d515d65731904d322389daabfb4f1308.webp 400w,
+                /projects/amp2/images/connected-back_hu0a78b3c690eee504633c5ae84490fb9a_1090669_1e99fe3e1c2e316b58bb9db01b604483.webp 700w,
+                /projects/amp2/images/connected-back_hu0a78b3c690eee504633c5ae84490fb9a_1090669_e00027329de04a064f4eb087f31cd2a1.webp 900w,
+                /projects/amp2/images/connected-back_hu0a78b3c690eee504633c5ae84490fb9a_1090669_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/amp2/images/connected-back_hu0a78b3c690eee504633c5ae84490fb9a_1090669_8e96a08b47552e423d81659121c7ed83.jpg 400w,
+                /projects/amp2/images/connected-back_hu0a78b3c690eee504633c5ae84490fb9a_1090669_d2f43ea55d70361769306fa708e8606c.jpg 700w,
+                /projects/amp2/images/connected-back_hu0a78b3c690eee504633c5ae84490fb9a_1090669_ec1d78d691a84f391d75b80722a5dbdc.jpg 900w,
+                /projects/amp2/images/connected-back_hu0a78b3c690eee504633c5ae84490fb9a_1090669_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/amp2/images/connected-back_hu0a78b3c690eee504633c5ae84490fb9a_1090669_d2f43ea55d70361769306fa708e8606c.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/amp2/images/back_hu2e2fddd316765662aafaed499b9a2c5d_1001729_f0f2092a5021e19e5841609d8d80a151.webp 400w,
+                /projects/amp2/images/back_hu2e2fddd316765662aafaed499b9a2c5d_1001729_a0cdfba41e2efb9917d7d88362228610.webp 700w,
+                /projects/amp2/images/back_hu2e2fddd316765662aafaed499b9a2c5d_1001729_e2549ecf4ced7edb9b31026489d35140.webp 900w,
+                /projects/amp2/images/back_hu2e2fddd316765662aafaed499b9a2c5d_1001729_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/amp2/images/back_hu2e2fddd316765662aafaed499b9a2c5d_1001729_07a6a07c8d444b766575a1b0b2cb67dc.jpg 400w,
+                /projects/amp2/images/back_hu2e2fddd316765662aafaed499b9a2c5d_1001729_2d7408eb9b8a1a1efbc7169eaed546e2.jpg 700w,
+                /projects/amp2/images/back_hu2e2fddd316765662aafaed499b9a2c5d_1001729_a10b0226836865c0200ce60b65072da4.jpg 900w,
+                /projects/amp2/images/back_hu2e2fddd316765662aafaed499b9a2c5d_1001729_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/amp2/images/back_hu2e2fddd316765662aafaed499b9a2c5d_1001729_2d7408eb9b8a1a1efbc7169eaed546e2.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/amp2/images/heatsink_hu0a78b3c690eee504633c5ae84490fb9a_961204_415648b8fff03bd5ed0946154a9e3c1a.webp 400w,
+                /projects/amp2/images/heatsink_hu0a78b3c690eee504633c5ae84490fb9a_961204_38da3e04092a918b1472bee0b362cc54.webp 700w,
+                /projects/amp2/images/heatsink_hu0a78b3c690eee504633c5ae84490fb9a_961204_e84d52ab24717d0d71573fd2a77643b1.webp 900w,
+                /projects/amp2/images/heatsink_hu0a78b3c690eee504633c5ae84490fb9a_961204_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/amp2/images/heatsink_hu0a78b3c690eee504633c5ae84490fb9a_961204_ed34b0d9db7d16d4c8204fc49003c19c.jpg 400w,
+                /projects/amp2/images/heatsink_hu0a78b3c690eee504633c5ae84490fb9a_961204_6a48b866721c18f6cadb02219dfed9bd.jpg 700w,
+                /projects/amp2/images/heatsink_hu0a78b3c690eee504633c5ae84490fb9a_961204_b571ae70ac67f6e83358a0a30761e1a7.jpg 900w,
+                /projects/amp2/images/heatsink_hu0a78b3c690eee504633c5ae84490fb9a_961204_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/amp2/images/heatsink_hu0a78b3c690eee504633c5ae84490fb9a_961204_6a48b866721c18f6cadb02219dfed9bd.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/amp2/images/inside2_hu0a78b3c690eee504633c5ae84490fb9a_953740_f8a030978c9f2afce64f332ecf27f6c1.webp 400w,
+                /projects/amp2/images/inside2_hu0a78b3c690eee504633c5ae84490fb9a_953740_87158e3f032e1c06bea0cf96f431ba92.webp 700w,
+                /projects/amp2/images/inside2_hu0a78b3c690eee504633c5ae84490fb9a_953740_96b56eff5b297fad639cfe028757c6ab.webp 900w,
+                /projects/amp2/images/inside2_hu0a78b3c690eee504633c5ae84490fb9a_953740_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/amp2/images/inside2_hu0a78b3c690eee504633c5ae84490fb9a_953740_60aca629b26f3f09cddaf124cc6541b7.jpg 400w,
+                /projects/amp2/images/inside2_hu0a78b3c690eee504633c5ae84490fb9a_953740_ae6a269f3388c125e552cf1e44db4811.jpg 700w,
+                /projects/amp2/images/inside2_hu0a78b3c690eee504633c5ae84490fb9a_953740_88a000a093462872295feb71ad34318c.jpg 900w,
+                /projects/amp2/images/inside2_hu0a78b3c690eee504633c5ae84490fb9a_953740_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/amp2/images/inside2_hu0a78b3c690eee504633c5ae84490fb9a_953740_ae6a269f3388c125e552cf1e44db4811.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/amp2/images/amp-board_hube83863cb47525ff736daae7628a3f0a_866707_ebd4df08ccf6e800011a721dc4df2b2e.webp 400w,
+                /projects/amp2/images/amp-board_hube83863cb47525ff736daae7628a3f0a_866707_5d6897e187805006545ca48f26c0fa6a.webp 700w,
+                /projects/amp2/images/amp-board_hube83863cb47525ff736daae7628a3f0a_866707_90710549a52ac5e3000d3d9f45b5951c.webp 900w,
+                /projects/amp2/images/amp-board_hube83863cb47525ff736daae7628a3f0a_866707_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/amp2/images/amp-board_hube83863cb47525ff736daae7628a3f0a_866707_4fa94826bd644822b3010c6ccba69b79.jpg 400w,
+                /projects/amp2/images/amp-board_hube83863cb47525ff736daae7628a3f0a_866707_7e889d48350febb92ca44a8deee727e4.jpg 700w,
+                /projects/amp2/images/amp-board_hube83863cb47525ff736daae7628a3f0a_866707_79428da946f107ba5d0cdbaa00267c9a.jpg 900w,
+                /projects/amp2/images/amp-board_hube83863cb47525ff736daae7628a3f0a_866707_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/amp2/images/amp-board_hube83863cb47525ff736daae7628a3f0a_866707_7e889d48350febb92ca44a8deee727e4.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h2 id="onwards">
+  Onwards
+  <a class="heading-link" href="#onwards">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>I thoroughly enjoyed constructing this amplifier and the finished result provides more than enough drive for my speakers. For a casual listen, I&rsquo;ll use a Raspberry PI with a <a href="http://iqaudio.co.uk/hats/47-pi-dac-pro.html"  class="external-link" target="_blank" rel="noopener">Pi-DAC Pro</a> and the open source Spotify client <a href="https://github.com/dtcooper/raspotify"  class="external-link" target="_blank" rel="noopener">Raspotify</a>. Otherwise, my pair of 1210&rsquo;s and a mixer feed the amplifier when I want a little bit of fun.</p>
+<p>The amplifier does not have a lid at the moment: a glass screwed into the top is the top candidate at the moment, similar to the top on my previous amp so everyone can oogle inside. Another area of improvement are the finger joints on the front - they were a little messy and required a lot of wood filler. Next time I would look into using router jigs to get better precision.</p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2015 -
+    
+    2023
+     Adam Piekarski 
+    ·
+    
+      Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

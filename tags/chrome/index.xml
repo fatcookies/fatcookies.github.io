@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>chrome on Adam Piekarski</title>
+    <link>https://fatcookies.github.io/tags/chrome/</link>
+    <description>Recent content in chrome on Adam Piekarski</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fatcookies.github.io/tags/chrome/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Facebook Teapot Spammer</title>
+      <link>https://fatcookies.github.io/projects/teapot/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/teapot/</guid>
+      <description>What is this? Link to heading A marvellous chrome extension which punishes your victims Facebook statuses if they go afk for too long!
+The source code for this extension and download can be found on my Github
+What does it do? Link to heading Upon installing the extension onto your victim&amp;rsquo;s computer, it will silently run in the background and detect if they are inactive from their computer for more than four minutes (this can be changed).</description>
+    </item>
+    
+  </channel>
+</rss>

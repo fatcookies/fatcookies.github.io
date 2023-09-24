@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on Adam Piekarski</title>
+    <link>https://fatcookies.github.io/authors/</link>
+    <description>Recent content in Authors on Adam Piekarski</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fatcookies.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adam Piekarski</title>
+      <link>https://fatcookies.github.io/authors/adam-piekarski/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/authors/adam-piekarski/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Authors of Hugo</title>
+      <link>https://fatcookies.github.io/authors/hugo-authors/</link>
+      <pubDate>Thu, 05 Jan 2023 01:15:29 +0100</pubDate>
+      
+      <guid>https://fatcookies.github.io/authors/hugo-authors/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

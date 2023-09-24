@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>arduino on Adam Piekarski</title>
+    <link>https://fatcookies.github.io/tags/arduino/</link>
+    <description>Recent content in arduino on Adam Piekarski</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fatcookies.github.io/tags/arduino/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DJ Controller</title>
+      <link>https://fatcookies.github.io/projects/dj/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/dj/</guid>
+      <description>A very compact Arduino based DJ Controller
+How I made it: Link to heading The enclosure Link to heading I had a couple of these nuts and bolts storage boxes lying around and they seemed to be the perfect size for this tiny beast.
+Drilling out the component holes Link to heading Drilled out three different types of holes for the potentiometers, push buttons and LED&amp;rsquo;s. A bonus hole right at the back for the mini-USB port required to hook the thing up!</description>
+    </item>
+    
+  </channel>
+</rss>

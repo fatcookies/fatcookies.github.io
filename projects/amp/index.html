@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  LM3886 Chip Amp (Gainclone) · Adam Piekarski
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Adam Piekarski">
+<meta name="description" content="A high-power audio amplifier using the infamous LM3886 chip">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LM3886 Chip Amp (Gainclone)"/>
+<meta name="twitter:description" content="A high-power audio amplifier using the infamous LM3886 chip"/>
+
+<meta property="og:title" content="LM3886 Chip Amp (Gainclone)" />
+<meta property="og:description" content="A high-power audio amplifier using the infamous LM3886 chip" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fatcookies.github.io/projects/amp/" /><meta property="article:section" content="projects" />
+<meta property="article:published_time" content="2023-09-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-09-23T00:00:00+00:00" />
+<meta property="og:see_also" content="https://fatcookies.github.io/projects/camera/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/boombox/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/ceefax/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/dj/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/amp2/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/eardentity/" />
+
+
+
+
+
+<link rel="canonical" href="https://fatcookies.github.io/projects/amp/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Adam Piekarski
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" aria-label="Menu"/>
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://fatcookies.github.io/projects/amp/">
+          LM3886 Chip Amp (Gainclone)
+        </a>
+      </h1>
+    </header>
+
+    <p>A high-power audio amplifier using the infamous LM3886 chip</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/amp/images/header_hu60619dd86dc15362043e81ab65b960a5_847497_b8e4430fbe6f59844f49006923df7f82.webp 400w,
+                /projects/amp/images/header_hu60619dd86dc15362043e81ab65b960a5_847497_a72e408a9e3488e13dcdd4216a52e854.webp 700w,
+                /projects/amp/images/header_hu60619dd86dc15362043e81ab65b960a5_847497_84139f96bd203a3b154bf3a714b86794.webp 900w,
+                /projects/amp/images/header_hu60619dd86dc15362043e81ab65b960a5_847497_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/amp/images/header_hu60619dd86dc15362043e81ab65b960a5_847497_56a34f303c8543bb16de7133e8b97f04.jpg 400w,
+                /projects/amp/images/header_hu60619dd86dc15362043e81ab65b960a5_847497_d2448b3b4d0c9a5ad671aaf63cb607d9.jpg 700w,
+                /projects/amp/images/header_hu60619dd86dc15362043e81ab65b960a5_847497_8b05640171bc662ff005c845422315b8.jpg 900w,
+                /projects/amp/images/header_hu60619dd86dc15362043e81ab65b960a5_847497_1200x0_resize_q65_box.jpg 1200w"/>
+
+<img src="/projects/amp/images/header_hu60619dd86dc15362043e81ab65b960a5_847497_d2448b3b4d0c9a5ad671aaf63cb607d9.jpg" alt="Header"  />
+
+</picture>
+</p>
+</p>
+<h1 id="amplify-now">
+  Amplify Now.
+  <a class="heading-link" href="#amplify-now">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<h2 id="background">
+  Background
+  <a class="heading-link" href="#background">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The original Gaincard amplifier by 47 Laboratory, released in 1999, defied all the elders&rsquo; wisdom of amplifier construction. Discrete transitors were ditched and a Texas Instruments LM3875 operation-amplifier sat in the heart of it all - you can read more about it <a href="http://www.6moons.com/audioreviews/47labs5/gaincard.html"  class="external-link" target="_blank" rel="noopener">here</a>.</p>
+<p>Shortly after the Gaincard was released, the DIY community embraced its controversial design and started creating clones, leading to the portmantau Gainclone.</p>
+<p>As a big music listener and someone that loves to make things, I married the two together by deciding to build a power amplifier.</p>
+<h2 id="the-power-supply">
+  The Power Supply
+  <a class="heading-link" href="#the-power-supply">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Nothing particularly inspired here - the circuit resembles the <a href="http://chipamp.com/product/snubberized-chipamp-power-supply-kit/"  class="external-link" target="_blank" rel="noopener">Chipamp.com snubberized power supply</a> with the addition of an extra 4400μF capacitance on each rail.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/amp/images/power-schematic_hu63fb769061aac4878accfffdf2ea22ee_756807_c476f4f3dc5256ed8fb76b6e70c2af88.webp 400w,
+                /projects/amp/images/power-schematic_hu63fb769061aac4878accfffdf2ea22ee_756807_ec9bfec0db8fe7618bd943fb8685a6aa.webp 700w,
+                /projects/amp/images/power-schematic_hu63fb769061aac4878accfffdf2ea22ee_756807_ffaf6081d71eed647688e74193abaa19.webp 900w,
+                /projects/amp/images/power-schematic_hu63fb769061aac4878accfffdf2ea22ee_756807_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/amp/images/power-schematic_hu63fb769061aac4878accfffdf2ea22ee_756807_f1d31a5301af8b5ca1c3e6873e246911.jpg 400w,
+                /projects/amp/images/power-schematic_hu63fb769061aac4878accfffdf2ea22ee_756807_8e1ec80c308158ad046245c9d49c9cc8.jpg 700w,
+                /projects/amp/images/power-schematic_hu63fb769061aac4878accfffdf2ea22ee_756807_b86cadcea3ec76817b272825ccd53924.jpg 900w,
+                /projects/amp/images/power-schematic_hu63fb769061aac4878accfffdf2ea22ee_756807_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/amp/images/power-schematic_hu63fb769061aac4878accfffdf2ea22ee_756807_8e1ec80c308158ad046245c9d49c9cc8.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<p>At the real heart of the power supply sits a huge centre tapped toroidal transfomer. Rated for 225VA, it is more than capabable of delivering the peak current that the amplifier will demand during loud sections of music. On a good day it should output +/- 25V, however this is dependant on the AC mains supply and the load placed on the power supply.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/amp/images/transformer_hu7e3b985a84baf1bbea063f3505684412_582644_920f1b75364edc0a912c26bbb3985247.webp 400w,
+                /projects/amp/images/transformer_hu7e3b985a84baf1bbea063f3505684412_582644_ccbd846458be8f07ef493d09976ce916.webp 700w,
+                /projects/amp/images/transformer_hu7e3b985a84baf1bbea063f3505684412_582644_cf0435dff85b6822dd7e278b666a59f9.webp 900w,
+                /projects/amp/images/transformer_hu7e3b985a84baf1bbea063f3505684412_582644_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/amp/images/transformer_hu7e3b985a84baf1bbea063f3505684412_582644_8e28ad137cbc82299ccd1baa4ad771db.jpg 400w,
+                /projects/amp/images/transformer_hu7e3b985a84baf1bbea063f3505684412_582644_9290fd822a9b989f5db61a38f72967fa.jpg 700w,
+                /projects/amp/images/transformer_hu7e3b985a84baf1bbea063f3505684412_582644_52ef68c89e75917b990eb74174c8378f.jpg 900w,
+                /projects/amp/images/transformer_hu7e3b985a84baf1bbea063f3505684412_582644_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/amp/images/transformer_hu7e3b985a84baf1bbea063f3505684412_582644_9290fd822a9b989f5db61a38f72967fa.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<p>The power supply is built on two mirrored perfboard&rsquo;s: one positive rail, one negative rail. The bridge rectifier on each board is built from four MUR860 diodes, coupled with Panasonic HA and FC capacitors all rated at least 50 volts.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/amp/images/power_hufcc0d11d53e39e98c2f84b379b956758_874878_06570f0092f110c55be7c45bab0dd683.webp 400w,
+                /projects/amp/images/power_hufcc0d11d53e39e98c2f84b379b956758_874878_931be696f91c5ea8d3ec3f9890e6a79d.webp 700w,
+                /projects/amp/images/power_hufcc0d11d53e39e98c2f84b379b956758_874878_6760fd864904c3610807077061efb002.webp 900w,
+                /projects/amp/images/power_hufcc0d11d53e39e98c2f84b379b956758_874878_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/amp/images/power_hufcc0d11d53e39e98c2f84b379b956758_874878_50b5934b2ccd6c3670523a2efa3bf360.jpg 400w,
+                /projects/amp/images/power_hufcc0d11d53e39e98c2f84b379b956758_874878_9a5e4c1315d6c8566b0918f5b1c331f0.jpg 700w,
+                /projects/amp/images/power_hufcc0d11d53e39e98c2f84b379b956758_874878_4c0ca1cbd5f22abafbd814203ce30e51.jpg 900w,
+                /projects/amp/images/power_hufcc0d11d53e39e98c2f84b379b956758_874878_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/amp/images/power_hufcc0d11d53e39e98c2f84b379b956758_874878_9a5e4c1315d6c8566b0918f5b1c331f0.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h2 id="the-amplifier-boards">
+  The amplifier boards
+  <a class="heading-link" href="#the-amplifier-boards">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Just as before, I have used the Chipamp.com design - utilising their PCB&rsquo;s. To make sure I got the most of out of LM3886 chip within a reasonable budget, I have used Panasonic FM for the large capacitors and WIMA elsewhere.</p>
+<p>The image below shows one of the amplifier boards (without the LM3886 chip). The terminal blocks, from left to right, resemble the following:</p>
+<ul>
+<li>V+ - Positive voltage rail (+35V)</li>
+<li>PG+ - Positive ground</li>
+<li>CHG - Chassis ground</li>
+<li>PG- - Negative ground</li>
+<li>V- - Negative voltage rail (-35V)</li>
+<li>NC - Not connected</li>
+</ul>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/amp/images/board_hub0652578dfb852c7cec1b9ade86590b4_852547_7ec786e913e632e5ab606d8f722dbca5.webp 400w,
+                /projects/amp/images/board_hub0652578dfb852c7cec1b9ade86590b4_852547_5166d02e0fa1ce24a2d846103c758d8e.webp 700w,
+                /projects/amp/images/board_hub0652578dfb852c7cec1b9ade86590b4_852547_260dbced5e080082a1efb2685985426e.webp 900w,
+                /projects/amp/images/board_hub0652578dfb852c7cec1b9ade86590b4_852547_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/amp/images/board_hub0652578dfb852c7cec1b9ade86590b4_852547_c9baecc03e95a4e4dc597e18ee1f71f3.jpg 400w,
+                /projects/amp/images/board_hub0652578dfb852c7cec1b9ade86590b4_852547_07657cc55e8ed748d62d8c1517d3b23d.jpg 700w,
+                /projects/amp/images/board_hub0652578dfb852c7cec1b9ade86590b4_852547_a257b4751912a7d6f30a1c233f3bb55f.jpg 900w,
+                /projects/amp/images/board_hub0652578dfb852c7cec1b9ade86590b4_852547_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/amp/images/board_hub0652578dfb852c7cec1b9ade86590b4_852547_07657cc55e8ed748d62d8c1517d3b23d.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<p>Once the LM3886 was soldered onto the amplifier board, the chip was mounted onto a rather large black heatsink. The clear braided wire is the speaker output, while the green and red wires with an black outer case carry the input signal to the board.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/amp/images/boardfinish_hu6ee92c83cc099d058459fc65a409fe73_811995_ee603fba7f1a1c5a7d674efe44e91311.webp 400w,
+                /projects/amp/images/boardfinish_hu6ee92c83cc099d058459fc65a409fe73_811995_2484842fb3844d391039605ff477c9a8.webp 700w,
+                /projects/amp/images/boardfinish_hu6ee92c83cc099d058459fc65a409fe73_811995_fd8e43f177289214d66a9137a6b974ad.webp 900w,
+                /projects/amp/images/boardfinish_hu6ee92c83cc099d058459fc65a409fe73_811995_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/amp/images/boardfinish_hu6ee92c83cc099d058459fc65a409fe73_811995_c5b601259fe12b745c31b3372a3a7229.jpg 400w,
+                /projects/amp/images/boardfinish_hu6ee92c83cc099d058459fc65a409fe73_811995_1aca55c0d4080bf9eb1fbc90124dd555.jpg 700w,
+                /projects/amp/images/boardfinish_hu6ee92c83cc099d058459fc65a409fe73_811995_d8028197bbaa42fc1417d84f8fe570d0.jpg 900w,
+                /projects/amp/images/boardfinish_hu6ee92c83cc099d058459fc65a409fe73_811995_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/amp/images/boardfinish_hu6ee92c83cc099d058459fc65a409fe73_811995_1aca55c0d4080bf9eb1fbc90124dd555.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h2 id="the-front">
+  The front
+  <a class="heading-link" href="#the-front">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Not a particularly aesthetic pleasing front, nevertheless it&rsquo;s very functional. On the edges are red and black binding posts which are the positive and negative speaker outputs, while the centre is occupied by two RCA plugs as an input. The centre hole currently remains empty, a future modification will be to add a volume potentiometer.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/amp/images/front_hub0652578dfb852c7cec1b9ade86590b4_913557_e9699827338951d1bb22e62c635e2d2c.webp 400w,
+                /projects/amp/images/front_hub0652578dfb852c7cec1b9ade86590b4_913557_8cc28d90bacb28be5e1bc43fbf3efa5a.webp 700w,
+                /projects/amp/images/front_hub0652578dfb852c7cec1b9ade86590b4_913557_ff31c751ec8aee5c9635b12b8148075b.webp 900w,
+                /projects/amp/images/front_hub0652578dfb852c7cec1b9ade86590b4_913557_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/amp/images/front_hub0652578dfb852c7cec1b9ade86590b4_913557_5d97da0b875b16c40609efdf924b46bf.jpg 400w,
+                /projects/amp/images/front_hub0652578dfb852c7cec1b9ade86590b4_913557_01c019efb7b4d872cf0bbaa82f17f55b.jpg 700w,
+                /projects/amp/images/front_hub0652578dfb852c7cec1b9ade86590b4_913557_32ba4df5064aa0792b6b82100860d6a3.jpg 900w,
+                /projects/amp/images/front_hub0652578dfb852c7cec1b9ade86590b4_913557_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/amp/images/front_hub0652578dfb852c7cec1b9ade86590b4_913557_01c019efb7b4d872cf0bbaa82f17f55b.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h2 id="the-finished-product">
+  The Finished Product
+  <a class="heading-link" href="#the-finished-product">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>A drawer has been repurposed to be the case for this amplifier. Sitting right in the centre is the transformer, the power supply boards are neatly tucked behind, with the positive rail on the right and the negative on the left. The back of the amplifier features an <a href="https://en.wikipedia.org/wiki/IEC_60320#C13.2FC14_coupler"  class="external-link" target="_blank" rel="noopener">IEC C13 connector</a> (usually found on desktop computers) for AC power. The two amplifier channels flank the sides, attached to the protruding heat sinks.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/amp/images/finish_hu2fd6a0efa7e87f7e9252323efbfdb99c_955356_75910875093504525be756f63b44d02e.webp 400w,
+                /projects/amp/images/finish_hu2fd6a0efa7e87f7e9252323efbfdb99c_955356_f794335a4e6156b9e7a0780cbddce270.webp 700w,
+                /projects/amp/images/finish_hu2fd6a0efa7e87f7e9252323efbfdb99c_955356_c1e31cec01b1fff6d9716f44e459eefa.webp 900w,
+                /projects/amp/images/finish_hu2fd6a0efa7e87f7e9252323efbfdb99c_955356_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/amp/images/finish_hu2fd6a0efa7e87f7e9252323efbfdb99c_955356_69a02901fdda9803aaac7913a641dbc4.jpg 400w,
+                /projects/amp/images/finish_hu2fd6a0efa7e87f7e9252323efbfdb99c_955356_7b95c0bb8d95cb43bed1a251ee7e8187.jpg 700w,
+                /projects/amp/images/finish_hu2fd6a0efa7e87f7e9252323efbfdb99c_955356_a07a80c01ecf8cd964bcbda07cd00311.jpg 900w,
+                /projects/amp/images/finish_hu2fd6a0efa7e87f7e9252323efbfdb99c_955356_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/amp/images/finish_hu2fd6a0efa7e87f7e9252323efbfdb99c_955356_7b95c0bb8d95cb43bed1a251ee7e8187.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/amp/images/header_hu60619dd86dc15362043e81ab65b960a5_847497_b8e4430fbe6f59844f49006923df7f82.webp 400w,
+                /projects/amp/images/header_hu60619dd86dc15362043e81ab65b960a5_847497_a72e408a9e3488e13dcdd4216a52e854.webp 700w,
+                /projects/amp/images/header_hu60619dd86dc15362043e81ab65b960a5_847497_84139f96bd203a3b154bf3a714b86794.webp 900w,
+                /projects/amp/images/header_hu60619dd86dc15362043e81ab65b960a5_847497_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/amp/images/header_hu60619dd86dc15362043e81ab65b960a5_847497_56a34f303c8543bb16de7133e8b97f04.jpg 400w,
+                /projects/amp/images/header_hu60619dd86dc15362043e81ab65b960a5_847497_d2448b3b4d0c9a5ad671aaf63cb607d9.jpg 700w,
+                /projects/amp/images/header_hu60619dd86dc15362043e81ab65b960a5_847497_8b05640171bc662ff005c845422315b8.jpg 900w,
+                /projects/amp/images/header_hu60619dd86dc15362043e81ab65b960a5_847497_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/amp/images/header_hu60619dd86dc15362043e81ab65b960a5_847497_d2448b3b4d0c9a5ad671aaf63cb607d9.jpg" loading="lazy" alt="Placeholder" />
+
+</picture>
+</p>
+</p>
+<h2 id="performance">
+  Performance
+  <a class="heading-link" href="#performance">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>There is plenty of analysis and praise about the LM3886 in DIY all over the internet, anything I would add would just be noise so I&rsquo;ll keep it short! I have this amp hooked up to a pair of <a href="https://www.dali-speakers.com/media/3222/dali-zensor-whitepaper.pdf"  class="external-link" target="_blank" rel="noopener">DALI Zensor 1&rsquo;s</a> which sit on my desk - the combination is fantastic, the staging is deep and engaging plus there is plenty of power to fill my small room. What more can you ask for!</p>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2015 -
+    
+    2023
+     Adam Piekarski 
+    ·
+    
+      Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  WiFi Kettle · Adam Piekarski
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Adam Piekarski">
+<meta name="description" content="After being inspired by the rather novel iKettle, I decided I could create my own WiFi enable kettle as a little project!">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="WiFi Kettle"/>
+<meta name="twitter:description" content="After being inspired by the rather novel iKettle, I decided I could create my own WiFi enable kettle as a little project!"/>
+
+<meta property="og:title" content="WiFi Kettle" />
+<meta property="og:description" content="After being inspired by the rather novel iKettle, I decided I could create my own WiFi enable kettle as a little project!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://fatcookies.github.io/projects/wifi-kettle/" /><meta property="article:section" content="projects" />
+<meta property="article:published_time" content="2023-09-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-09-23T00:00:00+00:00" />
+<meta property="og:see_also" content="https://fatcookies.github.io/projects/camera/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/boombox/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/ceefax/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/dj/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/amp2/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/eardentity/" />
+
+
+
+
+
+<link rel="canonical" href="https://fatcookies.github.io/projects/wifi-kettle/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Adam Piekarski
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" aria-label="Menu"/>
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="https://fatcookies.github.io/projects/wifi-kettle/">
+          WiFi Kettle
+        </a>
+      </h1>
+    </header>
+
+    <p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/wifi-kettle/images/header_hu323740a74d3c78162394256e571dac7a_191313_99527917b7bb7b8c3c68de0c7e3287ee.webp 400w,
+                /projects/wifi-kettle/images/header_hu323740a74d3c78162394256e571dac7a_191313_2654b8707fee936a88859aef35551256.webp 700w,
+                /projects/wifi-kettle/images/header_hu323740a74d3c78162394256e571dac7a_191313_83a88c0e0ebb8f2a41379087a2cc835b.webp 900w,
+                /projects/wifi-kettle/images/header_hu323740a74d3c78162394256e571dac7a_191313_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/wifi-kettle/images/header_hu323740a74d3c78162394256e571dac7a_191313_00389fe315aeea7d327c784c7a1b1d44.jpg 400w,
+                /projects/wifi-kettle/images/header_hu323740a74d3c78162394256e571dac7a_191313_59843b7c57ef602b700d189aa3426288.jpg 700w,
+                /projects/wifi-kettle/images/header_hu323740a74d3c78162394256e571dac7a_191313_8c59bc1a06189fbf2e539974231cc425.jpg 900w,
+                /projects/wifi-kettle/images/header_hu323740a74d3c78162394256e571dac7a_191313_1200x0_resize_q65_box.jpg 1200w"/>
+
+<img src="/projects/wifi-kettle/images/header_hu323740a74d3c78162394256e571dac7a_191313_59843b7c57ef602b700d189aa3426288.jpg" alt="Header"  />
+
+</picture>
+</p>
+</p>
+<p>After being inspired by the rather novel <a href="http://www.firebox.com/product/6068/iKettle"  class="external-link" target="_blank" rel="noopener">iKettle</a>, I decided I could create my own WiFi enable kettle as a little project!</p>
+<h2 id="how-i-made-it">
+  How I made it:
+  <a class="heading-link" href="#how-i-made-it">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="the-enclosure">
+  The enclosure
+  <a class="heading-link" href="#the-enclosure">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>One of the last components I actually bought - it&rsquo;s just a small power supply unit enclosure I picked up for a couple of quid from Maplin.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/wifi-kettle/images/kettle1_hu49ed4111f9222821d711d5c99d06144c_742277_d8a0504c872385d2ae6efef6769a09ef.webp 400w,
+                /projects/wifi-kettle/images/kettle1_hu49ed4111f9222821d711d5c99d06144c_742277_12c7d60dc2907d54345b9e9e61b45839.webp 700w,
+                /projects/wifi-kettle/images/kettle1_hu49ed4111f9222821d711d5c99d06144c_742277_9ba6ed2b8c85dcd9b2b48d299d3162c5.webp 900w,
+                /projects/wifi-kettle/images/kettle1_hu49ed4111f9222821d711d5c99d06144c_742277_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/wifi-kettle/images/kettle1_hu49ed4111f9222821d711d5c99d06144c_742277_f019e8b9aa6a26197819e55476ca8ae4.jpg 400w,
+                /projects/wifi-kettle/images/kettle1_hu49ed4111f9222821d711d5c99d06144c_742277_caa328d8029de1425aa10dddfba71c33.jpg 700w,
+                /projects/wifi-kettle/images/kettle1_hu49ed4111f9222821d711d5c99d06144c_742277_9d98dcfb74945564fc8dbb4c0463f1f6.jpg 900w,
+                /projects/wifi-kettle/images/kettle1_hu49ed4111f9222821d711d5c99d06144c_742277_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/wifi-kettle/images/kettle1_hu49ed4111f9222821d711d5c99d06144c_742277_caa328d8029de1425aa10dddfba71c33.jpg" loading="lazy" alt="Kettle Enclosure" />
+
+</picture>
+</p>
+</p>
+<h3 id="bottom-side-of-the-enclosure">
+  Bottom side of the enclosure
+  <a class="heading-link" href="#bottom-side-of-the-enclosure">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I have many Raspberry Pi&rsquo;s lying around the house, I believe the one pictured is the first Model B. It&rsquo;s screwed down into the enclosure. Attached is a WiFi dongle from <a href="http://thepihut.com/products/usb-wifi-adapter-for-the-raspberry-pi"  class="external-link" target="_blank" rel="noopener">ThePiHut</a> and an old 4GB SD card which I incidentally had to cut with scissors to fit into this enclosure!</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/wifi-kettle/images/kettle2_hu49ed4111f9222821d711d5c99d06144c_811939_669aefa42ef1cabe14c25969de5e5bad.webp 400w,
+                /projects/wifi-kettle/images/kettle2_hu49ed4111f9222821d711d5c99d06144c_811939_44f8495686e7fa51a48af8a49b6b6b27.webp 700w,
+                /projects/wifi-kettle/images/kettle2_hu49ed4111f9222821d711d5c99d06144c_811939_723b3aa43eb7c0aee9222badef9632b4.webp 900w,
+                /projects/wifi-kettle/images/kettle2_hu49ed4111f9222821d711d5c99d06144c_811939_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/wifi-kettle/images/kettle2_hu49ed4111f9222821d711d5c99d06144c_811939_128c5972a633835484912c1b7e161800.jpg 400w,
+                /projects/wifi-kettle/images/kettle2_hu49ed4111f9222821d711d5c99d06144c_811939_3ebdec9e8a22d14ab739c0875078ce19.jpg 700w,
+                /projects/wifi-kettle/images/kettle2_hu49ed4111f9222821d711d5c99d06144c_811939_a75219f26d481bfb5fdc2723dcf5004c.jpg 900w,
+                /projects/wifi-kettle/images/kettle2_hu49ed4111f9222821d711d5c99d06144c_811939_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/wifi-kettle/images/kettle2_hu49ed4111f9222821d711d5c99d06144c_811939_3ebdec9e8a22d14ab739c0875078ce19.jpg" loading="lazy" alt="Bottom side of the enclosure" />
+
+</picture>
+</p>
+</p>
+<h3 id="the-kettle-base">
+  The kettle base
+  <a class="heading-link" href="#the-kettle-base">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I drilled (punctured may a better way to describe it) a hole in the top of the enclosure and threaded a kettle cable through it.</p>
+<p>As this was a cheap and cheerful project, the base you see belongs to a beautiful <a href="https://www.argos-support.co.uk/instruction-manual/9016710-simple-value-kettle-wht.pdf"  class="external-link" target="_blank" rel="noopener">2.2kW Argos Value kettle</a> for the jaw-dropping price of a fiver :)</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/wifi-kettle/images/kettle3_hu49ed4111f9222821d711d5c99d06144c_674635_f5c86f045ffb77a8f5ebda37fd52076e.webp 400w,
+                /projects/wifi-kettle/images/kettle3_hu49ed4111f9222821d711d5c99d06144c_674635_10673427ab5ae1aba6e4f03d0acc24b2.webp 700w,
+                /projects/wifi-kettle/images/kettle3_hu49ed4111f9222821d711d5c99d06144c_674635_e69f9be663f5d9a279c42ef3fe1ea444.webp 900w,
+                /projects/wifi-kettle/images/kettle3_hu49ed4111f9222821d711d5c99d06144c_674635_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/wifi-kettle/images/kettle3_hu49ed4111f9222821d711d5c99d06144c_674635_e3bcd90db6b3d0149ccbff053a5a974d.jpg 400w,
+                /projects/wifi-kettle/images/kettle3_hu49ed4111f9222821d711d5c99d06144c_674635_165f18c94aed8817f5e4612c79d87fc0.jpg 700w,
+                /projects/wifi-kettle/images/kettle3_hu49ed4111f9222821d711d5c99d06144c_674635_f3e1ebd6910af7c3d1688a6f50b0b052.jpg 900w,
+                /projects/wifi-kettle/images/kettle3_hu49ed4111f9222821d711d5c99d06144c_674635_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/wifi-kettle/images/kettle3_hu49ed4111f9222821d711d5c99d06144c_674635_165f18c94aed8817f5e4612c79d87fc0.jpg" loading="lazy" alt="Kettle base" />
+
+</picture>
+</p>
+</p>
+<h3 id="top-side-of-the-enclosure">
+  Top side of the enclosure
+  <a class="heading-link" href="#top-side-of-the-enclosure">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Just a rough idea of what the final top looked like. To control mains electricity I am using a 2 way relay board designed for micro controllers/ardiuno etc rated for 250VAC, 10A. It can be found <a href="https://www.amazon.co.uk/gp/product/B009P04ZKC"  class="external-link" target="_blank" rel="noopener">here</a></p>
+<p>Also pictured is a chock block which I used for the earth and neutral wires (see below for more information)</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/wifi-kettle/images/kettle4_hu8020ee64ef2e12f079c970a254ee5bc1_715382_1385e47bbca6f74911631a5551098087.webp 400w,
+                /projects/wifi-kettle/images/kettle4_hu8020ee64ef2e12f079c970a254ee5bc1_715382_467c97e7d17811e06e3631cf22872e99.webp 700w,
+                /projects/wifi-kettle/images/kettle4_hu8020ee64ef2e12f079c970a254ee5bc1_715382_ca28ca041115422765c347e4aa08c3a6.webp 900w,
+                /projects/wifi-kettle/images/kettle4_hu8020ee64ef2e12f079c970a254ee5bc1_715382_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/wifi-kettle/images/kettle4_hu8020ee64ef2e12f079c970a254ee5bc1_715382_57363c4732d5229f511e9361d5e6a9d8.jpg 400w,
+                /projects/wifi-kettle/images/kettle4_hu8020ee64ef2e12f079c970a254ee5bc1_715382_6e6911053c86ae263fd0a979e610bfd9.jpg 700w,
+                /projects/wifi-kettle/images/kettle4_hu8020ee64ef2e12f079c970a254ee5bc1_715382_f7adc35044852c09772e03328f1cfea4.jpg 900w,
+                /projects/wifi-kettle/images/kettle4_hu8020ee64ef2e12f079c970a254ee5bc1_715382_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/wifi-kettle/images/kettle4_hu8020ee64ef2e12f079c970a254ee5bc1_715382_6e6911053c86ae263fd0a979e610bfd9.jpg" loading="lazy" alt="Top side" />
+
+</picture>
+</p>
+</p>
+<h3 id="what-it-looks-when-finished-but-before-i-actually-finished-it">
+  What it looks when finished (but before I actually finished it)
+  <a class="heading-link" href="#what-it-looks-when-finished-but-before-i-actually-finished-it">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Just a little check to see if everything would fit!</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/wifi-kettle/images/kettle5_hu49ed4111f9222821d711d5c99d06144c_655710_24abbb43bb0cc8f2f6cc6e86b041f3cc.webp 400w,
+                /projects/wifi-kettle/images/kettle5_hu49ed4111f9222821d711d5c99d06144c_655710_5da6064a654cdb75e57d45b7b8b94366.webp 700w,
+                /projects/wifi-kettle/images/kettle5_hu49ed4111f9222821d711d5c99d06144c_655710_14b4937b68a12f283ad3e8f32f609666.webp 900w,
+                /projects/wifi-kettle/images/kettle5_hu49ed4111f9222821d711d5c99d06144c_655710_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/wifi-kettle/images/kettle5_hu49ed4111f9222821d711d5c99d06144c_655710_6adb644c704622652f44ead191259d9c.jpg 400w,
+                /projects/wifi-kettle/images/kettle5_hu49ed4111f9222821d711d5c99d06144c_655710_85f54fd6778de74f5f8bff489068053e.jpg 700w,
+                /projects/wifi-kettle/images/kettle5_hu49ed4111f9222821d711d5c99d06144c_655710_bb49b5caee576729bc7f9bd2cd4d46d9.jpg 900w,
+                /projects/wifi-kettle/images/kettle5_hu49ed4111f9222821d711d5c99d06144c_655710_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/wifi-kettle/images/kettle5_hu49ed4111f9222821d711d5c99d06144c_655710_85f54fd6778de74f5f8bff489068053e.jpg" loading="lazy" alt="Test fit" />
+
+</picture>
+</p>
+</p>
+<h3 id="glue-glue-glue">
+  Glue Glue Glue
+  <a class="heading-link" href="#glue-glue-glue">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I used a high temperature (210c) glue gun to secure both the base and relay board to the top half of the enclosure.</p>
+<p>I stripped the kettle cord to expose the wires in the photo</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/wifi-kettle/images/kettle6_hu52b957b3f2e3ef885fc7648d9f7707e4_577632_77036db856eb47b2ac4396f20c73c171.webp 400w,
+                /projects/wifi-kettle/images/kettle6_hu52b957b3f2e3ef885fc7648d9f7707e4_577632_e6690a7e699ac47b249df53cf98fd61c.webp 700w,
+                /projects/wifi-kettle/images/kettle6_hu52b957b3f2e3ef885fc7648d9f7707e4_577632_5417866b782afbf395909d25297ba7a9.webp 900w,
+                /projects/wifi-kettle/images/kettle6_hu52b957b3f2e3ef885fc7648d9f7707e4_577632_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/wifi-kettle/images/kettle6_hu52b957b3f2e3ef885fc7648d9f7707e4_577632_4fbdb90c92cef706af8bcd1cf9c9a497.jpg 400w,
+                /projects/wifi-kettle/images/kettle6_hu52b957b3f2e3ef885fc7648d9f7707e4_577632_63f7541875f25874fe93983058530f8f.jpg 700w,
+                /projects/wifi-kettle/images/kettle6_hu52b957b3f2e3ef885fc7648d9f7707e4_577632_4ddf9ab4f9ddde59802d99d859ac048f.jpg 900w,
+                /projects/wifi-kettle/images/kettle6_hu52b957b3f2e3ef885fc7648d9f7707e4_577632_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/wifi-kettle/images/kettle6_hu52b957b3f2e3ef885fc7648d9f7707e4_577632_63f7541875f25874fe93983058530f8f.jpg" loading="lazy" alt="Gluing up" />
+
+</picture>
+</p>
+</p>
+<h3 id="connecting-the-kettle-up">
+  Connecting the kettle up
+  <a class="heading-link" href="#connecting-the-kettle-up">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>As previously mentioned, I used a chock block to hook up the kettle earth and neutral to the plug.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/wifi-kettle/images/kettle7_hu755ef2591cfdf8c72af175e49784332a_613290_c5a617190f32e7ec3a8c94d98dc71f4a.webp 400w,
+                /projects/wifi-kettle/images/kettle7_hu755ef2591cfdf8c72af175e49784332a_613290_521ea85dca6f9077eb713f9033c800fe.webp 700w,
+                /projects/wifi-kettle/images/kettle7_hu755ef2591cfdf8c72af175e49784332a_613290_321450094f50792a8f87e101f33d483a.webp 900w,
+                /projects/wifi-kettle/images/kettle7_hu755ef2591cfdf8c72af175e49784332a_613290_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/wifi-kettle/images/kettle7_hu755ef2591cfdf8c72af175e49784332a_613290_4cb4a134887aeb7d5ba78f4abb26c108.jpg 400w,
+                /projects/wifi-kettle/images/kettle7_hu755ef2591cfdf8c72af175e49784332a_613290_b936fca6db0e973a9a9c383d539adc7f.jpg 700w,
+                /projects/wifi-kettle/images/kettle7_hu755ef2591cfdf8c72af175e49784332a_613290_a35bb11885ea75235d1505fc4bf5c963.jpg 900w,
+                /projects/wifi-kettle/images/kettle7_hu755ef2591cfdf8c72af175e49784332a_613290_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/wifi-kettle/images/kettle7_hu755ef2591cfdf8c72af175e49784332a_613290_b936fca6db0e973a9a9c383d539adc7f.jpg" loading="lazy" alt="Hooking the kettle up" />
+
+</picture>
+</p>
+</p>
+<h3 id="hooking-up-the-cord-to-the-kettlerelay">
+  Hooking up the cord to the kettle/relay
+  <a class="heading-link" href="#hooking-up-the-cord-to-the-kettlerelay">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The camera is not very flattering here, glue is messy!</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/wifi-kettle/images/kettle8_huc6c0e7bec020d4cdfb479826a0fe0548_717272_1d0d7a8cf0da429a30191cdc3fc2dcba.webp 400w,
+                /projects/wifi-kettle/images/kettle8_huc6c0e7bec020d4cdfb479826a0fe0548_717272_5762e0b7c8c2afe4f5e284c95b73290d.webp 700w,
+                /projects/wifi-kettle/images/kettle8_huc6c0e7bec020d4cdfb479826a0fe0548_717272_21943e99fe5609e080f58d81a53a8eac.webp 900w,
+                /projects/wifi-kettle/images/kettle8_huc6c0e7bec020d4cdfb479826a0fe0548_717272_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/wifi-kettle/images/kettle8_huc6c0e7bec020d4cdfb479826a0fe0548_717272_bd43a58f77ba5fa254757315541d6eb8.jpg 400w,
+                /projects/wifi-kettle/images/kettle8_huc6c0e7bec020d4cdfb479826a0fe0548_717272_c290e81c4702506049dd5bd1936debcb.jpg 700w,
+                /projects/wifi-kettle/images/kettle8_huc6c0e7bec020d4cdfb479826a0fe0548_717272_96dfabd3413c534787475cff04f8b105.jpg 900w,
+                /projects/wifi-kettle/images/kettle8_huc6c0e7bec020d4cdfb479826a0fe0548_717272_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/wifi-kettle/images/kettle8_huc6c0e7bec020d4cdfb479826a0fe0548_717272_c290e81c4702506049dd5bd1936debcb.jpg" loading="lazy" alt="Connecting the cord" />
+
+</picture>
+</p>
+</p>
+<h3 id="hooking-the-pi-to-the-relay-board">
+  Hooking the Pi to the relay board
+  <a class="heading-link" href="#hooking-the-pi-to-the-relay-board">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The relay board requires a 3.3V, 5V, GPIO out and earth pin which are served by the Pi.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/wifi-kettle/images/kettle9_hu48389431203bb08eeea72dd083671966_717792_4056d82561cc626359efaf57b6de7217.webp 400w,
+                /projects/wifi-kettle/images/kettle9_hu48389431203bb08eeea72dd083671966_717792_23feb4be80fb1a0ab9b21d673867619d.webp 700w,
+                /projects/wifi-kettle/images/kettle9_hu48389431203bb08eeea72dd083671966_717792_f70755b35b9c0dc28bce8e336866de09.webp 900w,
+                /projects/wifi-kettle/images/kettle9_hu48389431203bb08eeea72dd083671966_717792_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/wifi-kettle/images/kettle9_hu48389431203bb08eeea72dd083671966_717792_6a4b5b85b8beac774bc03a82bdd1738e.jpg 400w,
+                /projects/wifi-kettle/images/kettle9_hu48389431203bb08eeea72dd083671966_717792_253760360f02211e08018e6b503bb926.jpg 700w,
+                /projects/wifi-kettle/images/kettle9_hu48389431203bb08eeea72dd083671966_717792_5cc2fe94208fac960c2e76c06106d262.jpg 900w,
+                /projects/wifi-kettle/images/kettle9_hu48389431203bb08eeea72dd083671966_717792_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/wifi-kettle/images/kettle9_hu48389431203bb08eeea72dd083671966_717792_253760360f02211e08018e6b503bb926.jpg" loading="lazy" alt="Raspberry Pi and relay" />
+
+</picture>
+</p>
+</p>
+<h3 id="the-software">
+  The software
+  <a class="heading-link" href="#the-software">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The below description and code is avaiable on <a href="https://github.com/fatcookies/wifikettle"  class="external-link" target="_blank" rel="noopener">Github</a></p>
+<h4 id="dependencies">
+  Dependencies
+  <a class="heading-link" href="#dependencies">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ul>
+<li>Raspberry Pi with an active WiFi/internet connection</li>
+<li><a href="http://webiopi.trouch.com/"  class="external-link" target="_blank" rel="noopener">WebIOPi</a></li>
+<li>OPTIONAL: The kettle hardware/relays etc</li>
+</ul>
+<h4 id="how-to-installuse">
+  How to install/use
+  <a class="heading-link" href="#how-to-installuse">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ol>
+<li>
+<p>Once you have WebIOPi installed on your Pi, you must replace or edit /etc/webiopi/config to match the <a href="https://github.com/fatcookies/wifikettle/blob/master/config"  class="external-link" target="_blank" rel="noopener">one in this reposistory</a></p>
+</li>
+<li>
+<p>If you have not modified the <a href="https://github.com/fatcookies/wifikettle/blob/master/config"  class="external-link" target="_blank" rel="noopener">config file</a>, you must copy and paste the contents of <a href="https://github.com/fatcookies/wifikettle/blob/master/www/"  class="external-link" target="_blank" rel="noopener">www/</a> into /var/www or wherever you wish to store your web pages.</p>
+</li>
+<li>
+<p>By default the web-service will toggle GPIO 17, if you wish you change this you will have to modify config and <a href="https://github.com/fatcookies/wifikettle/blob/master/www/kettle.css"  class="external-link" target="_blank" rel="noopener">kettle.css</a></p>
+</li>
+<li>
+<p>For security reasons I recommend keeping the password protection on your webpage, you can change the login using the following command: sudo webiopi-passwd</p>
+</li>
+<li>
+<p>You can then either add WebIOPi to your startup services with the following command sudo update-rc.d /etc/init.d/webiopi defaults or as a one off: sudo services webiopi start</p>
+</li>
+<li>
+<p>If you are running a graphical session on your Pi you can then access the page at <a href="http://127.0.0.1"  class="external-link" target="_blank" rel="noopener">http://127.0.0.1</a> , otherwise whatever the local IP address of your Pi is.</p>
+</li>
+<li>
+<p>Brew your kettle remotely and have a lovely cup of tea. (I do not endorse making cofee using an electric kettle!)</p>
+</li>
+</ol>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/wifi-kettle/images/kettle9a_hu9575cf26a0a5b0b51f6dbb45406ca3bf_174144_b8c09652de242e932098b02a7b48511b.webp 400w,
+                /projects/wifi-kettle/images/kettle9a_hu9575cf26a0a5b0b51f6dbb45406ca3bf_174144_77eea56ad9e4ee6edd073e1d728f377e.webp 700w,
+                /projects/wifi-kettle/images/kettle9a_hu9575cf26a0a5b0b51f6dbb45406ca3bf_174144_e10e81726b3a2c9859971f6ad93d6ee3.webp 900w,
+                /projects/wifi-kettle/images/kettle9a_hu9575cf26a0a5b0b51f6dbb45406ca3bf_174144_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/wifi-kettle/images/kettle9a_hu9575cf26a0a5b0b51f6dbb45406ca3bf_174144_1ef41d246e040d97bcafbf87c35f6433.jpg 400w,
+                /projects/wifi-kettle/images/kettle9a_hu9575cf26a0a5b0b51f6dbb45406ca3bf_174144_e1f1e7d914cbb74cd3f885df7a70e714.jpg 700w,
+                /projects/wifi-kettle/images/kettle9a_hu9575cf26a0a5b0b51f6dbb45406ca3bf_174144_6a0ef6efc39162d434bf5c062913239f.jpg 900w,
+                /projects/wifi-kettle/images/kettle9a_hu9575cf26a0a5b0b51f6dbb45406ca3bf_174144_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/wifi-kettle/images/kettle9a_hu9575cf26a0a5b0b51f6dbb45406ca3bf_174144_e1f1e7d914cbb74cd3f885df7a70e714.jpg" loading="lazy" alt="The web page" />
+
+</picture>
+</p>
+</p>
+<h3 id="the-final-product">
+  The final product
+  <a class="heading-link" href="#the-final-product">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>I decided, for safery reasons, to keep the Pi and the kettle powered by two separate cords.</p>
+<p>The kettle needs to be filled and the physical switch pressed down before being placed onto the base, the rest is all remote!</p>
+<p>To wrap up:</p>
+<ul>
+<li>Raspberry Pi - £30 (I personally already had one)</li>
+<li>Relay Board - £2</li>
+<li>Kettle - £5</li>
+<li>Box - £3</li>
+<li>Header pin cables - £1.50</li>
+<li>Switching on the kettle for a warm brew with your arse still glued to the sofa - Priceless</li>
+</ul>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<p class="md__image">
+<picture>
+<source type="image/webp"
+        srcset="/projects/wifi-kettle/images/kettle10_hu43f37067be13f1f0c8a70799b8f7998d_422967_6792f4e0e10465f3c431a78be370ff59.webp 400w,
+                /projects/wifi-kettle/images/kettle10_hu43f37067be13f1f0c8a70799b8f7998d_422967_74c8f0e4bc9f45c5016e8a68ee625ff2.webp 700w,
+                /projects/wifi-kettle/images/kettle10_hu43f37067be13f1f0c8a70799b8f7998d_422967_1e87c23bf46acca0d9658c7fe57b76db.webp 900w,
+                /projects/wifi-kettle/images/kettle10_hu43f37067be13f1f0c8a70799b8f7998d_422967_1200x0_resize_q65_h2_box.webp 1200w"/>
+<source srcset="/projects/wifi-kettle/images/kettle10_hu43f37067be13f1f0c8a70799b8f7998d_422967_7bf9703258a272acbeaceec3e3631e4e.jpg 400w,
+                /projects/wifi-kettle/images/kettle10_hu43f37067be13f1f0c8a70799b8f7998d_422967_6c03f08029b3a5b528db4074b2503cb5.jpg 700w,
+                /projects/wifi-kettle/images/kettle10_hu43f37067be13f1f0c8a70799b8f7998d_422967_f5086ec07559d3cf2330f77dfca62ebe.jpg 900w,
+                /projects/wifi-kettle/images/kettle10_hu43f37067be13f1f0c8a70799b8f7998d_422967_1200x0_resize_q65_box.jpg 1200w"/>
+
+  	<img src="/projects/wifi-kettle/images/kettle10_hu43f37067be13f1f0c8a70799b8f7998d_422967_6c03f08029b3a5b528db4074b2503cb5.jpg" loading="lazy" alt="Final setup" />
+
+</picture>
+</p>
+</p>
+<h3 id="some-press">
+  Some Press
+  <a class="heading-link" href="#some-press">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>This kettle can also be found at:</p>
+<ul>
+<li><a href="https://web.archive.org/web/20190608085815/https://www.reddit.com/r/DIY/comments/351my1/ive_created_my_own_wifi_enabled_kettle/"  class="external-link" target="_blank" rel="noopener">Reddit</a></li>
+<li><a href="http://hackaday.com/2015/05/08/turning-on-the-kettle-with-your-phone/"  class="external-link" target="_blank" rel="noopener">Hackaday</a></li>
+<li><a href="http://makezine.com/2015/05/11/diy-raspberry-pi-powered-wi-fi-enabled-kettle/"  class="external-link" target="_blank" rel="noopener">Makezine</a></li>
+</ul>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2015 -
+    
+    2023
+     Adam Piekarski 
+    ·
+    
+      Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

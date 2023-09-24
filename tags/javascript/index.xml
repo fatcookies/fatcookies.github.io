@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on Adam Piekarski</title>
+    <link>https://fatcookies.github.io/tags/javascript/</link>
+    <description>Recent content in javascript on Adam Piekarski</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fatcookies.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ceefax 2015</title>
+      <link>https://fatcookies.github.io/projects/ceefax/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/ceefax/</guid>
+      <description>A modern twist to an old favourite
+Take me back to 1974 Link to heading Now. Link to heading The idea Link to heading Since the launch of Ceefax, over 40 years ago, it has gifted a generation before the internet with on-demand, up-to-date news from the comfort of sofa&amp;rsquo;s across the country. Despite being born just before the big internet boom, Ceefax still played a part of my childhood so naturally I was devestated when it ceased to broadcast along with analog terrestrial television.</description>
+    </item>
+    
+    <item>
+      <title>Facebook Teapot Spammer</title>
+      <link>https://fatcookies.github.io/projects/teapot/</link>
+      <pubDate>Sat, 23 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fatcookies.github.io/projects/teapot/</guid>
+      <description>What is this? Link to heading A marvellous chrome extension which punishes your victims Facebook statuses if they go afk for too long!
+The source code for this extension and download can be found on my Github
+What does it do? Link to heading Upon installing the extension onto your victim&amp;rsquo;s computer, it will silently run in the background and detect if they are inactive from their computer for more than four minutes (this can be changed).</description>
+    </item>
+    
+  </channel>
+</rss>
