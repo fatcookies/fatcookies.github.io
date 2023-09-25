@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title>
   Dual mono LM3886 chip amp · Adam Piekarski
@@ -8,18 +7,12 @@
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
-
-
-
-
 <meta name="author" content="Adam Piekarski">
 <meta name="description" content="My second endeavour into building an audio amplifier">
 <meta name="keywords" content="blog,developer,personal">
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Dual mono LM3886 chip amp"/>
 <meta name="twitter:description" content="My second endeavour into building an audio amplifier"/>
-
 <meta property="og:title" content="Dual mono LM3886 chip amp" />
 <meta property="og:description" content="My second endeavour into building an audio amplifier" />
 <meta property="og:type" content="article" />
@@ -27,113 +20,51 @@
 <meta property="article:published_time" content="2023-09-23T00:00:00+00:00" />
 <meta property="article:modified_time" content="2023-09-23T00:00:00+00:00" />
 <meta property="og:see_also" content="https://fatcookies.github.io/projects/camera/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/boombox/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/ceefax/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/dj/" /><meta property="og:see_also" content="https://fatcookies.github.io/projects/eardentity/" />
-
-
-
-
-
 <link rel="canonical" href="https://fatcookies.github.io/projects/amp2/">
-
-
 <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
-
-
-  
-  
   <link rel="stylesheet" href="/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css" integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin="anonymous" media="screen" />
-
-
-
-
-
-
-  
-    
-    
     <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
-  
-
-
-
- 
-
-
-
-
 <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
 <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
-
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
-
-
-
-
-
-
-
-
-
 </head>
-
-
-
-
-
-
 <body class="preload-transitions colorscheme-auto">
-  
 <div class="float-container">
     <a id="dark-mode-toggle" class="colorscheme-toggle">
         <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
     </a>
 </div>
-
-
   <main class="wrapper">
     <nav class="navigation">
   <section class="container">
     <a class="navigation-title" href="/">
       Adam Piekarski
     </a>
-    
       <input type="checkbox" id="menu-toggle" aria-label="Menu"/>
       <label class="menu-button float-right" for="menu-toggle">
         <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
       </label>
       <ul class="navigation-list">
-        
-          
             <li class="navigation-item">
               <a class="navigation-link" href="/about/">About</a>
             </li>
-          
             <li class="navigation-item">
               <a class="navigation-link" href="/posts/">Blog</a>
             </li>
-          
             <li class="navigation-item">
               <a class="navigation-link" href="/projects/">Projects</a>
             </li>
-          
             <li class="navigation-item">
               <a class="navigation-link" href="/contact/">Contact me</a>
             </li>
-          
-        
-        
       </ul>
-    
   </section>
 </nav>
-
-
     <div class="content">
-      
   <section class="container page">
   <article>
     <header>
@@ -143,20 +74,8 @@
         </a>
       </h1>
     </header>
-
     <p>My second endeavour into building an audio amplifier</p>
 <p>
-
-
-
-
-
-
-
-
-
-
-
 <p class="md__image">
 <picture>
 <source type="image/webp"
@@ -168,9 +87,7 @@
                 /projects/amp2/images/header_huc71951f9a9504a82ac217e5d268613ad_465252_21207251374f96ffe53fd90b3c7d535e.jpg 700w,
                 /projects/amp2/images/header_huc71951f9a9504a82ac217e5d268613ad_465252_6809e4d33f27912abaebe2d100dad114.jpg 900w,
                 /projects/amp2/images/header_huc71951f9a9504a82ac217e5d268613ad_465252_1200x0_resize_q65_box.jpg 1200w"/>
-
 <img src="/projects/amp2/images/header_huc71951f9a9504a82ac217e5d268613ad_465252_21207251374f96ffe53fd90b3c7d535e.jpg" alt="Header"  />
-
 </picture>
 </p>
 </p>
@@ -200,17 +117,6 @@
 <p>Each channel contains a <a href="https://uk.rs-online.com/web/p/toroidal-transformers/7529261/"  class="external-link" target="_blank" rel="noopener">120VA 2 x 24V transformer</a> by RKD and two <a href="https://uk.rs-online.com/web/p/aluminium-capacitors/8696325/"  class="external-link" target="_blank" rel="noopener">KEMET 10000uF 50V resevior capacitors</a>. The transformers have very little mechanical hum and have dual-voltage primaries just incase I ever want to run the amplifier on 110V mains.</p>
 <p>The LM3886 chips sit on a PCB by <a href="https://www.ebay.co.uk/itm/Quality-LM3886-based-mono-amplifier-Chipamp-Gainclone-PCB-only-DIY-Audiophile/112887774780"  class="external-link" target="_blank" rel="noopener">KMTech</a> along with <a href="https://uk.rs-online.com/web/p/aluminium-capacitors/6022668/"  class="external-link" target="_blank" rel="noopener">100uF Nichicon FG Series</a> as power decoupling capacitors. They are a relatively neutral and compliment my DALI Zensor 1&rsquo;s well, but I may look at experimenting with different capacitors - I could benefit with a larger low-end. The resistors have all been hand-matched to be within 1% tolerance.</p>
 <p>
-
-
-
-
-
-
-
-
-
-
-
 <p class="md__image">
 <picture>
 <source type="image/webp"
@@ -222,9 +128,7 @@
                 /projects/amp2/images/top_hueea3202e7335e719daacab18b480c7f7_673769_902d17e44b2f13cd0b9e10094545e1ae.jpg 700w,
                 /projects/amp2/images/top_hueea3202e7335e719daacab18b480c7f7_673769_14f345218b237dc20cb7719297044162.jpg 900w,
                 /projects/amp2/images/top_hueea3202e7335e719daacab18b480c7f7_673769_1200x0_resize_q65_box.jpg 1200w"/>
-
   	<img src="/projects/amp2/images/top_hueea3202e7335e719daacab18b480c7f7_673769_902d17e44b2f13cd0b9e10094545e1ae.jpg" loading="lazy" alt="Top down view of the amp" />
-
 </picture>
 </p>
 </p>
@@ -238,17 +142,6 @@
 <p>Enclosing the amplifier is a custom built wooden case. The front and rear are solid pieces of Red Grandis (Eucalyptus Grandis) held together with a base made from <a href="https://www.metsawood.com/"  class="external-link" target="_blank" rel="noopener">Metsä Wood Spruce</a> plywood and supported by the aluminium heatsinks which flank the sides.</p>
 <p>This was the first project I&rsquo;ve completed that encorporated the use of a router. Since the Red Grandis stock was 25mm deep, the router enabled me to recess parts of the wood so I could mount components to it. It also was used to cut through dado joints so the base could fit snuggly to the rest of the wood.</p>
 <p>
-
-
-
-
-
-
-
-
-
-
-
 <p class="md__image">
 <picture>
 <source type="image/webp"
@@ -260,24 +153,9 @@
                 /projects/amp2/images/iso_hu2e2fddd316765662aafaed499b9a2c5d_1313656_94beea032476fe135a4fc3232bc12dd2.jpg 700w,
                 /projects/amp2/images/iso_hu2e2fddd316765662aafaed499b9a2c5d_1313656_ba1f4b1dec0e89105cc233fa45bf6a67.jpg 900w,
                 /projects/amp2/images/iso_hu2e2fddd316765662aafaed499b9a2c5d_1313656_1200x0_resize_q65_box.jpg 1200w"/>
-
   	<img src="/projects/amp2/images/iso_hu2e2fddd316765662aafaed499b9a2c5d_1313656_94beea032476fe135a4fc3232bc12dd2.jpg" loading="lazy" alt="Placeholder" />
-
 </picture>
 </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p class="md__image">
 <picture>
 <source type="image/webp"
@@ -289,24 +167,9 @@
                 /projects/amp2/images/connected-back_hu0a78b3c690eee504633c5ae84490fb9a_1090669_d2f43ea55d70361769306fa708e8606c.jpg 700w,
                 /projects/amp2/images/connected-back_hu0a78b3c690eee504633c5ae84490fb9a_1090669_ec1d78d691a84f391d75b80722a5dbdc.jpg 900w,
                 /projects/amp2/images/connected-back_hu0a78b3c690eee504633c5ae84490fb9a_1090669_1200x0_resize_q65_box.jpg 1200w"/>
-
   	<img src="/projects/amp2/images/connected-back_hu0a78b3c690eee504633c5ae84490fb9a_1090669_d2f43ea55d70361769306fa708e8606c.jpg" loading="lazy" alt="Placeholder" />
-
 </picture>
 </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p class="md__image">
 <picture>
 <source type="image/webp"
@@ -318,24 +181,9 @@
                 /projects/amp2/images/back_hu2e2fddd316765662aafaed499b9a2c5d_1001729_2d7408eb9b8a1a1efbc7169eaed546e2.jpg 700w,
                 /projects/amp2/images/back_hu2e2fddd316765662aafaed499b9a2c5d_1001729_a10b0226836865c0200ce60b65072da4.jpg 900w,
                 /projects/amp2/images/back_hu2e2fddd316765662aafaed499b9a2c5d_1001729_1200x0_resize_q65_box.jpg 1200w"/>
-
   	<img src="/projects/amp2/images/back_hu2e2fddd316765662aafaed499b9a2c5d_1001729_2d7408eb9b8a1a1efbc7169eaed546e2.jpg" loading="lazy" alt="Placeholder" />
-
 </picture>
 </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p class="md__image">
 <picture>
 <source type="image/webp"
@@ -347,24 +195,9 @@
                 /projects/amp2/images/heatsink_hu0a78b3c690eee504633c5ae84490fb9a_961204_6a48b866721c18f6cadb02219dfed9bd.jpg 700w,
                 /projects/amp2/images/heatsink_hu0a78b3c690eee504633c5ae84490fb9a_961204_b571ae70ac67f6e83358a0a30761e1a7.jpg 900w,
                 /projects/amp2/images/heatsink_hu0a78b3c690eee504633c5ae84490fb9a_961204_1200x0_resize_q65_box.jpg 1200w"/>
-
   	<img src="/projects/amp2/images/heatsink_hu0a78b3c690eee504633c5ae84490fb9a_961204_6a48b866721c18f6cadb02219dfed9bd.jpg" loading="lazy" alt="Placeholder" />
-
 </picture>
 </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p class="md__image">
 <picture>
 <source type="image/webp"
@@ -376,24 +209,9 @@
                 /projects/amp2/images/inside2_hu0a78b3c690eee504633c5ae84490fb9a_953740_ae6a269f3388c125e552cf1e44db4811.jpg 700w,
                 /projects/amp2/images/inside2_hu0a78b3c690eee504633c5ae84490fb9a_953740_88a000a093462872295feb71ad34318c.jpg 900w,
                 /projects/amp2/images/inside2_hu0a78b3c690eee504633c5ae84490fb9a_953740_1200x0_resize_q65_box.jpg 1200w"/>
-
   	<img src="/projects/amp2/images/inside2_hu0a78b3c690eee504633c5ae84490fb9a_953740_ae6a269f3388c125e552cf1e44db4811.jpg" loading="lazy" alt="Placeholder" />
-
 </picture>
 </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
 <p class="md__image">
 <picture>
 <source type="image/webp"
@@ -405,9 +223,7 @@
                 /projects/amp2/images/amp-board_hube83863cb47525ff736daae7628a3f0a_866707_7e889d48350febb92ca44a8deee727e4.jpg 700w,
                 /projects/amp2/images/amp-board_hube83863cb47525ff736daae7628a3f0a_866707_79428da946f107ba5d0cdbaa00267c9a.jpg 900w,
                 /projects/amp2/images/amp-board_hube83863cb47525ff736daae7628a3f0a_866707_1200x0_resize_q65_box.jpg 1200w"/>
-
   	<img src="/projects/amp2/images/amp-board_hube83863cb47525ff736daae7628a3f0a_866707_7e889d48350febb92ca44a8deee727e4.jpg" loading="lazy" alt="Placeholder" />
-
 </picture>
 </p>
 </p>
@@ -420,73 +236,22 @@
 </h2>
 <p>I thoroughly enjoyed constructing this amplifier and the finished result provides more than enough drive for my speakers. For a casual listen, I&rsquo;ll use a Raspberry PI with a <a href="http://iqaudio.co.uk/hats/47-pi-dac-pro.html"  class="external-link" target="_blank" rel="noopener">Pi-DAC Pro</a> and the open source Spotify client <a href="https://github.com/dtcooper/raspotify"  class="external-link" target="_blank" rel="noopener">Raspotify</a>. Otherwise, my pair of 1210&rsquo;s and a mixer feed the amplifier when I want a little bit of fun.</p>
 <p>The amplifier does not have a lid at the moment: a glass screwed into the top is the top candidate at the moment, similar to the top on my previous amp so everyone can oogle inside. Another area of improvement are the finger joints on the front - they were a little messy and required a lot of wood filler. Next time I would look into using router jigs to get better precision.</p>
-
   </article>
 </section>
-
-  
-
     </div>
-
     <footer class="footer">
   <section class="container">
     ©
-    
       2015 -
-    
     2023
      Adam Piekarski 
     ·
-    
       Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>
     ·
-    
     Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
-    
   </section>
 </footer>
-
   </main>
-
-  
-
-  
-  
   <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 </body>
-
 </html>

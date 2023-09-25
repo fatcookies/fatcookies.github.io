@@ -1,6 +1,9 @@
 HUGO_BIN=hugo
 
-.PHONY: build demo
+.PHONY: build demo stripped
+
+stripped: build
+	$(shell find public/ | grep \.html$ | xargs sed -i '/^ *$$/d' )
 
 build:
 	$(HUGO_BIN) 
