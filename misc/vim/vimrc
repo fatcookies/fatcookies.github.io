@@ -408,7 +408,6 @@ set path=**
 set grepprg=grep\ -nrsH
 command! -nargs=+ -complete=file_in_path Grep update | silent! grep! <args> | redraw! | copen
 map <leader>u :Grep <C-r><C-w><cr>
-nmap N :cn<cr>
 
 """""""""""""""""
 """ diff colors
@@ -431,4 +430,5 @@ else
    return "\<C-X>\<C-O>"
 endif
 endfunction
+
 inoremap <Tab> <C-R>=CleverTab()<CR>
