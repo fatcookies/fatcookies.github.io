@@ -419,3 +419,16 @@ if &diff
     highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
     highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
 endif
+
+
+"""""""""""""""""
+""" omni complete on tab
+"""""""""""""""""
+function! CleverTab()
+if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+   return "\<Tab>"
+else
+   return "\<C-X>\<C-O>"
+endif
+endfunction
+inoremap <Tab> <C-R>=CleverTab()<CR>
